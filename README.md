@@ -1,21 +1,34 @@
-#Apetitos Delivery
+# Apetitos Delivery
 
-##Nombre
+
 **Apetitos Delivery**, Just in time: compra, come rico y recibilo en tu domicilio.
 
 ##Integrantes
-- Pablo Santos
 - Shirly Battista
 - Josué Martínez
+- Pablo Santos
 
 ##Descripción
-En esta página web dodne podrás encontrar una gran variedad de alimentos, en la cual elegir tus platos preferidos; los precios se adecuen a tu presupuesto, hacer tu pedido online y recibirlo en tu domicilio.
+"Apetitos Delivery" es un sitio responsive desarrollado en el entorno de ejecución NODE JS para JavaScript, estructurado mediante etiquetas HTML y con estilos aplicados de manera selectiva.
+Funcionalmente, en esta página web  podrás encontrar una gran variedad de alimentos, en la cual elegir tus platos preferidos; los precios se adecuen a tu presupuesto, hacer tu pedido online y recibirlo en tu domicilio.
 Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de la gran variedad de platos para saciar tu apetito.
 Variado, simple, rápido y económico.
 Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops
 
+## Imagenes
+
+
+## Instalaciones
+Esta aplicacion fué programada utilizando distintas herramientas como HTML, CSS, JS, NodeJS y Express.
+[NodeJS](https://nodejs.org/es/ "NodeJS")
+[Express](https://expressjs.com/ "Express")
+
+Pensada para ser visualizada en dispositivos móviles, tablets, desktop.
+
+Las ultimas versiones se podran descargar directamente desde los repositorios ubicados en Github.
+
 ##Uso
-###En esta página web podrán:
+###En esta página web los usuarios podrán:
 - En el Home, mediante una barra de búsqueda se puede elegir entre una gran variedad de platos con criterios múltiples.
 - También existe una herramienta de ayuda que permite guiar nuestra selección y posterior compra. 
 - Se puede crear una cuenta de usuario y adquirir los productos mediante un carrito de compras. 
@@ -27,3 +40,16 @@ Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops
 - La página web posee vínculos con Instagram, facebook y twitter.
 - Finalmente, se puede elegir dentro de una variedad de medios de pago disponibles. 
 
+# Referencias
+[Comidas One](https://www.comidasone.com/ "Comidas One")
+[Viandas Cook](https://viandascook.com/ "Viandas Cook")
+[Hola Veggie](https://holaveggie.com.ar/ "Hola Veggie")
+[Simple Eat](https://simpleat.com.ar/ "Simple Eat")
+[Uber Eats](https://www.ubereats.com/ "Uber Eats")
+
+# Autores
+- Shirly Battista
+
+- Josué Martínez
+
+- **Pablo Santos:** Lic. en comercio internacional de 47 años, especializado en Logistica. En los ultimos años, especialmente interesado en el diseño e implementación de soluciones web para la la logistica de ultima milla para el cliente final (B2C).
