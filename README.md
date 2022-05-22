@@ -8,7 +8,7 @@
 - Shirly Battista
 - Josué Martínez
 
-##Descripción
+##Descripción del Sitio
 En esta página web dodne podrás encontrar una gran variedad de alimentos, en la cual elegir tus platos preferidos; los precios se adecuen a tu presupuesto, hacer tu pedido online y recibirlo en tu domicilio.
 Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de la gran variedad de platos para saciar tu apetito.
 Variado, simple, rápido y económico.
