@@ -1,14 +1,13 @@
 # Apetitos Delivery
 
-
 **Apetitos Delivery**, Just in time: compra, come rico y recibilo en tu domicilio.
 
-##Integrantes
+## Integrantes
 - Shirly Battista
 - Josué Martínez
 - Pablo Santos
 
-##Descripción
+## Descripción
 "Apetitos Delivery" es un sitio responsive desarrollado en el entorno de ejecución NODE JS para JavaScript, estructurado mediante etiquetas HTML y con estilos aplicados de manera selectiva.
 Funcionalmente, en esta página web  podrás encontrar una gran variedad de alimentos, en la cual elegir tus platos preferidos; los precios se adecuen a tu presupuesto, hacer tu pedido online y recibirlo en tu domicilio.
 Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de la gran variedad de platos para saciar tu apetito.
@@ -30,8 +29,8 @@ Pensada para ser visualizada en dispositivos móviles, tablets, desktop.
 
 Las ultimas versiones se podran descargar directamente desde los repositorios ubicados en Github.
 
-##Uso
-###En esta página web los usuarios podrán:
+## Uso
+### En esta página web los usuarios podrán:
 - En el Home, mediante una barra de búsqueda se puede elegir entre una gran variedad de platos con criterios múltiples.
 - También existe una herramienta de ayuda que permite guiar nuestra selección y posterior compra. 
 - Se puede crear una cuenta de usuario y adquirir los productos mediante un carrito de compras. 
@@ -53,6 +52,6 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 # Autores
 - **Shirly Battista:** Amante de la gastronomia de 29 años , mi objetivo es ayudar a las personas a comer bien todos los dias sin esfuerzo y hacer lo posible para que se vuelvan a sentir como nos sentíamos de niños, cuando comer era tan solo disfrutar.
 
-- Josué Martínez
+- **Josué Martínez:** Ingeniero en Sistemas Computacionales, tengo 31 años de edad, trabajo en el área de informática de una institución pública, mi hobbi es jugar videojuegos y reparar computadoras. 
 
 - **Pablo Santos:** Lic. en comercio internacional de 47 años, especializado en Logistica. En los ultimos años, especialmente interesado en el diseño e implementación de soluciones web para la la logistica de ultima milla para el cliente final (B2C).
