@@ -12,7 +12,10 @@
 En esta página web dodne podrás encontrar una gran variedad de alimentos, en la cual elegir tus platos preferidos; los precios se adecuen a tu presupuesto, hacer tu pedido online y recibirlo en tu domicilio.
 Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de la gran variedad de platos para saciar tu apetito.
 Variado, simple, rápido y económico.
-Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops
+Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops.
+
+##Instalaciones 
+Esta aplicacions fue programada ulitizadon distintas herramientas. Como HTML, CSS, JS, NODE JS, y EXPRESS. Tambien desarrollado para ser visualizada en dispositivos moviles, tables, Desktop.
 
 ##Uso
 ###En esta página web podrán:
