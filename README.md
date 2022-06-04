@@ -12,9 +12,6 @@ Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops.
 ##Instalaciones 
 Esta aplicacions fue programada ulitizadon distintas herramientas. Como HTML, CSS, JS, NODE JS, y EXPRESS. Tambien desarrollado para ser visualizada en dispositivos moviles, tables, Desktop.
 
-## Imagenes
-Images/apetitos_delivery_vector
-
 ## Instalaciones
 Esta aplicacion fué programada utilizando distintas herramientas como HTML, CSS, JS, NodeJS y Express.
 [NodeJS](https://nodejs.org/es/ "NodeJS")
