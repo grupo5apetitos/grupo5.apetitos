@@ -5,16 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <script src="https://kit.fontawesome.com/47867613da.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/styles.css">
         <title>Formulario de Registro</title>
     </head>
     <body>
+        <header>
+            <div class="top-header">
+                <div class="logo"> 
+                    <img src="images/apetitios-delivery-Image.svg" alt="Logo de Apetitos Delivery">
+                </div>
+                <div class="form" action="#" method="GET">
+                    <div class="input">Buscar </div>
+                    <div class="submit"><i class="fa fa-search"></i></div>
+               
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index">Incio</a></li>
+                    <li><a href="/register">Creá tu cuenta </a></li>
+                    <li><a href="/login">Ingresá </a></li>
+                    <li><a href="#">Mis compras </a></li>
+                    <li><a href="#">Ayuda</a></li>
+
+                    <div class="icono"><i class="fa-solid fa-user"></i></div>
+                </ul>
+            </nav>
+            
+        </header>
         <section class="form-register">
-            <h4>Formulario de Registro</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+            <form action="/" method="POST">
+            <h4>Registro de Usuarios</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+            <input class="controls" type="email" name="correo" id="correo" placeholder=" Confirmar Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Confirmar Contraseña">
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
             <p><a href="#">¿Ya tengo Cuenta?</a></p>
