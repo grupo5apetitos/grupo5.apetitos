@@ -38,7 +38,6 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 - Finalmente, se puede elegir dentro de una variedad de medios de pago disponibles. 
 
 # Referencias
-<<<<<<< HEAD
 - [Comidas One](https://www.comidasone.com/ "Comidas One")
 - [Viandas Cook](https://viandascook.com/ "Viandas Cook")
 - [Hola Veggie](https://holaveggie.com.ar/ "Hola Veggie")
@@ -51,13 +50,6 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 - #F0EAD6
 - #CEA780
 - #CB6715
-=======
-[Comidas One](https://www.comidasone.com/ "Comidas One")
-[Viandas Cook](https://viandascook.com/ "Viandas Cook")
-[Hola Veggie](https://holaveggie.com.ar/ "Hola Veggie")
-[Simple Eat](https://simpleat.com.ar/ "Simple Eat")
-[Uber Eats](https://www.ubereats.com/ "Uber Eats")
->>>>>>> dc728006cea3c1c122d97c518001c65c6eb2e162
 
 # Tipografía
 - [Philosopher](https://fonts.google.com/specimen/Philosopher?query=Mon "Philosopher"): Titulos y Subtitulos
