@@ -15,9 +15,6 @@ Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de l
 Variado, simple, rápido y económico.
 Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops
 
-## Imagenes
-
-
 ## Instalaciones
 Esta aplicacion fué programada utilizando distintas herramientas como HTML, CSS, JS, NodeJS y Express.
 [NodeJS](https://nodejs.org/es/ "NodeJS")
