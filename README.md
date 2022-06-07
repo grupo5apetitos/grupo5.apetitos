@@ -58,6 +58,6 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 # Autores
 - **Shirly Battista:** Amante de la gastronomia de 29 años , mi objetivo es ayudar a las personas a comer bien todos los dias sin esfuerzo y hacer lo posible para que se vuelvan a sentir como nos sentíamos de niños, cuando comer era tan solo disfrutar.
 
-- Josué Martínez
+- **Josué Martínez:** Tengo 31 años, mi hobby son los videojuegos en PC, me gusta la comida casera y trabajo en el entorno público. Me gusta aprender nuevas cosas relacionadas a mi entorno y disfruto de los retos.
 
 - **Pablo Santos:** Lic. en comercio internacional de 47 años, especializado en Logistica. En los ultimos años, especialmente interesado en el diseño e implementación de soluciones web para la la logistica de ultima milla para el cliente final (B2C).
