@@ -1,5 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Ruda:wght@400;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ruda', sans-serif;
+}
+
+h3, h2, h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+/** Estilo de cuadros de texto, textarea y select .............................................. */
+.text-box {
+    width: 100%;
+    padding: 0.25rem 0.35rem;
+    margin: 0.25rem 0.35rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+}
+
+/** Estilos de botones principales, secundarios y de advertencia ............................... */
+.btn {
+    width: 150px;
+    padding: 0.25rem 0.35rem;
+    margin: 0.25rem 0.35rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+    background-color: #fafafa;
+}
+
+/** Estilos para mensajes de error ............................................................. */
+.error {
+    border-radius: 0.35rem;
+    background-color: #ff555f;
+    border-radius: 1px solid #ff3a3a;
+    color: #333;
+}
+
+/** Estilos para grupos de textos y botones .................................................... */
+.group-box {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.group-box .text-box {
+    border-top-left-radius: 0.35rem;
+    border-bottom-left-radius: 0.35rem;
+}
+
+.group-box .btn {
+    border-top-right-radius: 0.35rem;
+    border-bottom-right-radius: 0.35rem;
 }

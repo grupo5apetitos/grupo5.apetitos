@@ -9,9 +9,6 @@ Es sencillo, simplemente tenés que registrarte y comenzar a comprar dentro de l
 Variado, simple, rápido y económico.
 Desarrollado para ser visualizado en dispositivos móviles, tablets y Laptops.
 
-##Instalaciones 
-Esta aplicacions fue programada ulitizadon distintas herramientas. Como HTML, CSS, JS, NODE JS, y EXPRESS. Tambien desarrollado para ser visualizada en dispositivos moviles, tables, Desktop.
-
 ## Instalaciones
 Esta aplicacion fué programada utilizando distintas herramientas como HTML, CSS, JS, NodeJS y Express.
 [NodeJS](https://nodejs.org/es/ "NodeJS")
@@ -42,9 +39,13 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 - [Uber Eats](https://www.ubereats.com/ "Uber Eats")
 
 # Colores a usar
-- #FF5733
-- #74b300
+- #FF6955
+- #8EB342
 - #F0EAD6
+
+# Tipografía
+- [Philosopher](https://fonts.google.com/specimen/Philosopher?query=Mon "Philosopher"): Titulos y Subtitulos
+- [Ruda](https://fonts.google.com/specimen/Ruda?query=Mon#standard-styles "Ruda"): Contenido
 
 # Autores
 - **Shirly Battista:** Amante de la gastronomia de 29 años , mi objetivo es ayudar a las personas a comer bien todos los dias sin esfuerzo y hacer lo posible para que se vuelvan a sentir como nos sentíamos de niños, cuando comer era tan solo disfrutar.
