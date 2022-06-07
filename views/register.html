@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/47867613da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/register.css">
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="menu-hamburguesa">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="static/images/logo/apetitos_delivery_vector.png" alt="Apetitos Delivery">
+            </div>
+            <form class="busqueda group-box" action="/" method="post">
+                <input type="text" class="text-box" name="buscar" id="buscar" placeholder="Búscar platillo">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="sesion">
+                <ul>
+                    <li><i class="fa-solid fa-user"></i></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li><i class="fa-solid fa-circle-info"></i></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="menu-header">
+            <ul>
+                <li><a href="/index">Incio</a></li>
+                <li><a href="/register">Creá tu cuenta </a></li>
+                <li><a href="/login">Ingresá </a></li>
+                <li><a href="#">Mis compras </a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-register">
+        <form action="/" method="POST">
+            <h4>Registro de Usuarios</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+            <input class="controls" type="email" name="correo" id="correo" placeholder=" Confirmar Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Confirmar Contraseña">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Registrar">
+            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+    </section>
+</body>
+
+</html>

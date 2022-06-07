@@ -1,7 +1,7 @@
 {
   "name": "grupo5.apetitos",
   "version": "1.0.0",
-  "description": "Proyecto Apetitos Delivery",
+  "description": "**Apetitos Delivery**, Just in time: compra, come rico y recibilo en tu domicilio.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
