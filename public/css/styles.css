@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Ruda:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ruda', sans-serif;
+}
+
+h3,
+h2,
+h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+/** Encabezado del sitio ....................................................................... */
+header {
+    background-color: #CEA780;
+}
+
+.top-header {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 0.35rem;
+}
+
+.top-header .menu-hamburguesa i,
+.top-header ul li i {
+    font-size: 1.8rem;
+    color: #F0EAD6;
+}
+
+.top-header .menu-hamburguesa {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-hamburguesa i {
+    margin-left: 1rem;
+}
+
+.top-header .logo {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header .logo img {
+    width: 125px;
+}
+
+.top-header .busqueda {
+    width: 100%;
+    order: 1;
+}
+
+.top-header .sesion {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-header .sesion ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0 0.35rem;
+}
+
+.top-header .sesion ul li:last-child {
+    display: none;
+}
+
+.busqueda .text-box,
+.busqueda .btn {
+    border: 1px solid #F0EAD6;
+    color: #CEA780;
+}
+
+.busqueda .text-box:focus,
+.busqueda .text-box:active {
+    border: 1px solid #CB6715;
+}
+
+/** Menú del sitio ............................................................................. */
+.menu-header {
+    display: none;
+    padding: 1rem 0.65rem;
+}
+
+/** Estilo de cuadros de texto, textarea y select .............................................. */
+.text-box {
+    width: 100%;
+    padding: 0.35rem 0.45rem;
+    margin: 0.35rem 0.45rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+    font-size: 1.2rem;
+}
+
+/** Estilos de botones principales, secundarios y de advertencia ............................... */
+.btn {
+    width: 150px;
+    padding: 0.35rem 0.45rem;
+    margin: 0.35rem 0.45rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+    background-color: #fafafa;
+    font-size: 1.2rem;
+}
+
+/** Estilos para mensajes de error ............................................................. */
+.error {
+    border-radius: 0.35rem;
+    background-color: #ff555f;
+    border-radius: 1px solid #ff3a3a;
+    color: #333;
+}
+
+/** Estilos para grupos de textos y botones .................................................... */
+.group-box {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.group-box .text-box {
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0.35rem;
+    border-bottom-right-radius: 0rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.group-box .btn {
+    border-top-right-radius: 0.35rem;
+    border-top-left-radius: 0rem;
+    border-bottom-right-radius: 0.35rem;
+    border-bottom-left-radius: 0rem;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+/** Estilos del footer.......................................................................... */
+.pie-pagina {
+    background-color: #CEA780;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pie-pagina .grupo-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0.35rem 1rem;
+}
+
+.pie-pagina .grupo-1 .box {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 1.2rem 0.55rem;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: rgb(17, 17, 17);
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+.pie-pagina .grupo-1 .box ul {
+    list-style: none;
+}
+
+.pie-pagina .grupo-1 .box ul li {
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+.pie-pagina .grupo-1 .box ul li a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+    font-size: 16px;
+    transition: all 300ms ease;
+
+}
+
+.pie-pagina .grupo-1 .box ul li a:hover {
+    color: rgb(39, 7, 182);
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    color: rgb(17, 17, 17);
+    margin-right: 10px;
+    text-align: center;
+    transition: color all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: rgb(39, 7, 182);
+}
+
+.pie-pagina .grupo-2 {
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #CB6715;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 12px;
+}
+
+/** Media Querys ............................................................................... */
+
+/* Tablets ................................... */
+@media (min-width: 539px) {
+    .top-header {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .top-header .menu-hamburguesa {
+        display: none;
+    }
+
+    .top-header .busqueda {
+        order: 0;
+        align-items: center;
+    }
+
+    .top-header .sesion ul li:last-child {
+        display: block;
+    }
+
+    .menu-header {
+        display: block;
+        background-color: #CB6715;
+    }
+
+    .menu-header ul {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0 0.35rem;
+    }
+
+    .menu-header ul li a {
+        text-decoration: none;
+        color: #fafafa;
+    }
+}
+
+/* Escritorio ................................ */
+@media (min-width: 767px) {
+    .pie-pagina .grupo-1 {
+        flex-wrap: nowrap;
+        padding: 0 1rem;
+    }
+
+    .pie-pagina .grupo-1 .box {
+        padding: 1.2rem 0.45rem;
+        margin: 0;
+    }
+}

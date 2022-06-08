@@ -1,0 +1,22 @@
+{
+  "name": "grupo5.apetitos",
+  "version": "1.0.0",
+  "description": "**Apetitos Delivery**, Just in time: compra, come rico y recibilo en tu domicilio.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grupo5apetitos/grupo5.apetitos.git"
+  },
+  "author": "Pablo, Shirly & Josue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grupo5apetitos/grupo5.apetitos/issues"
+  },
+  "homepage": "https://github.com/grupo5apetitos/grupo5.apetitos#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
