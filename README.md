@@ -48,7 +48,6 @@ Gracias a ellas pudimos tener una idea mas clara de lo que queriamos hacer y que
 
 # Colores a usar
 - #FF6955
-- #8EB342
 - #F0EAD6
 - #CEA780
 - #CB6715
