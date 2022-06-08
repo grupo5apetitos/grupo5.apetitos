@@ -37,11 +37,14 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 - Finalmente, se puede elegir dentro de una variedad de medios de pago disponibles. 
 
 # Referencias
-- [Comidas One](https://www.comidasone.com/ "Comidas One")
+- [Comidas One](https://www.comidasone.com/ "Comidas One") 
 - [Viandas Cook](https://viandascook.com/ "Viandas Cook")
 - [Hola Veggie](https://holaveggie.com.ar/ "Hola Veggie")
 - [Simple Eat](https://simpleat.com.ar/ "Simple Eat")
 - [Uber Eats](https://www.ubereats.com/ "Uber Eats")
+
+Cada una de estas referencias las elegimos porque nos parecieron paginas web bien organizadas.
+Gracias a ellas pudimos tener una idea mas clara de lo que queriamos hacer y que modelo queriamos seguir con nuestro sitio.
 
 # Colores a usar
 - #FF6955
