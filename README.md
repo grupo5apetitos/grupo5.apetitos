@@ -45,7 +45,6 @@ Las ultimas versiones se podran descargar directamente desde los repositorios ub
 
 # Colores a usar
 - #FF6955
-- #8EB342
 - #F0EAD6
 - #CEA780
 - #CB6715

@@ -19,7 +19,9 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="logo">
-                <img src="static/images/logo/apetitos_delivery_vector.png" alt="Apetitos Delivery">
+                <a href="/">
+                    <img src="static/images/logo/apetitos_delivery_vector.png" alt="Apetitos Delivery">
+                </a>
             </div>
             <form class="busqueda group-box" action="/" method="post">
                 <input type="text" class="text-box" name="buscar" id="buscar" placeholder="Búscar platillo">
@@ -27,9 +29,21 @@
             </form>
             <div class="sesion">
                 <ul>
-                    <li><i class="fa-solid fa-user"></i></li>
-                    <li><i class="fa-solid fa-cart-shopping"></i></li>
-                    <li><i class="fa-solid fa-circle-info"></i></li>
+                    <li>
+                        <a href="/login">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/productCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,7 +52,7 @@
                 <li><a href="/index">Incio</a></li>
                 <li><a href="/register">Creá tu cuenta </a></li>
                 <li><a href="/login">Ingresá </a></li>
-                <li><a href="#">Mis compras </a></li>
+                <li><a href="/productCart">Mis compras </a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </nav>

@@ -1,0 +1,122 @@
+.carrusel img {
+    width: 100%;
+}
+
+.como-funciona,
+.mas-elegido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2.titulo {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2.titulo span {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 0.45rem 1rem;
+    top: 0px;
+}
+
+.como-funciona article,
+.mas-elegido article {
+    width: 100%;
+    padding: 1.2rem 0.25rem;
+    margin: 0.4rem 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.como-funciona article img {
+    margin: 0.85rem 0.45rem;
+}
+
+.como-funciona article h5,
+.mas-elegido article h5 {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0.5rem;
+}
+
+/** Más Elegido ................................................................................ */
+.mas-elegido article img {
+    width: 300px;
+}
+
+.mas-elegido article h5 {
+    padding: 0.45rem 0.35rem;
+}
+
+.mas-elegido article p.precio {
+    color: #FF6955;
+    font-size: 20px;
+    margin-top: 0.6rem;
+    font-weight: bold;
+}
+
+/** Newsletter ................................................................................. */
+.newsletter {
+    margin: 1.2rem 0rem;
+    padding: 1.8rem 1rem;
+    background-color: #F0EAD6;
+}
+
+.newsletter .group-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.newsletter .principal {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.newsletter .secundario {
+    font-size: 12px;
+}
+
+/** Media Queries .............................................................................. */
+@media (min-width: 767px) {
+    .como-funciona,
+    .mas-elegido {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .como-funciona article img {
+        width: 100px;
+    }
+
+    .mas-elegido article img {
+        width: 150px;
+    }
+
+    .mas-elegido article {
+        border: 1px solid #F0EAD6;
+        border-radius: 10px;
+    }
+
+    .newsletter .principal,
+    .newsletter .secundario {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .como-funciona,
+    .mas-elegido {
+        max-width: 1200px;
+    }
+}

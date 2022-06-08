@@ -16,7 +16,7 @@ h1 {
     font-family: 'Philosopher', sans-serif;
     margin: 1rem 0;
     padding: 0.65rem 0.35rem;
-    border-bottom: 1px solid #F0EAD6;
+    border-bottom: 3px solid #F0EAD6;
 }
 
 /** Encabezado del sitio ....................................................................... */
@@ -293,5 +293,15 @@ header {
     .pie-pagina .grupo-1 .box {
         padding: 1.2rem 0.45rem;
         margin: 0;
+    }
+
+    .pie-pagina .grupo-1 .box h2 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .pie-pagina .grupo-1 .box h2 {
+        font-size: 24px;
     }
 }
