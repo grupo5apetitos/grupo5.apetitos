@@ -195,3 +195,74 @@ header {
 @media (min-width: 767px) {
 
 }
+/* Estilos del footer.........................*/
+.pie-pagina{
+    width: 100%;
+    background-color: #CEA780;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width:1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color:#333;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: rgb(17, 17, 17) ;
+    margin-bottom: 10px;
+    font-size: small;
+    
+}
+.pie-pagina .grupo-1 .box ul li a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+    color:rgb(17, 17, 17);
+    font-size: small;
+    transition: all 300ms ease;
+
+}
+.pie-pagina .grupo-1 .box ul li a:hover{
+    color: rgb(39, 7, 182);
+}
+.pie-pagina .grupo-1 .box  ul li{
+    margin-bottom: 10px;
+    font-size: small;
+   
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    color:rgb(17, 17, 17);
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(39, 7, 182);
+}
+.pie-pagina .grupo-2{
+    padding: 15px 10px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+}
+.pie-pagina .grupo-2 small{
+    font-size: 10px;
+}
+@media (min-width: 767px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+}
