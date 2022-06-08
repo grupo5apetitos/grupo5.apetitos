@@ -55,7 +55,9 @@ section article {
 .imagen {
     display: flex;
     justify-content: center;
-    height: 70%;
+    height: 60%;
+    width: 60%;
+    margin: auto;
 }
 
 .textoYprecio {
@@ -85,6 +87,12 @@ section article {
 
 #ver {
     text-decoration: none;
+}
+
+.pie-pagina {
+    background-color: #CEA780;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 420px) {
