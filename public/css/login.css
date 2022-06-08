@@ -1,0 +1,19 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    width: 350px;
+    margin: 4rem 0;
+    padding: 0.25rem 0.35rem;
+    text-align: center;
+}
+
+.login .btn {
+    background-color: #CB6715;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 0.65rem 0.35rem;
+}
