@@ -46,6 +46,7 @@ section article {
     width: 100%;
     height: 320px;
     padding: 10px;
+    width: 100%;
 }
 
 .imagen {
@@ -54,6 +55,10 @@ section article {
     height: 60%;
     width: 60%;
     margin: auto;
+}
+
+.imagen img {
+    width: 100%;
 }
 
 .textoYprecio {
@@ -91,14 +96,18 @@ section article {
     flex-wrap: wrap;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 539px) {
     section article {
         width: 40%;
     }
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
     section article {
         width: 20%;
+    }
+
+    .imagen {
+        width: 90%;
     }
 }
