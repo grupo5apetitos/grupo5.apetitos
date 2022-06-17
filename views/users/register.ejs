@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Parte del head -->
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <!-- Parte del header -->
+    <%- include('./partials/header.ejs') %>
+
+    <section class="form-register">
+        <form action="/" method="POST">
+            <h4>Registro de Usuarios</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+            <input class="controls" type="email" name="correo" id="correo" placeholder=" Confirmar Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Confirmar Contraseña">
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Registrar">
+            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+    </section>
+    <!-- Parte del footer  -->
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
