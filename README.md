@@ -6,6 +6,7 @@
 - Shirly Battista
 - Josué Martínez
 - Pablo Santos
+- David Gómez
 
 ## Descripción
 "Apetitos Delivery" es un sitio responsive desarrollado en el entorno de ejecución NODE JS para JavaScript, estructurado mediante etiquetas HTML y con estilos aplicados de manera selectiva.
@@ -66,3 +67,7 @@ Gracias a ellas pudimos tener una idea mas clara de lo que queriamos hacer y que
 
 - **Pablo Santos:** Lic. en comercio internacional de 47 años, especializado en Logistica. En los ultimos años, especialmente interesado en el diseño e implementación de soluciones web para la la logistica de ultima milla para el cliente final (B2C).
 
+<<<<<<< HEAD
+=======
+- **David Gómez:** Estudiante de Informática originario de México, me gusta aprender cada día cosas nuevas y así retroalimentar mis conocimientos y poner en practica mis habilidades. Me gusta el anime y la cultura tanto de Japón como de Corea del Sur. Me gusta poder ayudar y siempre ser mejor cada día.
+>>>>>>> 52bf712c87206eb67dde3bf3bb7b0670d1f3d8c4

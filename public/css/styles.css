@@ -245,7 +245,7 @@ header {
 
 /* Tablets ................................... */
 @media (min-width: 539px) {
-    .top-header {
+    .top-header { 
         display: flex;
         flex-wrap: nowrap;
     }
