@@ -22,4 +22,3 @@
 5. Dejar de Hacer.
 
 - No vemos nada que deberiamos dejar de hacer.
-

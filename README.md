@@ -65,3 +65,4 @@ Gracias a ellas pudimos tener una idea mas clara de lo que queriamos hacer y que
 - **Josué Martínez:** Tengo 31 años, mi hobby son los videojuegos en PC, me gusta la comida casera y trabajo en el entorno público. Me gusta aprender nuevas cosas relacionadas a mi entorno y disfruto de los retos.
 
 - **Pablo Santos:** Lic. en comercio internacional de 47 años, especializado en Logistica. En los ultimos años, especialmente interesado en el diseño e implementación de soluciones web para la la logistica de ultima milla para el cliente final (B2C).
+
