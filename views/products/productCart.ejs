@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/a9031de55e.js" crossorigin="anonymous"></script>
-    <!-- Mis Estilos -->
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="stylesheet" href="static/css/productCar.css">
-    <!-- Titulo -->
-    <title>Carrito de Compras | Apetitos Delivery</title>
-</head>
+<!-- Parte del head -->
+<%- include('../partials/head.ejs', { data: carritoCompras }) %>
 <body>
-    <!-- Parte del header -->
-    <%- include('./partials/header.ejs') %>
+    <!-- Encabezado de la Página -->
+    <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <main>
         <h1>Carrito de Compras</h1>
@@ -84,6 +74,6 @@
         </div-->
     </main>
     <!-- Parte del footer  -->
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>

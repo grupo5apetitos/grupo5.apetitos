@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <!-- Parte del head -->
-<%- include('./partials/head.ejs') %>
+<%- include('../partials/head.ejs', { data: sesion }) %>
 <body>
     <!-- Parte del header -->
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <main>
         <div class="login">
@@ -27,6 +27,6 @@
         </div>
     </main>
     <!-- Parte del footer  -->
-    <%- include('./partials/footer.ejs') %> 
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>

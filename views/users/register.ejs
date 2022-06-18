@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es-MX">
 <!-- Parte del head -->
-<%- include('./partials/head.ejs') %>
-
+<%- include('../partials/head.ejs', { data: registro }) %>
 <body>
     <!-- Parte del header -->
-    <%- include('./partials/header.ejs') %>
-
+    <%- include('../partials/header.ejs') %>
+    <!-- Cuerpo de la Página-->
     <section class="form-register">
         <form action="/" method="POST">
             <h4>Registro de Usuarios</h4>
@@ -22,7 +20,7 @@
             <p><a href="#">¿Ya tengo Cuenta?</a></p>
     </section>
     <!-- Parte del footer  -->
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>

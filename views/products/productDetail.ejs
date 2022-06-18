@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <script src="https://kit.fontawesome.com/47867613da.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="stylesheet" href="static/css/register.css">
-    <link rel="stylesheet" href="static/css/productDetail.css">
-
-    <title>Detalle de Productos</title>
-</head>
-
+<!-- Parte del head -->
+<%- include('../partials/head.ejs', { data: detalleProducto }) %>
 <body>
-    <!-- Parte del header -->
-    <%- include('./partials/header.ejs') %>
-
+    <!-- Encabezado de la Página -->
+    <%- include('../partials/header.ejs') %>
+    <!-- Cuerpo de la Página-->
     <main>
         <section class="menu">
             <div class="inicio">
@@ -51,7 +39,9 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="static/images/platillos/empanizado.png" alt="FotoComidas"></div>
+                <div class="imagen">
+                    <img src="static/images/platillos/empanizado.png" alt="FotoComidas">
+                </div>
 
                 <div class="textoYprecio">
                     <p class="titulo">Ensalada mediterranea</p>
@@ -143,9 +133,8 @@
 
 
     </main>
-
     <!-- Parte del footer  -->
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>
