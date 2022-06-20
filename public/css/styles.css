@@ -29,7 +29,7 @@ header {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 1rem 0.35rem;
+    padding: 0.35rem 0.65rem;
 }
 
 .top-header .menu-hamburguesa i,
@@ -57,7 +57,7 @@ header {
 }
 
 .top-header .logo img {
-    width: 125px;
+    width: 150px;
 }
 
 .top-header .busqueda {
