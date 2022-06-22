@@ -48,6 +48,12 @@ const mainController = {
     },
     admin: function (req, res) {
         res.render('admin/admin');
+    },
+    adminMostrar: (req, res) => {
+        res.render('admin/mostrar');
+    },
+    adminEditar: (req, res) => {
+        res.render('admin/editar');
     }
 };
 

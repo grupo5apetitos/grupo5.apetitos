@@ -1,55 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="static/images/favicon/favicon.ico" type="image/x-icon">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/a9031de55e.js" crossorigin="anonymous"></script>
-    <!-- Estilos para el administrador -->
-    <link rel="stylesheet" href="static/css/administrator.css">
-    <!-- Titulo -->
-    <title>Administrador - Apetitos Delivery</title>
-</head>
+<!-- Head del administrador -->
+<%- include('../partials/head_admin.ejs') %>
 <body>
     <!-- Encabezado del administrador -->
-    <header>
-        <div class="bar-left">
-            <div class="menu-bar">
-                <a href=""><i class="fa-solid fa-bars"></i></a>
-            </div>
-            <div class="logo">
-                <img src="static/images/logo/apetitos_delivery.gif" alt="apetitos_delivery">
-            </div>
-        </div>
-        <div class="bar-right">
-            <nav>
-                <ul>
-                    <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
-                    <li><a href="">Usuario</a></li>
-                    <li><a href="">Cerrar Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <%- include('../partials/header_admin.ejs') %>
     <!-- Cuerpo del administrador -->
     <main>
         <!-- Menú del administrador -->
-        <div class="menu-lateral">
-            <nav>
-                <ul>
-                    <li class="titulo">Detalles del Producto</li>
-                    <li><i class="fa-solid fa-square-plus"></i>&nbsp;<span>Agregar nuevo platillo</span></li>
-                    <li><i class="fa-solid fa-list"></i>&nbsp;<span>Lista de platillos</span></li>
-                    <li><i class="fa-solid fa-square-pen"></i>&nbsp;<span>Editar platillo</span></li>
-                    <li class="titulo">Extras</li>
-                </ul>
-            </nav>
-        </div>
+        <%- include('menu.ejs') %>
         <!-- Contenido del administrador -->
         <div class="contenido">
-            <!--
             <div class="panel">
                 <h2>Agregar nuevo platillo</h2>
                 <form action="#" method="post">
@@ -83,73 +44,9 @@
                     </div>
                 </form>
             </div>
-            -->
-            <div class="panel">
-                <h2>Lista de platillos</h2>
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Imagen</th>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Categoría</th>
-                                <th>Precio</th>
-                                <th>Editar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="static/images/platillos/camarones.png" alt="platillo1"></td>
-                                <td><span>Camarones Empanizados</span></td>
-                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
-                                <td><span>Comidas</span></td>
-                                <td><span>$10.00</span></td>
-                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="static/images/platillos/empanizado.png" alt="platillo1"></td>
-                                <td><span>Empanizados</span></td>
-                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
-                                <td><span>Comidas</span></td>
-                                <td><span>$10.00</span></td>
-                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="static/images/platillos/pata_muslo.jpg" alt="platillo1"></td>
-                                <td><span>Para de Muslo</span></td>
-                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
-                                <td><span>Comidas</span></td>
-                                <td><span>$10.00</span></td>
-                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="static/images/platillos/tarta_cebolla.jpg" alt="platillo1"></td>
-                                <td><span>Tarta de Cebolla</span></td>
-                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
-                                <td><span>Comidas</span></td>
-                                <td><span>$10.00</span></td>
-                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="static/images/platillos/vegetales_fritos.png" alt="platillo1"></td>
-                                <td><span>Vegetales Fritos</span></td>
-                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
-                                <td><span>Comidas</span></td>
-                                <td><span>$10.00</span></td>
-                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </main>
     <!-- Pie de págiona del administrador -->
-    <footer>
-        <div class="copyright">
-            <span>Administrador de Apetitos - Delivery</span>
-        </div>
-    </footer>
+    <%- include('../partials/footer_admin.ejs') %>
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- Head del administrador -->
+<%- include('../partials/head_admin.ejs') %>
+<body>
+    <!-- Encabezado del administrador -->
+    <%- include('../partials/header_admin.ejs') %>
+    <!-- Cuerpo del administrador -->
+    <main>
+        <!-- Menú del administrador -->
+        <%- include('menu.ejs') %>
+        <!-- Contenido del administrador -->
+        <div class="contenido">
+            <div class="panel">
+                <h2>Editar platillo</h2>
+                <form action="#" method="post" class="edit-form">
+                    <div class="group-column">
+                        <div class="group-form">
+                            <img src="static/images/platillos/camarones.png" alt="platillo">
+                        </div>
+                        <div class="group-form">
+                            <label for="image">Imagen del platillo</label>
+                            <input type="file" name="image" id="image" class="text-box" required>
+                        </div>
+                        <div class="group-form">
+                            <label for="name">Nombre del platillo</label>
+                            <input type="text" name="name" id="name" class="text-box" value="Camarones Empanizados" required>
+                        </div>
+                    </div>
+                    <div class="group-column">
+                        <div class="group-form">
+                            <label for="description">Descripción del platillo</label>
+                            <textarea name="description" id="description" cols="30" rows="10" class="text-box" required></textarea>
+                        </div>
+                        <div class="group-form">
+                            <label for="category">Categoría</label>
+                            <select name="category" id="category" class="text-box">
+                                <option value="1">Desayunos</option>
+                                <option value="2" selected>Comidas</option>
+                                <option value="3">Cenas</option>
+                                <option value="4">Postres</option>
+                            </select>
+                        </div>
+                        <div class="group-form">
+                            <label for="price">Precio del platillo</label>
+                            <input type="number" name="price" id="price" class="text-box" value="11.00" required>
+                        </div>
+                        <div class="group-form left">
+                            <button type="submit" class="btn">Guardar Platillo</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Pie de págiona del administrador -->
+    <%- include('../partials/footer_admin.ejs') %>
+</body>
+</html>

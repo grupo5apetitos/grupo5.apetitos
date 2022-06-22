@@ -201,6 +201,13 @@ main {
 
 .panel form {
     width: 90%;
+    margin: auto;
+}
+
+.panel .edit-form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .panel table {
