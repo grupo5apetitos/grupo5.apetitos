@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador - Apetitos Delivery</title>
+    <link rel="shortcut icon" href="static/images/favicon/favicon.ico" type="image/x-icon">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a9031de55e.js" crossorigin="anonymous"></script>
     <!-- Estilos para el administrador -->
-    <link rel="stylesheet" href="administrator.css">
+    <link rel="stylesheet" href="static/css/administrator.css">
+    <!-- Titulo -->
+    <title>Administrador - Apetitos Delivery</title>
 </head>
 <body>
     <!-- Encabezado del administrador -->
     <header>
-        <div class="menu-bar">
-            <a href=""><i class="fa-solid fa-bars"></i></a>
+        <div class="bar-left">
+            <div class="menu-bar">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div class="logo">
+                <img src="static/images/logo/apetitos_delivery.gif" alt="apetitos_delivery">
+            </div>
         </div>
-        <div class="logo">
-            <img src="" alt="apetitos_delivery">
-        </div>
-        <div class="menu">
+        <div class="bar-right">
             <nav>
                 <ul>
                     <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
@@ -29,25 +35,120 @@
     </header>
     <!-- Cuerpo del administrador -->
     <main>
+        <!-- Menú del administrador -->
         <div class="menu-lateral">
             <nav>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="titulo">Detalles del Producto</li>
+                    <li><i class="fa-solid fa-square-plus"></i>&nbsp;<span>Agregar nuevo platillo</span></li>
+                    <li><i class="fa-solid fa-list"></i>&nbsp;<span>Lista de platillos</span></li>
+                    <li><i class="fa-solid fa-square-pen"></i>&nbsp;<span>Editar platillo</span></li>
+                    <li class="titulo">Extras</li>
                 </ul>
             </nav>
         </div>
+        <!-- Contenido del administrador -->
         <div class="contenido">
+            <!--
             <div class="panel">
-                <!-- Contenido del administrador -->
+                <h2>Agregar nuevo platillo</h2>
+                <form action="#" method="post">
+                    <div class="group-form">
+                        <label for="name">Nombre del platillo</label>
+                        <input type="text" name="name" id="name" class="text-box" required>
+                    </div>
+                    <div class="group-form">
+                        <label for="description">Descripción del platillo</label>
+                        <textarea name="description" id="description" cols="30" rows="10" class="text-box" required></textarea>
+                    </div>
+                    <div class="group-form">
+                        <label for="image">Imagen del platillo</label>
+                        <input type="file" name="image" id="image" class="text-box" required>
+                    </div>
+                    <div class="group-form">
+                        <label for="category">Categoría</label>
+                        <select name="category" id="category" class="text-box">
+                            <option value="1">Desayunos</option>
+                            <option value="2">Comidas</option>
+                            <option value="3">Cenas</option>
+                            <option value="4">Postres</option>
+                        </select>
+                    </div>
+                    <div class="group-form">
+                        <label for="price">Precio del platillo</label>
+                        <input type="number" name="price" id="price" class="text-box" required>
+                    </div>
+                    <div class="group-form left">
+                        <button type="submit" class="btn">Guardar Platillo</button>
+                    </div>
+                </form>
+            </div>
+            -->
+            <div class="panel">
+                <h2>Lista de platillos</h2>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="static/images/platillos/camarones.png" alt="platillo1"></td>
+                                <td><span>Camarones Empanizados</span></td>
+                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
+                                <td><span>Comidas</span></td>
+                                <td><span>$10.00</span></td>
+                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/platillos/empanizado.png" alt="platillo1"></td>
+                                <td><span>Empanizados</span></td>
+                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
+                                <td><span>Comidas</span></td>
+                                <td><span>$10.00</span></td>
+                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/platillos/pata_muslo.jpg" alt="platillo1"></td>
+                                <td><span>Para de Muslo</span></td>
+                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
+                                <td><span>Comidas</span></td>
+                                <td><span>$10.00</span></td>
+                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/platillos/tarta_cebolla.jpg" alt="platillo1"></td>
+                                <td><span>Tarta de Cebolla</span></td>
+                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
+                                <td><span>Comidas</span></td>
+                                <td><span>$10.00</span></td>
+                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="static/images/platillos/vegetales_fritos.png" alt="platillo1"></td>
+                                <td><span>Vegetales Fritos</span></td>
+                                <td><span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span></td>
+                                <td><span>Comidas</span></td>
+                                <td><span>$10.00</span></td>
+                                <td><button type="button" class="btn"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
     <!-- Pie de págiona del administrador -->
     <footer>
         <div class="copyright">
-            <h3>Administrador de Apetitos - Delivery</h3>
+            <span>Administrador de Apetitos - Delivery</span>
         </div>
     </footer>
 </body>

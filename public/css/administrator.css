@@ -1,3 +1,84 @@
+/**
+    Administrador del sitio -------------------------------------------------------------------- //
+*/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&family=Ruda&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Ruda', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Philosopher', sans-serif;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #cecece;
+}
+
+/** 
+    Estilos para grupos de textos y botones ---------------------------------------------------- //
+*/
+.group-box {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.group-box .text-box {
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0.35rem;
+    border-bottom-right-radius: 0rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.group-box .btn {
+    border-top-right-radius: 0.35rem;
+    border-top-left-radius: 0rem;
+    border-bottom-right-radius: 0.35rem;
+    border-bottom-left-radius: 0rem;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.group-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.group-form.left {
+    justify-content: flex-end;
+}
+
+/* Estilo de cuadros de texto, textarea y select ................. */
+.text-box {
+    width: 100%;
+    padding: 0.35rem 0.45rem;
+    margin: 0.35rem 0.45rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+    font-size: 1.2rem;
+}
+
+/** Estilos de botones principales, secundarios y de advertencia . */
+.btn {
+    width: 150px;
+    padding: 0.85rem 0.45rem;
+    margin: 0.35rem 0.45rem;
+    border-radius: 0.35rem;
+    border: 1px solid #cecece;
+    background-color: #fafafa;
+    font-size: 1.1rem;
+}
+
+/**
+    Login del administrador -------------------------------------------------------------------- //
+*/
 .login {
     display: flex;
     flex-wrap: wrap;
@@ -8,4 +89,171 @@
 .login form {
     width: 400px;
     border: 1px solidr #cecece;
+}
+
+/* Encabezado del administrador ........................ */
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #CEA780;
+    padding: 0.65rem 0.45rem;
+}
+
+.bar-left {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar-left .logo,
+.bar-left .menu-bar {
+    margin-left: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-left .logo img {
+    width: 25px;
+}
+
+.bar-left .menu-bar i {
+    font-size: 1.6rem;
+}
+
+.bar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-right nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar-right nav ul li {
+    margin-right: 0.6rem;
+}
+
+.bar-right nav ul li a {
+    text-decoration: none;
+}
+
+/* Cuerpo del administrador ............................ */
+main {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.menu-lateral {
+    width: 20vw;
+    height: 90vh;
+    background-color: #F0EAD6;
+}
+
+.menu-lateral .titulo {
+    background-color: #b35000;
+    color: #CEA780;
+    padding: 0.75rem 0.45rem;
+    font-size: 14px;
+}
+
+.menu-lateral nav ul li {
+    font-size: 13px;
+    padding: 0.6rem;
+}
+
+.menu-lateral nav ul li:hover {
+    background-color: #CEA780;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.menu-lateral nav ul li i {
+    margin-left: 1rem;
+}
+
+.menu-lateral nav ul li span {
+    margin-left: 0.6rem;
+}
+
+.contenido {
+    width: 80vw;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .panel {
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    width: 95%;
+    height: 800px;
+    padding: 1.2rem 0.8rem;
+    background-color: #fefefe;
+}
+
+.panel form {
+    width: 90%;
+}
+
+.panel table {
+    width: 100%;
+}
+
+.panel .table tr th {
+    padding: 0.4rem;
+    border: 2px solid #333;
+}
+.panel .table tr td {
+    padding: 0.35rem 0.45rem;
+    border: 1px solid #cecece;
+}
+
+.panel .table tr td img {
+    width: 100px;
+}
+
+.panel .table .btn {
+    width: 40px;
+    padding: 0.4rem;
+}
+
+.panel .btn {
+    background-color: #198754;
+    border-color: #198754;
+    cursor: pointer;
+    color: #fafafa;
+}
+
+.panel .btn:active {
+    color: #fff;
+    background-color: #146c43;
+    border-color: #13653f;
+}
+
+.panel .btn:hover {
+    color: #fff;
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+/* Pie de página del administrador ..................... */
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #CEA780; */
+}
+
+.copyright {
+    color: #CB6715;
+    padding: 0.8rem 0.4rem;
 }

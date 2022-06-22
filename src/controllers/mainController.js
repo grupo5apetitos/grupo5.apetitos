@@ -21,30 +21,33 @@ let productDetail = {
 }
 // Controlador --------------------------------------------------- //
 const mainController = {
-    index: function(req,res){
+    index: function (req, res) {
         res.render('index', {
             inicio: index
         });
-    }, 
-    login: function(req, res){
+    },
+    login: function (req, res) {
         res.render('users/login', {
             sesion: login
         });
     },
-    register: function(req, res){
+    register: function (req, res) {
         res.render('users/register', {
             registro: register
         });
     },
-    productCart: function(req, res){
+    productCart: function (req, res) {
         res.render('products/productCart', {
             carritoCompras: productCart
         });
     },
-    productDetail: function(req, res){
+    productDetail: function (req, res) {
         res.render('products/productDetail', {
             detalleProducto: productDetail
         });
+    },
+    admin: function (req, res) {
+        res.render('admin/admin');
     }
 };
 
