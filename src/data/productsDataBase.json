@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Camarones",
+        "description": "Camarones pelados, pasados por jugo de limón, harina, huevo y pan molido y, posteriormente, fritos. Acompañados por una salsa de mesa tradicional y con arroz o ensalada de verduras.",
+        "image": "camarones.png",
+        "category": "visited",
+        "price": 850.00 
+    },
+    {
+        "id": 2,
+        "name": "Pata y Muslo",
+        "description": "Pata y Muslo Deshuesada de Pollo a la Pomarola con Puré de Calabazas.",
+        "image": "pata_muslo.jpg",
+        "category": "visited",
+        "price": 850.00
+    },
+    {
+        "id": 3,
+        "name": "Tarta de Cebolla",
+        "description": "Tarta de Cebolla y Queso Port Salut Light (con masa de ricotta y harina Integral).",
+        "image": "tarta_cebolla.jpg",
+        "category": "visited",
+        "price": 950.00
+    
+    },
+    {
+        "id": 4,
+        "name": "Vegetales Fritos",
+        "description": "Una preparacion a base de verduras, por lo que su consumo va aportarnos una buena cantidad de vitaminas, minerales, y sustancias de acción antioxidates",
+        "image": "vegetales_fritos.png",
+        "category": "visited",
+        "price": 850.00
+    },
+    {
+        "id": 5,
+        "name": "Tempura de Verduras",
+        "description": "Tempura de verduras ligera y crujiente. Se puede servir con alguna salsa para mojar como la de soja.",
+        "image": "empanizado.png",
+        "category": "visited",
+        "price": 1225.00
+    },
+    {
+        "id": 6,
+        "name": "Ravioles con Bolognesa",
+        "description": "Deliciosos ravioles con bolognesa echos con relleno de queso y ricotta o de espinaca y una deliciosa bolonesa con salsa de tomate natural.",
+        "image":"raviolis-con-salsa-bolonesa.jpg",
+        "category": "visited",
+        "price": 980.00
+    },
+    {
+        "id": 7,
+        "name": "Salmon con Fideos",
+        "description": "Este Salmon con fideos llena de sabor la perfecta combinacion y es un hit para toda la familia. Con una salsa teriyaki realmente esquisita. ",
+        "image": "Salmon-con-Fideos.jpg",
+        "category": "visited",
+        "price": 1200
+    },
+    {
+        "id": 8,
+        "name":"Lasaña",
+        "description": "La lasaña un plato delicioso elaborado de finas laminas de pasta que son rellenadas con carne, tomate, verduras, cebolla y normalmente son cocinadas con aceite de oliva. Este plato presenta una gran variedad de posibilidades ya wue hay lasañas de todo tipo. En cualquier caso, se trata de un plato muy nutritivo y esquisito!",
+        "image": "lasaña.jpg",
+        "category": "visited",
+        "price": 980.00
+    }
+]
