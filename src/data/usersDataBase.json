@@ -1,0 +1,41 @@
+[
+    {
+     
+        "id": 1,
+        "name": "Shirly",
+        "lastName":"Battista",
+        "email": "shirly@gmail.com",
+        "password": "shirly_apetitos",
+        "category": "admin",
+        "image": "../../public/images/icons/user.png" 
+        
+    },
+    {
+        "id": 2,
+        "name": "Josue",
+        "lastName":"Matinez",
+        "email": "josue@gmail.com",
+        "password": "josue_apetitos",
+        "category": "admin",
+        "image": "../../public/images/icons/user.png" 
+    },
+    {
+        "id": 3,
+        "name": "Pablo",
+        "lastName":"Santos",
+        "email": "pablo@gmail.com",
+        "password": "pablo_apetitos",
+        "category": "admin",
+        "image": "../../public/images/icons/user.png"
+    
+    },
+    {
+        "id": 4,
+        "name": "David",
+        "lastName":"Gomez",
+        "email": "david@gmail.com",
+        "password": "david_apetitos",
+        "category": "admin",
+        "image": "../../public/images/icons/user.png"  
+    }
+]
