@@ -19,6 +19,10 @@ let productDetails = {
     titulo: "Detalle del Producto - Apetitos Delivery",
     css: "productDetails"
 }
+let productList = {
+    titulo: "Lista de Productos - Apetitos Delivery",
+    css: "productList"
+}
 // Controlador --------------------------------------------------- //
 const mainController = {
     index: function (req, res) {
@@ -49,7 +53,7 @@ const mainController = {
 
     productList: function (req, res) {
         res.render('products/productList', {
-            detalleProducto: productDetail
+            productList: productList
         });
     },
     admin: function (req, res) {
