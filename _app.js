@@ -28,6 +28,6 @@ app.get('/productCart', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/views/productCart.html'));
 });
 
-app.get('/productDetail', (req, res) => {
-    res.sendFile(path.resolve(__dirname + '/views/productDetail.html'));
+app.get('/productList', (req, res) => {
+    res.sendFile(path.resolve(__dirname + '/views/productList.html'));
 });
