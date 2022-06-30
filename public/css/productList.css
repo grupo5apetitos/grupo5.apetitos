@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.inicio p {
+    margin-left: 5px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+section article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #FF5733;
+    width: 100%;
+    height: 320px;
+    padding: 10px;
+    width: 100%;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    margin: auto;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+.textoYprecio {
+    height: 20%;
+    color: #FF5733;
+}
+
+.comprarVerMas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10%;
+    padding: 5px;
+}
+
+.titulo {
+    height: 50%;
+    padding: 2px;
+}
+
+.precio {
+    height: 50%;
+    padding: 2px;
+    font-weight: 900;
+}
+
+#ver {
+    text-decoration: none;
+}
+
+.pie-pagina {
+    background-color: #CEA780;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 539px) {
+    section article {
+        width: 40%;
+    }
+}
+
+@media (min-width: 769px) {
+    section article {
+        width: 20%;
+    }
+
+    .imagen {
+        width: 90%;
+    }
+}

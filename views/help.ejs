@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- Parte del head -->
+<%- include('./partials/head.ejs', { data: help }) %>
+<body>
+    <!-- Parte del header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- Cuerpo e la página -->
+    <main>
+        <div class="main-image">
+            <img src="/images/carrusel/carrusel-2.png" alt="¿Cómo funciona?">
+        </div>
+        <div class="contenido">
+            <div class="fila">
+                <div class="columna">
+                    <div class="icono">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div class="texto">
+                        <h3>1.- Seleccioná tu plan y elegí tus comidas</h3>
+                        <p>Elegí entre diferentes tipos de recetas cada semana. Incluyendo opciones fáciles y rápidas, altas en proteínas, y la elección del chef para quienes desean expandir sus horizontes culinarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="columna"></div>
+                <div class="columna"></div>
+            </div>
+            <div class="fila">
+                <div class="columna"></div>
+                <div class="columna"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Parte del footer  -->
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

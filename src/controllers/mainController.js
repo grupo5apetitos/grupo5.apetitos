@@ -19,6 +19,14 @@ let productDetails = {
     titulo: "Detalle del Producto - Apetitos Delivery",
     css: "productDetails"
 }
+let productList = {
+    titulo: "Lista de Productos - Apetitos Delivery",
+    css: "productList"
+ }
+let help = {
+    titulo: "¿Como funciona? - Apetitos Delivery",
+    css: "help"
+}
 // Controlador --------------------------------------------------- //
 const mainController = {
     index: function (req, res) {
@@ -49,17 +57,11 @@ const mainController = {
 
     productList: function (req, res) {
         res.render('products/productList', {
-            detalleProducto: productList
+            productList: productList
         });
     },
-    admin: function (req, res) {
-        res.render('admin/admin');
-    },
-    adminMostrar: (req, res) => {
-        res.render('admin/mostrar');
-    },
-    adminEditar: (req, res) => {
-        res.render('admin/editar');
+    help: function(req, res) {
+        res.render('help', { help } );
     }
 };
 
