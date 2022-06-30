@@ -3,12 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 // Llamado al controlador por require ---------------------------- //
-const mainController = require('../controllers/mainController');
+const adminController = require('../controllers/adminController');
 
 // Ruta para el administrador ------------------------------------ //
-router.get('/', mainController.admin);
-router.get('/mostrar', mainController.adminMostrar);
-router.get('/editar', mainController.adminEditar);
+router.get('/', adminController.admin);
+router.get('/mostrar', adminController.adminMostrar);
+router.get('/editar', adminController.adminEditar);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;

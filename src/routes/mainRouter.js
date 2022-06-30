@@ -12,6 +12,7 @@ router.get('/productCart', mainController.productCart);
 router.get('/productDetails', mainController.productDetails);
 router.get('/productList', mainController.productList);
 router.get('/register', mainController.register);
+router.get('/help', mainController.help);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;
