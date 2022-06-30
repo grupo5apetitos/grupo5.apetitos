@@ -19,6 +19,10 @@ let productDetail = {
     titulo: "Detalle del Producto - Apetitos Delivery",
     css: "productDetail"
 }
+let help = {
+    titulo: "¿Como funciona? - Apetitos Delivery",
+    css: "help"
+}
 // Controlador --------------------------------------------------- //
 const mainController = {
     index: function (req, res) {
@@ -46,14 +50,8 @@ const mainController = {
             detalleProducto: productDetail
         });
     },
-    admin: function (req, res) {
-        res.render('admin/admin');
-    },
-    adminMostrar: (req, res) => {
-        res.render('admin/mostrar');
-    },
-    adminEditar: (req, res) => {
-        res.render('admin/editar');
+    help: function(req, res) {
+        res.render('help', { help } );
     }
 };
 
