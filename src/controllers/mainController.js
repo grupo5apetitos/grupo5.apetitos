@@ -15,9 +15,9 @@ let productCart = {
     titulo: "Carrito de Compras - Apetitos Delivery",
     css: "productCart"
 }
-let productDetail = {
+let productDetails = {
     titulo: "Detalle del Producto - Apetitos Delivery",
-    css: "productDetail"
+    css: "productDetails"
 }
 let help = {
     titulo: "¿Como funciona? - Apetitos Delivery",
@@ -45,8 +45,14 @@ const mainController = {
             carritoCompras: productCart
         });
     },
-    productDetail: function (req, res) {
-        res.render('products/productDetail', {
+    productDetails: function (req, res) {
+        res.render('products/productDetails', {
+            detalleProducto: productDetails
+            
+        })},
+
+    productList: function (req, res) {
+        res.render('products/productList', {
             detalleProducto: productDetail
         });
     },
