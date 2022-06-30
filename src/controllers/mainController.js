@@ -41,8 +41,8 @@ const mainController = {
             carritoCompras: productCart
         });
     },
-    productDetail: function (req, res) {
-        res.render('products/productDetail', {
+    productList: function (req, res) {
+        res.render('products/productList', {
             detalleProducto: productDetail
         });
     },
