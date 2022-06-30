@@ -49,7 +49,7 @@ const mainController = {
 
     productList: function (req, res) {
         res.render('products/productList', {
-            detalleProducto: productDetail
+            detalleProducto: productList
         });
     },
     admin: function (req, res) {
