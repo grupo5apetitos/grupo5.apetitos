@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<!-- Parte del head -->
+<%- include('../partials/head.ejs', { data: detalleProducto }) %>
+<body>
+    <!-- Encabezado de la Página -->
+    <%- include('../partials/header.ejs') %>
+    <!-- Cuerpo de la Página-->
+    <main>
+        <section class="menu">
+            <div class="inicio">
+                <p>Inicio</p>
+                <p>></p>
+                <p>Nuestros platos</p>
+            </div>
+
+
+            <div><select name="select">
+                    <option value="value1">ensaladas</option>
+                    <option value="value2" selected>pastas</option>
+                    <option value="value3">postres</option>
+                </select></div>
+        </section>
+
+        <section class="productos">
+
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/camarones.png" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Pollo al horno con papas</p>
+                    <p class="precio">$ 850,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen">
+                    <img src="/images/platillos/empanizado.png" alt="FotoComidas">
+                </div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Tempura de Verduras</p>
+                    <p class="precio">$ 1225,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/pata_muslo.jpg" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Tallarines caseros con crema</p>
+                    <p class="precio">$ 850,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" ref="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/tarta_cebolla.jpg" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Ravioles a la bolognesa</p>
+                    <p class="precio">$ 980,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/camarones.png" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Ensalada Ceasar</p>
+                    <p class="precio">$ 830,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/empanizado.png" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Salmón rosado con ensalada</p>
+                    <p class="precio">$ 2250,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/pata_muslo.jpg" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Pizza con vegetales</p>
+                    <p class="precio">$ 650,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+            <article>
+                <div class="imagen"><img src="/images/platillos/tarta_cebolla.jpg" alt="FotoComidas"></div>
+
+                <div class="textoYprecio">
+                    <p class="titulo">Tiramisú</p>
+                    <p class="precio">$ 365,00</p>
+                </div>
+
+                <div class="comprarVerMas"><button>Comprar</button>
+                    <div><a id="ver" href="">Ver +</a></div>
+                </div>
+            </article>
+
+
+    </main>
+    <!-- Parte del footer  -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

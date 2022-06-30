@@ -2,12 +2,13 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-//REQUIRE DE mainRouter 
+
+// Llamadas a las rutas ------------------------------------------ //
 const mainRouter = require('./routes/mainRouter');
+const adminRouter = require('./routes/adminRouter');
 
 // Configuración ------------------------------------------------- //
-const publicPath = path.resolve(__dirname, '../public');
-app.use('/static', express.static(publicPath));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Template Engine EJS ------------------------------------------- //
 app.set('view engine', 'ejs');
@@ -15,6 +16,7 @@ app.set('views', path.join(__dirname, '../views'));
 
 // Vista a la rutas ---------------------------------------------- //
 app.use('/', mainRouter);
+app.use('/administrador', adminRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {
