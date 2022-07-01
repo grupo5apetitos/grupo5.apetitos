@@ -19,7 +19,7 @@
         "id": 3,
         "name": "Tarta de Cebolla",
         "description": "Tarta de Cebolla y Queso Port Salut Light (con masa de ricotta y harina Integral).",
-        "image": "tarta_cebolla.jpg",
+        "image": "tarta-de-cebolla.jpg",
         "category": "visited",
         "price": 950.00
     
@@ -37,7 +37,7 @@
         "name": "Tempura de Verduras",
         "description": "Tempura de verduras ligera y crujiente. Se puede servir con alguna salsa para mojar como la de soja.",
         "image": "empanizado.png",
-        "category": "visited",
+        "category": "mas comprado",
         "price": 1225.00
     },
     {
@@ -45,23 +45,72 @@
         "name": "Ravioles con Bolognesa",
         "description": "Deliciosos ravioles con bolognesa echos con relleno de queso y ricotta o de espinaca y una deliciosa bolonesa con salsa de tomate natural.",
         "image":"raviolis-con-salsa-bolonesa.jpg",
-        "category": "visited",
+        "category": "visitado",
         "price": 980.00
     },
     {
         "id": 7,
         "name": "Salmon con Fideos",
-        "description": "Este Salmon con fideos llena de sabor la perfecta combinacion y es un hit para toda la familia. Con una salsa teriyaki realmente esquisita. ",
+        "description": "Este Salmon con fideos llena de sabor la perfecta combinacion y es un hit para toda la familia. Con una salsa teriyaki realmente exquisita. ",
         "image": "Salmon-con-Fideos.jpg",
-        "category": "visited",
+        "category": "visitado",
         "price": 1200
     },
     {
         "id": 8,
         "name":"Lasaña",
-        "description": "La lasaña un plato delicioso elaborado de finas laminas de pasta que son rellenadas con carne, tomate, verduras, cebolla y normalmente son cocinadas con aceite de oliva. Este plato presenta una gran variedad de posibilidades ya wue hay lasañas de todo tipo. En cualquier caso, se trata de un plato muy nutritivo y esquisito!",
+        "description": "La lasaña un plato delicioso elaborado de finas laminas de pasta que son rellenadas con carne, tomate, verduras, cebolla y normalmente son cocinadas con aceite de oliva. Este plato presenta una gran variedad de posibilidades ya wue hay lasañas de todo tipo. En cualquier caso, se trata de un plato muy nutritivo y exquisito!",
         "image": "lasaña.jpg",
-        "category": "visited",
+        "category": "mas puntuado",
         "price": 980.00
     }
+    {
+        "id": 9,
+        "name": "Tallarines con Crema",
+        "description": "Los tallarines con crema que ofrecemos son echos con tallarines caseros y una cream libre de gluten para que todos la puedan disfrutar sin ningun problema.",
+        "image": "tallarines-con-crema.jpg",
+        "category": "mas puntuado",
+        "price": 850.00
+    },
+    {
+        "id": 10,
+        "name":"Ensalada",
+        "description": "Ofrecemos una ensalada unica a tu gusto. La podes armar como vos quieras. Pedilo y te la hacemos!",
+        "image": "ensalada.jpg",
+        "category":"mas puntuado",
+        "price": 800.00
+    },
+    {
+        "id": 11,
+        "name": "Caesar Salad",
+        "description": "Caeser Salad es una ensalada echa con lechuga, tomate, cubos de pan tostados, y pollo(opcional) y un adereso para Caesaer salad muy delicioso.",
+        "image":"caesar-salad.jpg" ,
+        "category":"mas comprado",
+        "price": 780.00
+    },
+    {
+        "id": 12,
+        "name": "Pizza con Vegetales",
+        "description": "Para los amantes de los vegetales, les ofrecemos una pizza con vegetales riquisima. Tradiconalmente esta echa con calabacin, berenjena, pimiento rojo, y cebollo pero le la pueden pedir a su gusto con los vegetales que mas le gusten.",
+        "image": "pizza-vegetales.jpg",
+        "category":"mas comprado",
+        "price": 980.00
+    },
+    {
+        "id": 13,
+        "name": "Pollo al Horno con Papas",
+        "description": "Les ofrecemos un Pollo al horno con papas delicioso que cuando lo prueben les va ser acordar a su infancia como lo hacia mamá.",
+        "image": "pollo-con-papas.jpg",
+        "category": "mas puntuado",
+        "price": 1100.00
+    },
+    {
+        "id": 14,
+        "name": "Tiramisu",
+        "description": "Un postre echo con capas de bizcocho soletilla junto con una deliciosa crema de Mascarpone, donde el contraste de sabores del queso, café, licor y bizcochos hacen de esta tarta un bocado difícil de olvidar.",
+        "image": "tiramisu.jpg",
+        "category":"visitado",
+        "price":1100.00
+    }
+
 ]
