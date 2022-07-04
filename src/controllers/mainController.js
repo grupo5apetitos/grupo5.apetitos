@@ -62,6 +62,32 @@ const mainController = {
     },
     help: function(req, res) {
         res.render('help', { help } );
+    },
+    createUser: function(req, res) {
+        let user = req.body;
+        // let image = req.file.filename;
+
+    },
+    getUser: function(req, res) {
+        let usuario = req.body;
+        usuario.email;
+        usuario.password;
+        let usuario_correcto;
+
+        let usuarios = JSON.stringify('userDatabase.js');
+
+        for(let i = 0; i < usuarios; i++) {
+            if (usuario.email == usuarios[i].email) {
+                if (usuario.password == usuarios[i].password){
+                    usuario_correcto = usuarios[i];
+                }
+            }
+        }
+
+        res.render('index', { 
+            inicio: index,
+            usuario: usuario_correcto
+         });
     }
 };
 

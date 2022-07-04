@@ -6,9 +6,16 @@ const router = express.Router();
 const adminController = require('../controllers/adminController');
 
 // Ruta para el administrador ------------------------------------ //
-router.get('/', adminController.admin);
-router.get('/mostrar', adminController.adminMostrar);
-router.get('/editar', adminController.adminEditar);
+router.get('/', adminController.login);
+// agregar un producto ................................. //
+router.get('/agregar', adminController.agregar);
+router.post('/mostrar', adminController.crear);
+// mostrar productos ................................... //
+router.get('/mostrar', adminController.lista);
+// editar un producto .................................. //
+router.get('/editar', adminController.editar);
+router.put('/mostrar', adminController.actualizar);
+// eliminar un producto ................................ //
 
 // Exportando router --------------------------------------------- //
 module.exports = router;

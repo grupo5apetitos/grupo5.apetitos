@@ -1,8 +1,6 @@
 //.......... REQUIRE'S.......
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
 
 //... GET ALL PRODUCTS.....//
 router.get('/products', productsController.index);
@@ -20,3 +18,7 @@ router.put('/products', productsController.update);
 
 //....DELETE ONE PRODUCT...//
 router.delete('/products/:id', productsController.destroy);
+
+router.get('/productCart', mainController.productCart);
+router.get('/productDetails', mainController.productDetails);
+router.get('/productList', mainController.productList);
