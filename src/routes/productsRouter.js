@@ -20,3 +20,8 @@ router.put('/products', productsController.update);
 
 //....DELETE ONE PRODUCT...//
 router.delete('/products/:id', productsController.destroy);
+
+
+router.get('/productCart', mainController.productCart);
+router.get('/productDetails', mainController.productDetails);
+router.get('/productList', mainController.productList);
