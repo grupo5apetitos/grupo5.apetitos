@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- Head del administrador -->
+<%- include('../partials/head_admin.ejs', { data: panel }) %>
+<body>
+    <!-- Encabezado del administrador -->
+    <%- include('../partials/header_admin.ejs') %>
+    <!-- Cuerpo del administrador -->
+    <main>
+        <!-- Menú del administrador -->
+        <%- include('menu.ejs') %>
+        <!-- Contenido del administrador -->
+        <div class="contenido">
+            <div class="panel">
+                <h2>Lista de platillos</h2>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (platillo of products) { %>
+                            <tr>
+                                <td><img src="/images/platillos/<%= platillo.image %>" alt="platillo1"></td>
+                                <td><span><%= platillo.name %></span></td>
+                                <td><span><%= platillo.description %></span></td>
+                                <td><span><%= platillo.category %></span></td>
+                                <td><span>$<%= platillo.price %></span></td>
+                                <td>
+                                    <a href="/administrador/editar/<%= platillo.id %>" class="btn">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Pie de págiona del administrador -->
+    <%- include('../partials/footer_admin.ejs') %>
+</body>
+</html>

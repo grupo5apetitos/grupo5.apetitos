@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <!-- Head del administrador -->
-<%- include('../partials/head_admin.ejs') %>
+<%- include('../partials/head_admin.ejs', { data: panel }) %>
 <body>
     <!-- Encabezado del administrador -->
     <%- include('../partials/header_admin.ejs') %>
@@ -13,7 +13,7 @@
         <div class="contenido">
             <div class="panel">
                 <h2>Agregar nuevo platillo</h2>
-                <form action="/administrador/mostrar" method="post">
+                <form action="/administrador/agregar" method="post" enctype="multipart/form-data">
                     <div class="group-form">
                         <label for="name">Nombre del platillo</label>
                         <input type="text" name="name" id="name" class="text-box" required>
@@ -23,16 +23,16 @@
                         <textarea name="description" id="description" cols="30" rows="10" class="text-box" required></textarea>
                     </div>
                     <div class="group-form">
-                        <label for="image">Imagen del platillo</label>
-                        <input type="file" name="image" id="image" class="text-box" required>
+                        <label for="imagen">Imagen del platillo</label>
+                        <input type="file" name="imagen" id="imagen" class="text-box" required>
                     </div>
                     <div class="group-form">
                         <label for="category">Categoría</label>
                         <select name="category" id="category" class="text-box">
-                            <option value="1">Desayunos</option>
-                            <option value="2">Comidas</option>
-                            <option value="3">Cenas</option>
-                            <option value="4">Postres</option>
+                            <option value="Desayuno">Desayunos</option>
+                            <option value="Comida">Comidas</option>
+                            <option value="Cena">Cenas</option>
+                            <option value="Postre">Postres</option>
                         </select>
                     </div>
                     <div class="group-form">
