@@ -11,11 +11,11 @@ router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/help', mainController.help);
 
-// Registro de usuarios ------------------------------------------ //
+// Ruta de crear usuario  ------------------------------------------//
 router.post('/login', mainController.createUser);
-router.get('/', mainController.getUser);
 
-router.put('/products', mainController.update);
+// Ruta de Obtener datos del usuario -------------------------------//
+router.get('/', mainController.getUser);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;

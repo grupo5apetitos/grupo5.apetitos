@@ -1,3 +1,7 @@
+// Todo aquello que llegue de un formulario capturarlo como un objeto literal---------------------//
+const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 // Titulos y CSS ------------------------------------------------- //
 let index = {
     titulo: "Inicio - Apetitos Delivery",
@@ -62,32 +66,31 @@ const mainController = {
     },
     help: function(req, res) {
         res.render('help', { help } );
-    },
-    createUser: function(req, res) {
+    }, 
+// Crear usuario --------------------------------------------//
+    createUser: function(req,res) {
         let user = req.body;
-        // let image = req.file.filename;
+        let image = req.file.filename;
 
-    },
+        let objectNew = {
+			id: users.length + 1,
+			name: user.name,
+			description: user.description,
+			category: user.category,
+			price: user.price,
+            image: image,
+		}
+        users.push(objectNew);
+		let arrJSON = JSON.stringify(users);
+		fs.writeFileSync(productsFilePath, arrJSON);
+		res.render('users', { users });
+    }, 
+
+// Obtener datos del usuario --------------------------------------------//
+
     getUser: function(req, res) {
-        let usuario = req.body;
-        usuario.email;
-        usuario.password;
-        let usuario_correcto;
 
-        let usuarios = JSON.stringify('userDatabase.js');
-
-        for(let i = 0; i < usuarios; i++) {
-            if (usuario.email == usuarios[i].email) {
-                if (usuario.password == usuarios[i].password){
-                    usuario_correcto = usuarios[i];
-                }
-            }
-        }
-
-        res.render('index', { 
-            inicio: index,
-            usuario: usuario_correcto
-         });
+        
     }
 };
 
