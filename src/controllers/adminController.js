@@ -23,6 +23,9 @@ const mainController = {
     },
     actualizar: (req, res) => {
 
+    },
+    eliminar: (req, res) => {
+        
     }
 };
 

@@ -16,6 +16,6 @@ router.get('/mostrar', adminController.lista);
 router.get('/editar', adminController.editar);
 router.put('/mostrar', adminController.actualizar);
 // eliminar un producto ................................ //
-
+router.delete('/eliminar', adminController.eliminar);
 // Exportando router --------------------------------------------- //
 module.exports = router;
