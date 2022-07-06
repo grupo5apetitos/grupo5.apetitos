@@ -26,7 +26,7 @@ let productDetails = {
 let productList = {
     titulo: "Lista de Productos - Apetitos Delivery",
     css: "productList"
- }
+}
 let help = {
     titulo: "¿Como funciona? - Apetitos Delivery",
     css: "help"
