@@ -31,10 +31,6 @@ router.post('/lista', adminController.session);
 router.get('/editar/:id', adminController.editar);
 router.put('/lista/:id', upload.single('image'), adminController.actualizar);
 // eliminar un producto ................................ //
-<<<<<<< HEAD
-router.delete('/eliminar', adminController.eliminar);
-=======
 router.delete('/lista/:id', adminController.eliminar);
->>>>>>> 233d869f6e4f72b91e8cfbfcaa1659ee23775c07
 // Exportando router --------------------------------------------- //
 module.exports = router;
