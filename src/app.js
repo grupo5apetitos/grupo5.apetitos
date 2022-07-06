@@ -22,6 +22,10 @@ app.use('/', mainRouter);
 //app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
 
+
+
+
+
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {
     console.log("Servidor Activo en el puerto 3000...");
