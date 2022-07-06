@@ -25,7 +25,7 @@ const administrador = {
         let password = req.body.password;
 
         let resultado = users.filter((user) => { return (user.user === usuario); });
-        (resultado[0].password === password) ? res.render('admin/lista', { panel }) : res.render('admin/login', { login });
+        (resultado[0].password === password) ? res.render('admin/lista', { panel, products }) : res.render('admin/login', { login });
     },
     mostrar: (req, res) => {
         res.render('admin/agregar', { panel });
@@ -37,7 +37,7 @@ const administrador = {
         products.push(producto);
 
         fs.writeFileSync(filePathProduct, JSON.stringify(products, null, 4));
-        res.render('admin/lista', { panel });
+        res.render('admin/lista', { panel, products });
     },
     lista: (req, res) => {
         res.render('admin/lista', { panel, products });
@@ -51,6 +51,7 @@ const administrador = {
     actualizar: (req, res) => {
         let id = req.params.id;
         let form = req.body;
+        let resultado = products.filter((producto) => { return (producto.id == id) });
         console.log(id);
         console.log('-------------------');
         console.log(form);

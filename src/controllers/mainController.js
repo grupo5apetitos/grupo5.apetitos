@@ -43,9 +43,7 @@ const mainController = {
         });
     },
     login: function (req, res) {
-        res.render('users/login', {
-            sesion: login
-        });
+        res.render('users/login', { login: login });
     },
     register: function (req, res) {
         res.render('users/register', {

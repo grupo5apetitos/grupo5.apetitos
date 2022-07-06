@@ -23,49 +23,7 @@
         </section>
 
         <section class="productos">
-
-
-            <article>
-                <% for (producto of products) { %>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-            <article>
-                <div class="imagen">
-                    <img src="/images/platillos/<%= producto.image %>" alt="FotoComidas">
-                </div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" ref="">Ver +</a></div>
-                </div>
-            </article>
-
+            <% for (producto of products) { %>
             <article>
                 <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
@@ -78,61 +36,8 @@
                     <div><a id="ver" href="">Ver +</a></div>
                 </div>
             </article>
-
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-               <% } %>
-            </article>
-
-
+            <% } %>
+        </section>
     </main>
     <!-- Parte del footer  -->
     <%- include('../partials/footer.ejs') %>
