@@ -75,19 +75,20 @@ const mainController = {
     createUser: function(req,res) {
         let user = req.body;
         let image = req.file.filename;
-
+      
         let objectNew = {
 			id: users.length + 1,
 			name: user.name,
-			description: user.description,
-			category: user.category,
-			price: user.price,
+			lastname: user.lastname,
+			email: user.email,
+			password: user.password,
             image: image,
 		}
+
         users.push(objectNew);
-		let arrJSON = JSON.stringify(users);
+		let arrJSON = JSON.stringify(users, null, 4);
 		fs.writeFileSync(productsFilePath, arrJSON);
-		res.render('users', { users });
+		res.render('users/login', { login }); 
     }, 
 
 // Obtener datos del usuario --------------------------------------------//

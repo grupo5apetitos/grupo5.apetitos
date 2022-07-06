@@ -2,43 +2,41 @@
     {
         "id": 1,
         "name": "Shirly",
-        "lastName":"Battista",
+        "lastName": "Battista",
         "email": "shirly@gmail.com",
         "user": "shirty",
         "password": "shirly_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png" 
-        
+        "image": "../../public/images/icons/user.png"
     },
     {
         "id": 2,
         "name": "Josue",
-        "lastName":"Matinez",
+        "lastName": "Matinez",
         "email": "josue@gmail.com",
         "user": "josue",
         "password": "josue_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png" 
+        "image": "../../public/images/icons/user.png"
     },
     {
         "id": 3,
         "name": "Pablo",
-        "lastName":"Santos",
+        "lastName": "Santos",
         "email": "pablo@gmail.com",
         "user": "pablo",
         "password": "pablo_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png"
-    
     },
     {
         "id": 4,
         "name": "David",
-        "lastName":"Gomez",
+        "lastName": "Gomez",
         "email": "david@gmail.com",
         "user": "david",
         "password": "david_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png"  
+        "image": "../../public/images/icons/user.png"
     }
 ]
