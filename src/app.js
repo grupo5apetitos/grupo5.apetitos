@@ -1,7 +1,7 @@
 // Módulos ------------------------------------------------------- //
+const methodOverride = require('method-override');
 const express = require('express');
 const path = require('path');
-const methodOverride = require('method-override');
 const app = express();
 
 // Llamadas a las rutas ------------------------------------------ //
@@ -11,7 +11,9 @@ const adminRouter = require('./routes/adminRouter');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extends: true }));
 app.use(methodOverride('_method'));
+app.use(express.json());
 
 // Template Engine EJS ------------------------------------------- //
 app.set('view engine', 'ejs');

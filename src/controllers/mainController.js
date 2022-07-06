@@ -1,6 +1,5 @@
-const path = require('path');
 const fs = require('fs');
-
+const path = require('path');
 // Todo aquello que llegue de un formulario capturarlo como un objeto literal---------------------//
 const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
 // Cpnvierte los datos del JSON en objetos para trabajarlos
