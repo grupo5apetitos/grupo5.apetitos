@@ -1,25 +1,26 @@
 //.......... REQUIRE'S.......
 const express = require('express');
 const router = express.Router();
+const productsController = require('../controllers/productsController');
 
 //... GET ALL PRODUCTS.....//
-router.get('/products', productsController.index);
+router.get('/', productsController.index);
 
 //.... CREATE ONE PRODUCT...//
-router.get('/products/create', productsController.create);
-router.post('/products', upload.single('platillosImage'), productsController.store);
+//router.get('/create', productsController.create);
+//router.post('/', upload.single('platillosImage'), productsController.store);
 
 //.....GET ONE PRODUCT....//
-router.get('/products/:id', productsController.detail);
+//router.get('/:id', productsController.detail);
 
 //....EDIT ONE PRODUCT...//
-router.get('/products/edit/:id', productsController.edit);
-router.put('/products', productsController.update);
+//router.get('/edit/:id', productsController.edit);
+//router.put('/', productsController.update);
 
 //....DELETE ONE PRODUCT...//
-router.delete('/products/:id', productsController.destroy);
+//router.delete('/:id', productsController.destroy);
 
 
-router.get('/productCart', mainController.productCart);
-router.get('/productDetails', mainController.productDetails);
-router.get('/productList', mainController.productList);
+router.get('/productCart', productsController.productCart);
+router.get('/productDetails', productsController.productDetails);
+router.get('/productList', productsController.productList);

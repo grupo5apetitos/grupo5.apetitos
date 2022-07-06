@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { actualizar } = require('./adminController');
-const { productList } = require('./mainController');
+
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -10,14 +9,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let index = {
     titulo: "Inicio - Apetitos Delivery",
     css: "inicio"
-}
-let login = {
-    titulo: "Inicio de Sesión - Apetitos Delivery",
-    css: "login"
-}
-let register = {
-    titulo: "Registro de Usuarios - Apetitos Delivery",
-    css: "register"
 }
 let productCart = {
     titulo: "Carrito de Compras - Apetitos Delivery",
@@ -31,62 +22,31 @@ let productList = {
     titulo: "Lista de Productos - Apetitos Delivery",
     css: "productList"
  }
-let help = {
-    titulo: "¿Como funciona? - Apetitos Delivery",
-    css: "help"
-}
+
 
 // Controlador ------------------------//
 const productsController = {
    index: (req, res) => {
-    res.render('products')
+   // res.render('products')
+   res.send('esta es la pagina de index')
    },
    
    productDetails: (req, res) => {
-    res.render('ProductDetails');
-   },
-
-   agregar: (req, res) => {
-    res.render('products/agregar');
+    res.render('products/productDetails', { productDetails });
    },
 
    productCart: (req, res) => {
-    res.render('products/productCart');
+    res.render('products/productCart', { productCart });
    },
 
    productList: (req, res) => {
-    res.render('products/productList');
+    res.render('products/productList', { productList });
    },
 
-   editar: (req,res) => {
-    res.render('products/editar');
-   },
-
-   actualizar: (req, res) => {
-    res.render('products');
-   },
-
-// Create Product ----------------//
-createProduct: (req, res) => {
-    let product = req.body;
-    let image = req.file.filename;
-
-    let newObj = {
-        id: products.length + 1,
-        name: products.name,
-        description: products.description,
-        category: products.category,
-        price: products.price,
-        image: image
-    }
-    products.push(newObj);
-    let arrJSON = JSON.stringify(products);
-    fs.writeFileSync(productsFilePath, arrJSON);
-    res.render('products', { products });
-},
 
 // Get data from product ------------//
-getProduct: (req,res) => {
+getProduct: (req,res) => { 
+    res.render('product/productList', { products });
 
 }
 
