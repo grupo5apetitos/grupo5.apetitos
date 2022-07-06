@@ -6,8 +6,8 @@ const app = express();
 
 // Llamadas a las rutas ------------------------------------------ //
 const mainRouter = require('./routes/mainRouter');
-const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouter');
+const productRouter = require('./routes/productsRouter');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
@@ -21,7 +21,7 @@ app.set('views', path.join(__dirname, '../views'));
 
 // Vista a la rutas ---------------------------------------------- //
 app.use('/', mainRouter);
-app.use('/productos', productsRouter);
+app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
 
 // Servidor a escuchar ------------------------------------------- //
