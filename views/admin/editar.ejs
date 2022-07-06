@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <!-- Head del administrador -->
-<%- include('../partials/head_admin.ejs') %>
+<%- include('../partials/head_admin.ejs', { data: panel }) %>
 <body>
     <!-- Encabezado del administrador -->
     <%- include('../partials/header_admin.ejs') %>
@@ -13,40 +13,40 @@
         <div class="contenido">
             <div class="panel">
                 <h2>Editar platillo</h2>
-                <form action="#" method="post" class="edit-form">
+                <form action="/administrador/lista/<%= resultado.id %>?_method=PUT" method="POST" class="edit-form">
                     <div class="group-column">
                         <div class="group-form">
-                            <img src="/images/platillos/camarones.png" alt="platillo">
+                            <img src="/images/platillos/<%= resultado.image %>" alt="platillo">
                         </div>
                         <div class="group-form">
-                            <label for="image">Imagen del platillo</label>
+                            <label for="image">Nueva foto del platillo</label>
                             <input type="file" name="image" id="image" class="text-box" required>
                         </div>
                         <div class="group-form">
                             <label for="name">Nombre del platillo</label>
-                            <input type="text" name="name" id="name" class="text-box" value="Camarones Empanizados" required>
+                            <input type="text" name="name" id="name" class="text-box" value="<%= resultado.name %>" required>
                         </div>
                     </div>
                     <div class="group-column">
                         <div class="group-form">
                             <label for="description">Descripción del platillo</label>
-                            <textarea name="description" id="description" cols="30" rows="10" class="text-box" required></textarea>
+                            <textarea name="description" id="description" cols="30" rows="10" class="text-box" required><%= resultado.description %></textarea>
                         </div>
                         <div class="group-form">
                             <label for="category">Categoría</label>
                             <select name="category" id="category" class="text-box">
-                                <option value="1">Desayunos</option>
-                                <option value="2" selected>Comidas</option>
-                                <option value="3">Cenas</option>
-                                <option value="4">Postres</option>
+                                <option value="Desayuno">Desayuno</option>
+                                <option value="Comida">Comida</option>
+                                <option value="Cena">Cena</option>
+                                <option value="Postre">Postre</option>
                             </select>
                         </div>
                         <div class="group-form">
                             <label for="price">Precio del platillo</label>
-                            <input type="number" name="price" id="price" class="text-box" value="11.00" required>
+                            <input type="number" name="price" id="price" class="text-box" value="<%= resultado.price %>" required>
                         </div>
                         <div class="group-form left">
-                            <button type="submit" class="btn">Guardar Platillo</button>
+                            <button type="submit" class="btn">Actualizar el Platillo</button>
                         </div>
                     </div>
                 </form>

@@ -1,0 +1,43 @@
+/**
+    Login del administrador -------------------------------------------------------------------- //
+*/
+.login {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login form {
+    width: 400px;
+    border: 1px solid #CEA780;
+    border-radius: 5px;
+    padding: 0.65rem 0.45rem;
+    margin: 0.85rem 0.45rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login img {
+    width: 150px;
+}
+
+.login .group-box {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem 0;
+    padding: 0.35rem;
+}
+
+.login .group-box .text-box,
+.login .group-box .btn {
+    border-radius: 0.35rem;
+}
+
+.login .btn {
+    background-color: #CB6715;
+    color: #F0EAD6;
+    cursor: pointer;
+}

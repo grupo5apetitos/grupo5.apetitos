@@ -4,6 +4,7 @@
         "name": "Shirly",
         "lastName":"Battista",
         "email": "shirly@gmail.com",
+        "user": "shirty",
         "password": "shirly_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png" 
@@ -14,6 +15,7 @@
         "name": "Josue",
         "lastName":"Matinez",
         "email": "josue@gmail.com",
+        "user": "josue",
         "password": "josue_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png" 
@@ -23,6 +25,7 @@
         "name": "Pablo",
         "lastName":"Santos",
         "email": "pablo@gmail.com",
+        "user": "pablo",
         "password": "pablo_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png"
@@ -33,6 +36,7 @@
         "name": "David",
         "lastName":"Gomez",
         "email": "david@gmail.com",
+        "user": "david",
         "password": "david_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png"  

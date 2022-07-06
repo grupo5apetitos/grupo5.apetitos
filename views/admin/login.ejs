@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador | Apetitos Delivery</title>
-</head>
+<%- include('../partials/head_admin.ejs', { data: login }) %>
 <body>
     <div class="login">
-        <form action="" method="post">
+        <form action="/administrador/lista" method="post">
             <div class="group-box">
-                <img src="" alt="Usuario">
+                <img src="../../images/icons/user.png" alt="Usuario">
             </div>
             <div class="group-box">
                 <label for="usuario">Usuario:</label>
@@ -18,12 +13,14 @@
             </div>
             <div class="group-box">
                 <label for="password">Contraseña:</label>
-                <input type="text" name="password" id="password" class="text-box">
+                <input type="password" name="password" id="password" class="text-box">
             </div>
             <div class="group-box">
                 <button type="submit" class="btn">Iniciar Sesión</button>
             </div>
         </form>
     </div>
+    <!-- Pie de págiona del administrador -->
+    <%- include('../partials/footer_admin.ejs') %>
 </body>
 </html>

@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 // Todo aquello que llegue de un formulario capturarlo como un objeto literal---------------------//
 const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
