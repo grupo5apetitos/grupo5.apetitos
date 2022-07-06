@@ -1,6 +1,10 @@
+const fs = require('fs');
+const path = require('path');
 // Todo aquello que llegue de un formulario capturarlo como un objeto literal---------------------//
 const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
+// Cpnvierte los datos del JSON en objetos para trabajarlos
 const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 // Titulos y CSS ------------------------------------------------- //
 let index = {
@@ -26,7 +30,7 @@ let productDetails = {
 let productList = {
     titulo: "Lista de Productos - Apetitos Delivery",
     css: "productList"
- }
+}
 let help = {
     titulo: "¿Como funciona? - Apetitos Delivery",
     css: "help"
@@ -89,9 +93,23 @@ const mainController = {
 // Obtener datos del usuario --------------------------------------------//
 
     getUser: function(req, res) {
+        let usuario = req.body; 
+        let usuarioValido;
 
+        for(let i=0; i < users.length; i++){
+            if(usuario.email == users[i].email){
+                if(usuario.password == users[i].password){
+                    usuarioValido = users[i];
+                }
+            }
+        }
+        res.render('index', {
+            inicio: index,
+            usuario: usuarioValido
+        })
         
     }
+
 };
 
 // Exportando el controlador ------------------------------------- //

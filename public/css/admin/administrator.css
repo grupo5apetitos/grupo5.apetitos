@@ -76,21 +76,6 @@ h1, h2, h3 {
     font-size: 1.1rem;
 }
 
-/**
-    Login del administrador -------------------------------------------------------------------- //
-*/
-.login {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.login form {
-    width: 400px;
-    border: 1px solidr #cecece;
-}
-
 /* Encabezado del administrador ........................ */
 header {
     display: flex;
