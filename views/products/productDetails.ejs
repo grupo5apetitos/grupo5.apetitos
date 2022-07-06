@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <!-- Parte del head -->
-<%- include('../partials/head.ejs', { data: detalleProducto }) %>
+<%- include('../partials/head.ejs', { data: productDetails }) %>
 <body>
     <!-- Encabezado de la Página -->
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <main>
-        <h1> Hola </h1>
+       <section>
+        <div class="container">
+            <div class="container-hijo"> 
+                <img src="/images/platillos/caesar-salad.jpg" alt="detalle del producto">
+            </div>
+            <div class="container-description">Una ensalada César es una ensalada de lechuga romana y croûtons (trozos de pan tostado) con jugo de limón, aceite de oliva, huevo, salsa Worcestershire, anchoas, ajo, mostaza de Dijon, queso parmesano y pimienta negra</div>
+            <div class="container-description-dos"> 
+                <h1> Ensalada César </h1>
+                <p class="price"><h2> $ 100.00 </h2></p>
+                <div class="container-price">
+                    <p><h4> 12 cuotas de</h4></p>
+                    <p><h4> $ 10.00</h4> </p>
+
+                </div>
+            </div>
+
+        </div>
+       </section>
 
 
     </main>

@@ -56,3 +56,31 @@
 
 # Retrospectiva Sprint 3
 
+1. Comenzar Hacer. 
+
+- Revision del nuevo sprint y atender dudas puntuales
+- Comunicarnos ideas y opiniones asi como estar constantemente comunicados.
+- Dividirnos tareas.
+- Daily o Weekly.
+
+2.  Hacer mas.
+
+- Daily o Weekly.
+- Mas seguimiento de como va cada integrante del grupo y atender dudas en grupo para estar al tanto de todo.
+- Mas revisiones para ver como va quedando el sprint antes de la  fecha de entrega.
+
+3. Continuar Haciendo.
+
+- Trabajo en equipo y logarr una sinergia adecuada en el transcurso del proyecto
+- Los Weeklys.
+- Comunicarnos las ideas y opiniones del Sprint asi como agendar juntas de retrospectiva
+- Seguimiento del sprint y trabajo individual.
+- Divisiones de tareas.
+
+4. Hacer menos.
+
+- No vemos nada que debamos hacer menos.
+
+5. Dejar de Hacer.
+
+- No vemos nada que dejar de hacer.

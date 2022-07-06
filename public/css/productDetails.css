@@ -96,6 +96,43 @@ section article {
     flex-wrap: wrap;
 }
 
+
+
+.container {
+    border: 1px solid red;
+}
+.container-hijo {
+    border: 1px solid rgb(37, 102, 223);
+    width: 100%;
+    margin-bottom: 15px;
+}
+.container-hijo img {
+    margin-top: 2em;
+    width: 100%;
+    object-fit: cover;
+}
+.container-description {
+    padding: 15px;
+    border: 1px solid rgb(37, 102, 223);
+    font-family: 'Ruda', sans-serif;
+}
+.container-description-dos {
+    font-family: 'Ruda', sans-serif;
+
+}
+.price{
+    margin:5px
+}
+.container-price {
+    margin: 15px;
+    display: flex;
+}
+
+
+
+
+
+
 @media (min-width: 539px) {
     section article {
         width: 40%;
