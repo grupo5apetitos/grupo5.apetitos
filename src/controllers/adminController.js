@@ -16,7 +16,7 @@ let panel = {
     css: "admin/panel"
 };
 // Controlador --------------------------------------------------- //
-const mainController = {
+const administrador = {
     login: (req, res) => {
         res.render('admin/login', { login });
     },
@@ -63,4 +63,4 @@ const mainController = {
 };
 
 // Exportando el controlador ------------------------------------- //
-module.exports = mainController;
+module.exports = administrador;

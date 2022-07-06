@@ -1,26 +1,16 @@
-//.......... REQUIRE'S.......
+// Módulos ------------------------------------------------------- //
 const express = require('express');
+const multer = require('multer');
 const router = express.Router();
+const path = require('path');
+
+// Llamado al controlador por require ---------------------------- //
 const productsController = require('../controllers/productsController');
 
-//... GET ALL PRODUCTS.....//
-router.get('/', productsController.index);
-
-//.... CREATE ONE PRODUCT...//
-//router.get('/create', productsController.create);
-//router.post('/', upload.single('platillosImage'), productsController.store);
-
-//.....GET ONE PRODUCT....//
-//router.get('/:id', productsController.detail);
-
-//....EDIT ONE PRODUCT...//
-//router.get('/edit/:id', productsController.edit);
-//router.put('/', productsController.update);
-
-//....DELETE ONE PRODUCT...//
-//router.delete('/:id', productsController.destroy);
-
-
-router.get('/productCart', productsController.productCart);
+// Rutas para los productos -------------------------------------- //
 router.get('/productDetails', productsController.productDetails);
+router.get('/productCart', productsController.productCart);
 router.get('/productList', productsController.productList);
+
+// Exportando router --------------------------------------------- //
+module.exports = router;
