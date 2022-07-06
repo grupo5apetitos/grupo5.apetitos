@@ -26,11 +26,12 @@
 
 
             <article>
-                <div class="imagen"><img src="/images/platillos/pollo-con-papas.jpg" alt="FotoComidas"></div>
+                <% for (producto of products) { %>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Pollo al horno con papas</p>
-                    <p class="precio">$ 850,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -40,12 +41,12 @@
 
             <article>
                 <div class="imagen">
-                    <img src="/images/platillos/empanizado.png" alt="FotoComidas">
+                    <img src="/images/platillos/<%= producto.image %>" alt="FotoComidas">
                 </div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Tempura de Verduras</p>
-                    <p class="precio">$ 1225,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -54,11 +55,11 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/tallarines-con-crema.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Tallarines caseros con crema</p>
-                    <p class="precio">$ 850,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -67,11 +68,11 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/raviolis-con-bolognesa.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Ravioles a la bolognesa</p>
-                    <p class="precio">$ 980,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -80,11 +81,11 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/caesar-salad.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Ensalada Ceasar</p>
-                    <p class="precio">$ 830,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -93,11 +94,11 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/Salmon-con-Fideos.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Salmón rosado con Fideos</p>
-                    <p class="precio">$ 2250,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -106,11 +107,11 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/pizza-vegetales.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Pizza con vegetales</p>
-                    <p class="precio">$ 650,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
@@ -119,16 +120,17 @@
             </article>
 
             <article>
-                <div class="imagen"><img src="/images/platillos/tiramisu.jpg" alt="FotoComidas"></div>
+                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
 
                 <div class="textoYprecio">
-                    <p class="titulo">Tiramisú</p>
-                    <p class="precio">$ 365,00</p>
+                    <p class="titulo"><%= producto.name %></p>
+                    <p class="precio">$<%= producto.price %></p>
                 </div>
 
                 <div class="comprarVerMas"><button>Comprar</button>
                     <div><a id="ver" href="">Ver +</a></div>
                 </div>
+                <% } %>
             </article>
 
 
