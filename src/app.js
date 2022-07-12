@@ -5,9 +5,10 @@ const path = require('path');
 const app = express();
 
 // Llamadas a las rutas ------------------------------------------ //
-const mainRouter = require('./routes/mainRouter');
-const adminRouter = require('./routes/adminRouter');
-const productRouter = require('./routes/productsRouter');
+const mainRouter = require('./routers/mainRouter');
+const adminRouter = require('./routers/adminRouter');
+const productRouter = require('./routers/productsRouter');
+const userRouter = require('./routers/userRouter');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
@@ -23,6 +24,7 @@ app.set('views', path.join(__dirname, '../views'));
 app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
+app.use('/usuarios', userRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {
