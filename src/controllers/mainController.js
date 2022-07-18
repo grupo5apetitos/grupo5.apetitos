@@ -73,7 +73,6 @@ const mainController = {
     createUser: function(req,res) {
         let user = req.body;
         let image = req.file.filename;
-      
         let objectNew = {
 			id: users.length + 1,
 			name: user.name,

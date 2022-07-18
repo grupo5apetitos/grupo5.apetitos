@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Josué",
+        "apellido": "Martínez",
+        "correo": "josephee.xp@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    },
+    {
+        "nombre": "Shirly",
+        "apellido": "Batista",
+        "correo": "shirly.battista.sb@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    },
+    {
+        "nombre": "David",
+        "apellido": "Gómez",
+        "correo": "david.gomez.fca@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    }
+]
