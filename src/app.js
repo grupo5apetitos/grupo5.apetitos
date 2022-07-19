@@ -12,9 +12,9 @@ const userRouter = require('./routers/userRouter');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.urlencoded({ extends: true }));
-app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 // Template Engine EJS ------------------------------------------- //
 app.set('view engine', 'ejs');
@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, '../views'));
 app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
-app.use('/usuarios', userRouter);
+app.use('/usuarios', userRouter); // en la ruta colocas el nombre que quieras XD
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {

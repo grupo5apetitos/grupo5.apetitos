@@ -27,7 +27,6 @@ router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/help', mainController.help);
 
-
 // Ruta de crear usuario  ------------------------------------------//
 router.post('/login', upload.single('image'), mainController.createUser);
 

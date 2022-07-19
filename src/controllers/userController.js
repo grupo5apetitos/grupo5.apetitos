@@ -8,10 +8,10 @@ const controller = {
     
     index: function(req, res) {
         req.params.id;
-        res.render('index');
+        res.render('users/login');
     },
     perfil: function(req, res) {
-        
+        res.render('users/perfil');
     },
     editar: function(req, res) {
         let id = req.params.id;
@@ -20,7 +20,6 @@ const controller = {
         res.render('user/editar', { panel, resultado });
     }
 }
-
 
 //Exportando el modulo del controlador --------------------------//
 module.exports = controller;

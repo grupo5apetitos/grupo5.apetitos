@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 // Obtener los datos de la carpeta data -------------------------- //
 const filePathUser = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(filePathUser, 'utf-8'));
@@ -17,8 +18,12 @@ let panel = {
 };
 // Controlador --------------------------------------------------- //
 const administrador = {
-    login: (req, res) => {
+    admin: (req, res) => {
         res.render('admin/login', { login });
+    },
+    login: (req, res) => {
+        const errors = validationResult(req);
+        return res.send(errors);
     },
     session: (req, res) => {
         let usuario = req.body.usuario;
