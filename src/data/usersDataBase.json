@@ -4,7 +4,7 @@
         "name": "Shirly",
         "lastName": "Battista",
         "email": "shirly@gmail.com",
-        "user": "shirty",
+        "user": "shirly",
         "password": "shirly_apetitos",
         "category": "admin",
         "image": "../../public/images/icons/user.png"

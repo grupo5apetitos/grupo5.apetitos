@@ -3,13 +3,18 @@
 <%- include('../partials/head_admin.ejs', { data: login }) %>
 <body>
     <div class="login">
-        <form action="/administrador/lista" method="post">
+        <% if (locals.errors) { %>
+        <% for( let oneError in errors ) { %>
+            <p><%= errors[oneError].msg %> </p>
+        <% } %>
+        <% } %>
+        <form action="/administrador/" method="post">
             <div class="group-box">
-                <img src="../../images/icons/user.png" alt="Usuario">
+                <img src="../../images/icons/user.png" alt="Email">
             </div>
             <div class="group-box">
-                <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" id="usuario" class="text-box">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" class="text-box">
             </div>
             <div class="group-box">
                 <label for="password">Contraseña:</label>
