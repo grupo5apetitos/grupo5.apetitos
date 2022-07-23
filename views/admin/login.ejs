@@ -3,11 +3,6 @@
 <%- include('../partials/head_admin.ejs', { data: login }) %>
 <body>
     <div class="login">
-        <% if (locals.errors) { %>
-            <% for( let oneError in errors ) { %>
-                <p><%= errors[oneError].msg %> </p>
-            <% } %>
-        <% } %>
         <form action="/administrador/" method="post">
             <div class="group-box">
                 <img src="../../images/icons/user.png" alt="Email">
@@ -20,6 +15,8 @@
                 <label for="password">Contraseña:</label>
                 <input type="password" name="password" id="password" class="text-box">
             </div>
+            <input type="password" name="" id="">
+
             <div class="group-box">
                 <button type="submit" class="btn">Iniciar Sesión</button>
             </div>

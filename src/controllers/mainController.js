@@ -3,7 +3,9 @@ const path = require('path');
 // Todo aquello que llegue de un formulario capturarlo como un objeto literal---------------------//
 const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
 // Cpnvierte los datos del JSON en objetos para trabajarlos
-const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const userFilePath = path.join(__dirname, '../data/user.json');
+const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+const { validationResult } = require('express-validator');
 
 
 // Titulos y CSS ------------------------------------------------- //
@@ -45,6 +47,15 @@ const mainController = {
     login: function (req, res) {
         res.render('users/login', { login: login });
     },
+     processLogin: function(req, res) {
+                const errors = validationResult(req)                
+                if (errors.isEmpty()) {
+                    
+                } else {
+                    res.render('users/login', { errors: errors.mapped(), login });
+                
+                }
+            },
     register: function (req, res) {
         res.render('users/register', {
             registro: register

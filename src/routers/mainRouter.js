@@ -20,10 +20,12 @@ const storage = multer.diskStorage({
     const upload = multer({ storage: storage });
 // Llamado al controlador por require ---------------------------- //
 const mainController = require('../controllers/mainController');
+const validationLogin = require('../middleware/validationLoginMiddleware');
 
 // Acá definimos las rutas --------------------------------------- //
 router.get('/', mainController.index );
 router.get('/login', mainController.login);
+router.post('/login', validationLogin, mainController.processLogin);
 router.get('/register', mainController.register);
 router.get('/help', mainController.help);
 
