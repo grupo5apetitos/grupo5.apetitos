@@ -1,10 +1,10 @@
 // Módulos ------------------------------------------------------- //
-const methodOverride = require('method-override');
+const methodOverride = require('method-override');  // Metodo para hacer uso de PUT 
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 
-// Llamadas a las rutas ------------------------------------------ //
+// Requiriendo a las rutas ------------------------------------------ //
 const mainRouter = require('./routers/mainRouter');
 const adminRouter = require('./routers/adminRouter');
 const productRouter = require('./routers/productsRouter');
@@ -13,12 +13,13 @@ const userRouter = require('./routers/userRouter');
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extends: true }));
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method')); //Metodo para uso de PUT
 app.use(express.json());
 
-// Template Engine EJS ------------------------------------------- //
+// Utilizando el Template Engine EJS ------------------------------------------- //
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
+
 
 // Vista a la rutas ---------------------------------------------- //
 app.use('/', mainRouter);

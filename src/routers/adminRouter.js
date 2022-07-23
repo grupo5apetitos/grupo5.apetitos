@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+
 // Ruta para el administrador ------------------------------------ //
 router.get('/', adminController.login);
 // agregar un producto ................................. //

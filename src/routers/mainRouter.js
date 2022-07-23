@@ -17,7 +17,8 @@ const storage = multer.diskStorage({
     }
 });
 
-    const upload = multer({ storage: storage });
+const upload = multer({ storage: storage });
+
 // Llamado al controlador por require ---------------------------- //
 const mainController = require('../controllers/mainController');
 
