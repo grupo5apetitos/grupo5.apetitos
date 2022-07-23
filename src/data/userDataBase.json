@@ -1,0 +1,33 @@
+[
+    {
+        "nombre": "Josué",
+        "apellido": "Martínez",
+        "email": "josephee.xp@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    },
+    {
+        "nombre": "Shirly",
+        "apellido": "Batista",
+        "email": "shirly.battista.sb@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    },
+    {
+        "nombre": "David",
+        "apellido": "Gómez",
+        "email": "david.gomez.fca@gmail.com",
+        "password": "123456",
+        "imagen": ""
+    },
+    {
+        "name": "david",
+        "lastname": "gomez",
+        "email": "david@gmail.com",
+        "email_conf": "david@gmail.com",
+        "password": "123",
+        "password_conf": "123",
+        "id": 4,
+        "image": "users-1658544644143.jpg"
+    }
+]

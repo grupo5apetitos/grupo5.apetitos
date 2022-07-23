@@ -5,34 +5,37 @@ const multer = require('multer');
 const path = require('path');
 
 //Middleware para user -------------------------------------------//
+const validationLogin = require('../middleware/validationLoginMiddleware');
 
-// Configuracion de Multer    ---------------------------------------------------//
+// Constante para indicarle a multer donde vamos aguardar los archivos-------------------//
+// Configuracion de Multer---------------------------------------------------//
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        let users = path.join(__dirname, '../../public/images/users');
         cb(null, path.join(__dirname, '../../public/images/users'));
     }, 
     filename: (req, file, cb) => {
-        //newFilename = 'users-'+ Date.now() + path.extname(file.originalname);
-        cb(null, path.join(__dirname, '../../public/images/users'));
+        newFilename = 'users-'+ Date.now() + path.extname(file.originalname);
+        cb(null, newFilename);
     }
 });
 
 const upload = multer({ storage: storage });
 
-
-//Requiriendo el controlador userController---------------------//
+//Requiriendo el controlador userController--------------------------------//
 const userController = require('../controllers/userController');
 
 //Definiendo las rutas ----------------------------- //
-router.get('/', userController.index);
+
+router.get('/login', userController.login);
+router.post('/login', validationLogin, userController.processLogin);
+
+
 router.get('/perfil', userController.perfil);
-router.put('/perfil/editar', userController.editar);
-router.post('/perfil/editar', upload.single('image'), userController.editar);
+router.put('/perfil/editar', userController.editar_perfil);
 
+router.get('/registro', userController.registro);
+router.post('/registro', upload.single('image'),userController.form_registro);
 
-
-
-// Exportando el router --------------------------//
+//Exportando el router --------------------------//
 module.exports = router;

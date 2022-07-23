@@ -7,7 +7,7 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <section class="form-register">
-        <form action="/login" method="POST" enctype="multipart/form-data">
+        <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
             <h4>Registro de Usuarios</h4>
             <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
             <input class="controls" type="text" name="lastname" id="lastname" placeholder="Apellido">
@@ -24,5 +24,4 @@
     <!-- Parte del footer  -->
     <%- include('../partials/footer.ejs') %>
 </body>
-
 </html>

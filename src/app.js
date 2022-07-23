@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, '../views'));
 app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
-app.use('/usuarios', userRouter);
+app.use('/usuarios', userRouter); // En la ruta colocas el nombre que quieras XD
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {

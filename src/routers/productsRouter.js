@@ -8,9 +8,9 @@ const path = require('path');
 const productsController = require('../controllers/productsController');
 
 // Rutas para los productos -------------------------------------- //
-router.get('/productDetails', productsController.productDetails);
-router.get('/productCart', productsController.productCart);
-router.get('/productList', productsController.productList);
+router.get('/detalleProductos', productsController.productDetails);
+router.get('/carroProductos', productsController.productCart);
+router.get('/listaProductos', productsController.productList);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;
