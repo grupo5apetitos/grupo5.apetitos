@@ -1,0 +1,47 @@
+.perfil {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 0.35rem;
+}
+
+.perfil form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil form h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.perfil .form-module {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perfil .group-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0.4rem 0.2rem;
+}
+
+.perfil .group-input img {
+    width: 200px;
+    margin: 0.6rem auto;
+}
+
+.perfil .group-input .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    background-color: #CEA780;
+    border: 1px solid #CB6715;
+    color: #F0EAD6;
+}

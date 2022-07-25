@@ -13,6 +13,10 @@ let registro = {
     titulo: "Registro de Usuarios - Apetitos Delivery",
     css: "register"
 }
+let perfil = {
+    titulo: "Perfil de Usuario -  Apetitos Delivery",
+    css: "perfil"
+}
 
 const controller = {
     
@@ -63,7 +67,7 @@ const controller = {
 //         }
 //     },
     perfil: function(req, res) {
-        res.render('users/perfil');
+        res.render('users/perfil', { perfil: perfil });
     },
     
     editar_perfil: function(req, res) {
