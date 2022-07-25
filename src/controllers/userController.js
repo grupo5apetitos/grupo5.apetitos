@@ -81,15 +81,21 @@ const controller = {
     }, 
 
     form_registro: function(req, res) {
-        
-        let userNew = req.body;
-        userNew.id = users.length + 1;
-        userNew.image = req.file.filename;
-        users.push(userNew);
-        fs.writeFileSync(userFilePath, JSON.stringify(users, null, 4));
-        res.render('users/login', { login });
-
-
+//----- Validacion desde el controlador al formulario e registro-------//
+        const errores = validationResult(req); 
+        console.log(errores);
+ 
+       if (errores.isEmpty()) {
+            let userNew = req.body;
+            userNew.id = users.length + 1;
+            userNew.image = req.file.filename;
+            users.push(userNew);
+            fs.writeFileSync(userFilePath, JSON.stringify(users, null, 4));
+            res.render('users/register', { registro });
+       } else {
+            res.render('users/register', { errors: errores.array(), registro});
+       }
+       
     },
 }
 
