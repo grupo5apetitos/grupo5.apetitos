@@ -7,10 +7,13 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <section class="form-register">
-        <% if(local.errors) {
-            erros.forEach( error => { %>
-            <p><%=  error.msg %></p>
-        <% }) %>
+        <% if (locals.errors) { %>
+            <%= errors.name.msg %>
+            <br>
+            <%= errors.lastname.msg %>
+            <br>
+            <%= errors.email.msg %>
+        <% } %>
         <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
             <h4>Registro de Usuarios</h4>
             <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
