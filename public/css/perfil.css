@@ -45,3 +45,11 @@
     border: 1px solid #CB6715;
     color: #F0EAD6;
 }
+
+/** Media Query --------------------------------------------------------------------------------  */
+
+@media (min-width: 539px) {
+    .perfil form {
+        width: 600px;
+    }
+}
