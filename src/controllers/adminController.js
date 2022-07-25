@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+
 // Obtener los datos de la carpeta data -------------------------- //
 const filePathUser = path.join(__dirname, '../data/adminDataBase.json');
 const users = JSON.parse(fs.readFileSync(filePathUser, 'utf-8'));
 
 const filePathProduct = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(filePathProduct, 'utf-8'));
+
 // Titulos y CSS ------------------------------------------------- //
 let login = {
     titulo: "Administrador - Apetitos Delivery",
@@ -16,6 +18,7 @@ let panel = {
     titulo: "Panel de Control - Apetitos Delivery",
     css: "admin/panel"
 };
+
 // Controlador --------------------------------------------------- //
 const administrador = {
     admin: (req, res) => {
@@ -23,7 +26,10 @@ const administrador = {
     },
     login: (req, res) => {
         const errors = validationResult(req);
-        return res.send(errors);
+        // return res.send(errors);
+        if (errors.length > 0) {
+            
+        }
     },
     session: (req, res) => {
         let usuario = req.body.usuario;

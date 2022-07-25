@@ -32,29 +32,35 @@ const avatar_user = multer.diskStorage({
 });
 const avatar = multer({ storage: avatar_user });
 
-// Validaciones para el Login ---------------- //
+// Validaciones para el Login ------------------------------------ //
 const validations = [
-    body('usuario')
-        .notEmpty(),
+    body('email')
+        .notEmpty().withMessage('Ingrese un correo.')
+        .isEmail().withMessage('Debe ser un correo válido.'),
     body('password')
-        .notEmpty()
+        .notEmpty().withMessage('Ingrese una contraseña.')
 ];
 
 // Acceso al administrador ------------------- //
 router.get('/', adminController.admin);
 router.post('/', validations, adminController.login);
 
-// agregar un producto ................................. //
+// agregar un producto ----------------------- //
 router.get('/agregar', adminController.mostrar);
 router.post('/agregar', upload.single('imagen'), adminController.crear);
-// mostrar productos ................................... //
+
+// mostrar productos ------------------------- //
 router.get('/lista', adminController.lista);
-// validar sesión del usuario .......................... //
+
+// validar sesión del usuario ---------------- //
 router.post('/lista', adminController.session);
-// editar un producto .................................. //
+
+// editar un producto ------------------------ //
 router.get('/editar/:id', adminController.editar);
 router.put('/lista/:id', upload.single('image'), adminController.actualizar);
-// eliminar un producto ................................ //
+
+// eliminar un producto ---------------------- //
 router.delete('/lista/:id', adminController.eliminar);
+
 // Exportando router --------------------------------------------- //
 module.exports = router;
