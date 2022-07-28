@@ -63,7 +63,9 @@ const controller = {
 //         }
 //     },
     perfil: function(req, res) {
-        res.render('users/perfil');
+        res.render('users/perfil', {
+            user: req.session.userLogged
+        });
     },
     
     editar_perfil: function(req, res) {

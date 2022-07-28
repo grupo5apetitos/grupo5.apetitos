@@ -84,3 +84,7 @@
 5. Dejar de Hacer.
 
 - No vemos nada que dejar de hacer.
+
+# Retrospectiva Sprint 4 
+
+1. 
