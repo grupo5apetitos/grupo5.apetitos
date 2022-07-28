@@ -7,17 +7,17 @@
         "user": "shirly",
         "password": "shirly_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png"
+        "image": "../../public/images/avatars/user.png"
     },
     {
         "id": 2,
-        "name": "Josue",
-        "lastName": "Matinez",
-        "email": "josue@gmail.com",
+        "name": "Josué",
+        "lastName": "Matínez",
+        "email": "josephee.xp@gmail.com",
         "user": "josue",
-        "password": "josue_apetitos",
+        "password": "Fernand0189",
         "category": "admin",
-        "image": "../../public/images/icons/user.png"
+        "image": "../../public/images/avatars/josue.png"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "user": "pablo",
         "password": "pablo_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png"
+        "image": "../../public/images/avatars/user.png"
     },
     {
         "id": 4,
@@ -37,6 +37,6 @@
         "user": "david",
         "password": "david_apetitos",
         "category": "admin",
-        "image": "../../public/images/icons/user.png"
+        "image": "../../public/images/avatars/user.png"
     }
 ]

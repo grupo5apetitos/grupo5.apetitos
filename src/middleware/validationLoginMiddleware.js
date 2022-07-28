@@ -1,4 +1,5 @@
 const { body } = require('express-validator');
+
 module.exports = [
     body('email')
         .notEmpty().withMessage('Ingrasar correo electronico').bail()

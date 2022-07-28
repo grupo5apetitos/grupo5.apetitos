@@ -6,6 +6,7 @@ const path = require('path');
 
 //Middleware para user -------------------------------------------//
 const validationLogin = require('../middleware/validationLoginMiddleware');
+const middleware = require('../middleware/middle_user');
 
 // Constante para indicarle a multer donde vamos aguardar los archivos-------------------//
 // Configuracion de Multer---------------------------------------------------//
@@ -35,7 +36,7 @@ router.get('/perfil', userController.perfil);
 router.put('/perfil/editar', userController.editar_perfil);
 
 router.get('/registro', userController.registro);
-router.post('/registro', upload.single('image'),userController.form_registro);
+router.post('/registro', upload.single('image'), middleware, userController.form_registro);
 
 //Exportando el router --------------------------//
 module.exports = router;

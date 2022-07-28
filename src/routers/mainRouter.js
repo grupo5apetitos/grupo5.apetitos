@@ -11,8 +11,7 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.index );
 router.get('/ayuda', mainController.help);
 
-
-// Ruta de Obtener datos del usuario -------------------------------//
+// Ruta de Obtener datos del usuario ----------------------------- //
 //router.get('/', mainController.getUser);
 
 // Exportando router --------------------------------------------- //
