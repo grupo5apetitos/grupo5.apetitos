@@ -7,22 +7,50 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la Página-->
     <section class="form-register">
-        <% if (locals.errors) { %>
-            <%= errors.name.msg %>
-            <br>
-            <%= errors.lastname.msg %>
-            <br>
-            <%= errors.email.msg %>
-        <% } %>
         <form action="/usuarios/registro" method="POST" enctype="multipart/form-data">
             <h4>Registro de Usuarios</h4>
-            <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
-            <input class="controls" type="text" name="lastname" id="lastname" placeholder="Apellido">
-            <input class="controls" type="email" name="email" id="email" placeholder="Correo">
-            <input class="controls" type="email" name="email_conf" id="email_conf" placeholder=" Confirmar Correo">
-            <input class="controls" type="password" name="password" id="password" placeholder="Contraseña">
-            <input class="controls" type="password" name="password_conf" id="password_conf" placeholder="Confirmar Contraseña">
-            <input type="file" name="image" id="image" class="controls">
+            <div>
+                <input class="controls" type="text" name="name" id="name" placeholder="Nombre">
+                <% if (locals.errors && errors.name) { %>
+                    <p style="color: red;"><%= errors.name.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input class="controls" type="text" name="lastname" id="lastname" placeholder="Apellido">
+                <% if (locals.errors && errors.lastname) { %>
+                    <p style="color: red;"><%= errors.lastname.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input class="controls" type="text" name="email" id="email" placeholder="Correo">
+                <% if (locals.errors && errors.email) { %>
+                    <p style="color: red;"><%= errors.email.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input class="controls" type="email" name="email_conf" id="email_conf" placeholder=" Confirmar Correo">
+                <% if (locals.errors && errors.email_conf) { %>
+                    <p style="color: red;"><%= errors.email_conf.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input class="controls" type="password" name="password" id="password" placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <p style="color: red;"><%= errors.password.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input class="controls" type="password" name="password_conf" id="password_conf" placeholder="Confirmar Contraseña">
+                <% if (locals.errors && errors.password_conf) { %>
+                    <p style="color: red;"><%= errors.password_conf.msg %> </p>
+                <% } %>
+            </div>
+            <div>
+                <input type="file" name="image" id="image" class="controls">
+                <% if (locals.errors && errors.image) { %>
+                    <p style="color: red;"><%= errors.image.msg %> </p>
+                <% } %>
+            </div>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
             <p><a href="/login">¿Ya tengo Cuenta?</a></p>

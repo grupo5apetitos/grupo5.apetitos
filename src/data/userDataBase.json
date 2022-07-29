@@ -1,33 +1,22 @@
 [
-    {
-        "nombre": "Josué",
-        "apellido": "Martínez",
-        "email": "josephee.xp@gmail.com",
-        "password": "123456",
-        "imagen": ""
-    },
-    {
-        "nombre": "Shirly",
-        "apellido": "Batista",
-        "email": "shirly.battista.sb@gmail.com",
-        "password": "123456",
-        "imagen": ""
-    },
-    {
-        "nombre": "David",
-        "apellido": "Gómez",
-        "email": "david.gomez.fca@gmail.com",
-        "password": "123456",
-        "imagen": ""
-    },
-    {
-        "name": "david",
-        "lastname": "gomez",
-        "email": "david@gmail.com",
-        "email_conf": "david@gmail.com",
-        "password": "123",
-        "password_conf": "123",
-        "id": 4,
-        "image": "users-1658544644143.jpg"
-    }
+ {
+  "id": 1,
+  "name": "shirly",
+  "lastname": "battista",
+  "email": "shirly.battista.sb@gmail.com",
+  "email_conf": "shirly.battista.sb@gmail.com",
+  "password": "$2a$10$U40nf1C1viJn78Jmn2OMjeQYW4KJo/v1je104judAFFJn5gwmRdiq",
+  "password_conf": "12345",
+  "image": "users-1659060549410.jpg"
+ },
+ {
+  "id": 2,
+  "name": "shirly",
+  "lastname": "battista",
+  "email": "shirly654@aim.com",
+  "email_conf": "shirly654@aim.com",
+  "password": "$2a$10$swhvo6Ax5HNtT8hlNmnu5.uoSygd5iEbIJofgMrcUKWhpKY/0vdCK",
+  "password_conf": "12345",
+  "image": "users-1659060817004.jpg"
+ }
 ]

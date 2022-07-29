@@ -5,7 +5,6 @@ const path = require('path');
 const userFilePath = path.join(__dirname, '../data/userDataBase.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 // Uso de express-validator para validar los datos --------------- //
-const { validationResult } = require('express-validator');
 
 // Titulos y CSS ------------------------------------------------- //
 let index = {

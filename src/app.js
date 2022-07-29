@@ -1,8 +1,7 @@
 // Módulos ------------------------------------------------------- //
-const methodOverride = require('method-override');  // Metodo para hacer uso de PUT and DELETE
 const express = require('express');
 const app = express();
-const path = require('path');
+const session = require('express-session');
 
 // Requiriendo a las rutas --------------------------------------- //
 const mainRouter = require('./routers/mainRouter');
@@ -10,11 +9,20 @@ const adminRouter = require('./routers/adminRouter');
 const productRouter = require('./routers/productsRouter');
 const userRouter = require('./routers/userRouter');
 
+const path = require('path');
+const methodOverride = require('method-override');  // Metodo para hacer uso de PUT and DELETE
+const cookieParser = require('cookie-parser');
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
+
+
+
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.urlencoded({ extends: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method')); //Metodo para uso de PUT
-app.use(express.json());
+app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
+app.use(cookieParser());
+app.use(userLoggedMiddleware);
 
 // Utilizando el Template Engine EJS ----------------------------- //
 app.set('view engine', 'ejs');

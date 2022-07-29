@@ -1,9 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require('bcryptjs');
 
 const userFilePath = path.join(__dirname, "../data/userDataBase.json");
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
+
+const User = require('../models/User');
 
 let login = {
     titulo: "Inicio de Sesión - Apetitos Delivery",
@@ -25,98 +28,68 @@ const controller = {
     processLogin: function (req, res) {
         const errors = validationResult(req);
         if (errors.isEmpty()) {
-            //     for (const user of users) {
-            //         if (user.email == req.body.email) {
-            //             if (user.password = req.body.password){
-            //                 res.redirect('/main');
-            //             }else{
-            //                 res.render('users/login', { errors: { email: { msg: 'credenciales invalidas'}}, login });
-            //             }
-            //         } else {
-            //             res.render('users/login', { errors: { email: { msg: 'no existe un usuario con este email'}}, login });
-            //         }
-            //     }
-            // } else {
-            //     res.render('users/login', { errors: errors.mapped(), login });
-
-            // }
-            let usuarioEncontrado = users.find(
-                (user) => user.email === req.body.email
-            );
+            let usuarioEncontrado = User.findByField('email', req.body.email);
             if (usuarioEncontrado) {
-                if ((usuarioEncontrado.password = req.body.password)) {
+                let validatePassword = bcryptjs.compareSync(req.body.password, usuarioEncontrado.password);
+                if (validatePassword) {
+                    delete usuarioEncontrado.password;
+                    req.session.userLogged = usuarioEncontrado;
+
+                    if (req.body.remember) {
+                        res.cookie('emailUsuario', req.body.email, { maxAge: (1000 * 60) * 100 });
+                    }
                     res.redirect("/");
                 } else {
-                    res.render("users/login", {
-                        errors: { email: { msg: "credenciales invalidas" } },
-                        login,
-                    });
+                    res.render("users/login", { errors: { email: { msg: "credenciales invalidas" } }, login});
                 }
-            },
-//    / processLogin: function(req, res) {
-//         let errors = validationResult(req);
-        
-//         if (errors.isEmpty()) {
-            
-//         } else {
-//             res.render('users/login', { errors: errors.mapped(), login });
-//         }
-//     },
-    perfil: function(req, res) {
+            }
+        } else {
+            res.render('users/login', { errors: errors.mapped(), login });
+        }
+    },
+    perfil: (req, res) => {
         res.render('users/perfil', {
             user: req.session.userLogged
         });
-    //         } else {
-    //             res.render("users/login", {
-    //                 errors: { email: { msg: "no existe un usuario con este email" } },
-    //                 login,
-    //             });
-    //         }
-    //     } else {
-    //         res.render("users/login", { errors: errors.mapped(), login });
-    //     }
-    // },
-    //    / processLogin: function(req, res) {
-    //         let errors = validationResult(req);
-
-    //         if (errors.isEmpty()) {
-
-    //         } else {
-    //             res.render('users/login', { errors: errors.mapped(), login });
-    //         }
-    //     },
-    perfil: function (req, res) {
-        res.render("users/perfil", { perfil: perfil });
     },
-
-    editar_perfil: function (req, res) {
+    editar_perfil: (req, res) => {
         let id = req.params.id;
         let resultado = products.filter((user) => {
             return user.id == id;
         });
         resultado = resultado[0];
         res.render("user/editar", { panel, resultado });
-    },
+    },//
     registro: function (req, res) {
         res.render("users/register", { registro });
     },
-
-    form_registro: function (req, res) {
+    form_registro: (req, res) => {
         //----- Validacion desde el controlador al formulario e registro-------//
         const errores = validationResult(req);
         // console.log(errores.mapped());
 
         if (errores.isEmpty()) {
-            let userNew = req.body;
-            userNew.id = users.length + 1;
-            userNew.image = req.file.filename;
-            users.push(userNew);
-            fs.writeFileSync(userFilePath, JSON.stringify(users, null, 4));
-            res.render("users/register", { registro });
+            let usuarioRegistrado = User.findByField('email', req.body.email);
+            if (usuarioRegistrado) {
+                res.render("users/register", { errors: { email: { msg: "El usuario ya se encuentra registrado" } }, login});
+            } else {
+                let usuarioCreado = {
+                    ...req.body,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    image: req.file.filename,
+                };
+                User.create(usuarioCreado);
+                res.redirect('/usuarios/login');
+            }
         } else {
             res.render("users/register", { errors: errores.mapped(), registro });
         }
     },
+    logout: function (req, res) {
+        res.clearCookie('emailUsuario');
+        req.session.destroy();
+        res.redirect('/');
+    }
 };
 
 //Exportando el modulo del controlador --------------------------//
