@@ -8,10 +8,10 @@
     <!-- Cuerpo de la página -->
     <section class="perfil">
         <form action="/usuarios/perfil" method="post" enctype="multipart/form-data">
-            <h4>Perfil de Usuario</h4>
+            <h4>Perfil de <%= users.nombre  %> </h4>
             <div class="form-module">
                 <div class="group-input">
-                    <img src="../../images/users/users-1658544718237.jpg" alt="imagen de perfil">
+                    <img src="../../images/users/<%= users.imagen %> " alt="imagen de perfil">
                 </div>
                 <div class="group-input">
                     <label for="name">Nombre:</label>
@@ -36,6 +36,9 @@
                 <div class="group-input">
                     <button type="submit" class="btn">Guardar Cambios</button>
                 </div>
+            </div>
+            <div>
+                <a href="/users/logout">Cerrar Sesion</a>
             </div>
         </form>
     </section>
