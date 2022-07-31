@@ -78,6 +78,7 @@ header {
     gap: 1.25rem;
     list-style: none;
     margin: 0 0.35rem;
+    align-items: center;
 }
 
 .top-header .sesion ul li:last-child {
@@ -93,6 +94,11 @@ header {
 .busqueda .text-box:focus,
 .busqueda .text-box:active {
     border: 1px solid #CB6715;
+}
+
+.perfil-header {
+    width: 32px;
+    border-radius: 50%;
 }
 
 /** Menú del sitio ............................................................................. */
