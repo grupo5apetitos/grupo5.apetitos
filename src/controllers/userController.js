@@ -100,7 +100,7 @@ const controller = {
             fs.writeFileSync(userFilePath, JSON.stringify(users, null, 4));
             res.render("users/register", { registro });
         } else {
-            res.render("users/register", { errors: errores.mapped(), registro });
+            res.redirect("users/register", { errors: errores.mapped(), registro });
         }
     },
 };

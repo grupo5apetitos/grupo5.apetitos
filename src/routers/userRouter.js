@@ -36,7 +36,7 @@ router.get('/perfil', userController.perfil);
 router.put('/perfil/editar', userController.editar_perfil);
 
 router.get('/registro', userController.registro);
-router.post('/registro', upload.single('image'), middleware, userController.form_registro);
+router.post('/registro', upload.single('image'), middleware.register_user, userController.form_registro);
 
 //Exportando el router --------------------------//
 module.exports = router;
