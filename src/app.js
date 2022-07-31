@@ -14,8 +14,6 @@ const methodOverride = require('method-override');  // Metodo para hacer uso de 
 const cookieParser = require('cookie-parser');
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
 
-
-
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));

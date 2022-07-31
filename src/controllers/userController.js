@@ -33,12 +33,15 @@ const controller = {
                 let validatePassword = bcryptjs.compareSync(req.body.password, usuarioEncontrado.password);
                 if (validatePassword) {
                     delete usuarioEncontrado.password;
+                    delete usuarioEncontrado.password_conf;
+                    usuarioEncontrado.session = true;
+
                     req.session.userLogged = usuarioEncontrado;
 
                     if (req.body.remember) {
                         res.cookie('emailUsuario', req.body.email, { maxAge: (1000 * 60) * 100 });
                     }
-                    res.redirect("/");
+                    res.redirect("/usuarios/perfil");
                 } else {
                     res.render("users/login", { errors: { email: { msg: "credenciales invalidas" } }, login});
                 }
@@ -48,8 +51,10 @@ const controller = {
         }
     },
     perfil: (req, res) => {
+        // console.log(req.session.userLogged);
         res.render('users/perfil', {
-            user: req.session.userLogged
+            users: req.session.userLogged,
+            perfil: perfil
         });
     },
     editar_perfil: (req, res) => {
