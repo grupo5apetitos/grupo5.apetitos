@@ -25,6 +25,7 @@ const controller = {
     login: function (req, res) {
         res.render("users/login", { login });
     },
+
     processLogin: function (req, res) {
         const errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -50,6 +51,7 @@ const controller = {
             res.render('users/login', { errors: errors.mapped(), login });
         }
     },
+
     perfil: (req, res) => {
         // console.log(req.session.userLogged);
         res.render('users/perfil', {
@@ -57,18 +59,19 @@ const controller = {
             perfil: perfil
         });
     },
+
     editar_perfil: (req, res) => {
         let id = parseInt(req.params.id);
         let form = req.body;
-        console.log(form);
-        res.send(form);
+        form.image = req.file.filename;
 
         // let usuarioEncontrado = User.findByPk(id);
-        // console.log(usuarioEncontrado);
     },
+
     registro: function (req, res) {
         res.render("users/register", { registro });
     },
+
     form_registro: (req, res) => {
         //----- Validacion desde el controlador al formulario e registro-------//
         const errores = validationResult(req);
@@ -91,6 +94,7 @@ const controller = {
             res.render("users/register", { errors: errores.mapped(), registro });
         }
     },
+
     logout: function (req, res) {
         res.clearCookie('emailUsuario');
         req.session.destroy();

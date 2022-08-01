@@ -13,7 +13,7 @@
         <div class="contenido">
             <div class="panel">
                 <h2>Editar platillo</h2>
-                <form action="/administrador/lista/<%= resultado.id %>?_method=PUT" method="POST" class="edit-form">
+                <form action="/administrador/lista/<%= resultado.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="edit-form">
                     <div class="group-column">
                         <div class="group-form">
                             <img src="/images/platillos/<%= resultado.image %>" alt="platillo">
