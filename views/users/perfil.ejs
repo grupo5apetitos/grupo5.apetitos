@@ -7,23 +7,26 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la página -->
     <section class="perfil">
-        <form action="/usuarios/perfil" method="post" enctype="multipart/form-data">
-            <h4>Perfil de <%= users.name  %> </h4>
+        <form action="/usuarios/perfil?_method=PUT" method="post" enctype="multipart/form-data">
+            <h4>Perfil de <%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %> </h4>
             <div class="form-module">
                 <div class="group-input">
-                    <img src="../../images/users/<%= users.image %> " alt="imagen de perfil">
+                    <img src="../../images/users/<%= (locals.userLogged && locals.userLogged.image)  ? locals.userLogged.image : null %> " alt="imagen de perfil">
                 </div>
                 <div class="group-input">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" class="text-box">
+                    <input type="text" name="name" id="name" class="text-box" 
+                    value="<%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %>">
                 </div>
                 <div class="group-input">
                     <label for="lastname">Apellidos:</label>
-                    <input type="text" name="lastname" id="lastname" class="text-box">
+                    <input type="text" name="lastname" id="lastname" class="text-box" 
+                    value="<%= (locals.userLogged && locals.userLogged.lastname)  ? locals.userLogged.lastname : null %>">
                 </div>
                 <div class="group-input">
                     <label for="email">Correo:</label>
-                    <input type="text" name="email" id="email" class="text-box">
+                    <input type="text" name="email" id="email" class="text-box" 
+                    value="<%= (locals.userLogged && locals.userLogged.email)  ? locals.userLogged.email : null %>">
                 </div>
                 <div class="group-input">
                     <label for="password">Cambiar Contraseña:</label>
@@ -34,6 +37,8 @@
                     <input type="file" name="image" id="image" class="text-box">
                 </div>
                 <div class="group-input">
+                    <input type="hidden" name="id" 
+                    value="<%= (locals.userLogged && locals.userLogged.id)  ? locals.userLogged.id : null %>">
                     <button type="submit" class="btn">Guardar Cambios</button>
                 </div>
             </div>
