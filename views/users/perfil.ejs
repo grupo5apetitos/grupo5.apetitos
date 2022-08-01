@@ -7,7 +7,8 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la página -->
     <section class="perfil">
-        <form action="/usuarios/perfil?_method=PUT" method="post" enctype="multipart/form-data">
+        <form action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id)  ? locals.userLogged.id : null %>?_method=PUT" 
+            method="post" enctype="multipart/form-data">
             <h4>Perfil de <%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %> </h4>
             <div class="form-module">
                 <div class="group-input">
@@ -37,8 +38,6 @@
                     <input type="file" name="image" id="image" class="text-box">
                 </div>
                 <div class="group-input">
-                    <input type="hidden" name="id" 
-                    value="<%= (locals.userLogged && locals.userLogged.id)  ? locals.userLogged.id : null %>">
                     <button type="submit" class="btn">Guardar Cambios</button>
                 </div>
             </div>
