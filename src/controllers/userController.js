@@ -58,10 +58,13 @@ const controller = {
         });
     },
     editar_perfil: (req, res) => {
-        let id = req.params.id;
-        let usuarioEncontrado = User.findByField('id', id);
-        
-        console.log(usuarioEncontrado);
+        let id = parseInt(req.params.id);
+        let form = req.body;
+        console.log(form);
+        res.send(form);
+
+        // let usuarioEncontrado = User.findByPk(id);
+        // console.log(usuarioEncontrado);
     },
     registro: function (req, res) {
         res.render("users/register", { registro });

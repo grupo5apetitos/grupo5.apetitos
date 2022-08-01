@@ -38,6 +38,16 @@
   "password": "$2a$10$m.c8VHD8ZJJ4EXr0xDFyZ.aGKPvSu6YbGLVV0M1Fz655GVZYZrbgi",
   "password_conf": "1234",
   "image": "users-1659244841635.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Hibraim",
+  "lastname": "Martínez",
+  "email": "hibraimmartinez@gmail.com",
+  "email_conf": "hibraimmartinez@gmail.com",
+  "password": "$2a$10$kZAjLI89tGUXS6ePzmlkxO6nGVKx9/kvd0q6rx9NH5duxsFRlAQbK",
+  "password_conf": "12345",
+  "image": "users-1659331500508.jpg"
  }
 
 ]
