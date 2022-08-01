@@ -130,13 +130,10 @@ header {
 
 /** Estilos para mensajes de error ............................................................. */
 .text-error {
-    border-radius: 0.35rem;
-    background-color: #ff555f;
-    border-radius: 1px solid #ff3a3a;
-}
-
-.text-error span {
-    color: #ff555f;
+    margin: 0.35rem 0;
+    font-size: 1rem;
+    color: #e70000;
+    font-size: 0.8rem;
 }
 
 /** Estilos para grupos de textos y botones .................................................... */

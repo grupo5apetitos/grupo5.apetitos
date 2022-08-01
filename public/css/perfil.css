@@ -45,6 +45,7 @@
     background-color: #CEA780;
     border: 1px solid #CB6715;
     color: #F0EAD6;
+    cursor: pointer;
 }
 
 /** Media Query --------------------------------------------------------------------------------  */

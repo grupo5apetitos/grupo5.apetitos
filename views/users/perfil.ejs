@@ -17,31 +17,56 @@
                     <label for="name">Nombre:</label>
                     <input type="text" name="name" id="name" class="text-box" 
                     value="<%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <span><%= errors.user.msg %></span>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="group-input">
                     <label for="lastname">Apellidos:</label>
                     <input type="text" name="lastname" id="lastname" class="text-box" 
                     value="<%= (locals.userLogged && locals.userLogged.lastname)  ? locals.userLogged.lastname : null %>">
+                    <% if (locals.errors && errors.lastname) { %>
+                    <div class="text-error">
+                        <span><%= errors.lastname.msg %></span>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="group-input">
                     <label for="email">Correo:</label>
                     <input type="text" name="email" id="email" class="text-box" 
                     value="<%= (locals.userLogged && locals.userLogged.email)  ? locals.userLogged.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <span><%= errors.email.msg %></span>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="group-input">
                     <label for="password">Cambiar Contraseña:</label>
                     <input type="text" name="password" id="password" class="text-box">
+                    <% if (locals.errors && errors.password) { %>
+                    <div class="text-error">
+                        <span><%= errors.password.msg %></span>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="group-input">
-                    <label for="iamge">Cambiar foto de perfil:</label>
+                    <label for="image">Cambiar foto de perfil:</label>
                     <input type="file" name="image" id="image" class="text-box">
+                    <% if (locals.errors && errors.image) { %>
+                    <div class="text-error">
+                        <span><%= errors.image.msg %></span>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="group-input">
                     <button type="submit" class="btn">Guardar Cambios</button>
                 </div>
             </div>
             <div>
-                <a href="/users/logout">Cerrar Sesion</a>
+                <a href="/usuarios/logout">Cerrar Sesion</a>
             </div>
         </form>
     </section>

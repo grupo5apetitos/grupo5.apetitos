@@ -56,8 +56,21 @@ const User = {
         return true;
     },
 
-    update: function(id) {
-        
+    update: function(id, data) {
+        let allUsers = this.findAll();
+        allUsers.forEach(user => {
+            if (user.id === id) {
+                user.name = data.name;
+                user.lastname = data.lastname;
+                user.email = data.email;
+                user.email_conf = data.email;
+                user.password = data.password;
+                user.password_conf = data.password;
+                user.image = data.image;
+            }
+        });
+        fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ' '));
+        return true;
     }
 }
 

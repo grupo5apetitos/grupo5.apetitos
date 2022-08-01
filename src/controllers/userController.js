@@ -61,11 +61,22 @@ const controller = {
     },
 
     editar_perfil: (req, res) => {
-        let id = parseInt(req.params.id);
-        let form = req.body;
-        form.image = req.file.filename;
+        const errores = validationResult(req);
 
-        // let usuarioEncontrado = User.findByPk(id);
+        if (errores.isEmpty()) {
+            let id = parseInt(req.params.id);
+            let form = req.body;
+            form.image = req.file.filename;
+            form.password = bcryptjs.hashSync(form.password, 10);
+            
+            let usuarioEncontrado = User.findByPk(id);
+            if (usuarioEncontrado) {
+                User.update(id, form);
+                res.redirect('/usuarios/perfil');
+            }
+        } else {
+            res.render("users/perfil", { errors: errores.mapped(), users: req.session.userLogged, perfil });
+        }
     },
 
     registro: function (req, res) {

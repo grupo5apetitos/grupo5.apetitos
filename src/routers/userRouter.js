@@ -5,6 +5,7 @@ const router = express.Router();
 //Middleware para user -------------------------------------------//
 const validationLogin = require('../middleware/validationLoginMiddleware');
 const validationRegister = require('../middleware/validationRegisterMiddleware');
+const validationPerfil = require('../middleware/validationPerfil');
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 const upload = require('../middleware/multerUserMiddleware');
@@ -22,7 +23,7 @@ router.get('/registro', guestMiddleware, userController.registro);
 router.post('/registro', upload.single('image'), validationRegister, userController.form_registro);
 
 router.get('/perfil', userController.perfil);
-router.put('/perfil/:id', uploadPerfil.single('image'), userController.editar_perfil);
+router.put('/perfil/:id', uploadPerfil.single('image'), validationPerfil, userController.editar_perfil);
 
 router.get('/logout', userController.logout);
 
