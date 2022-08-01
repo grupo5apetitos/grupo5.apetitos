@@ -60,6 +60,8 @@ const controller = {
     editar_perfil: (req, res) => {
         let id = req.params.id;
         let usuarioEncontrado = User.findByField('id', id);
+        
+        console.log(usuarioEncontrado);
     },
     registro: function (req, res) {
         res.render("users/register", { registro });
