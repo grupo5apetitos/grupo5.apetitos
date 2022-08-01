@@ -25,7 +25,7 @@ const controller = {
     login: function (req, res) {
         res.render("users/login", { login });
     },
-    
+
     processLogin: function (req, res) {
         const errors = validationResult(req);
         if (errors.isEmpty()) {
@@ -63,12 +63,9 @@ const controller = {
     editar_perfil: (req, res) => {
         let id = parseInt(req.params.id);
         let form = req.body;
-        let image = req.file.filename;
+        form.image = req.file.filename;
 
         // let usuarioEncontrado = User.findByPk(id);
-        console.log(form);
-        console.log("---------------");
-        console.log(image);
     },
 
     registro: function (req, res) {
