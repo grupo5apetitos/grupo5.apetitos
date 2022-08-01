@@ -87,7 +87,7 @@ const controller = {
                 res.redirect('/usuarios/login');
             }
         } else {
-            res.redirect("users/register", { errors: errores.mapped(), registro });
+            res.render("users/register", { errors: errores.mapped(), registro });
         }
     },
     logout: function (req, res) {
