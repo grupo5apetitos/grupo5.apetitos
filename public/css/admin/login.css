@@ -24,11 +24,11 @@
 
 .login img {
     width: 150px;
+    margin: auto;
 }
 
 .login .group-box {
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     margin: 0.8rem 0;
     padding: 0.35rem;

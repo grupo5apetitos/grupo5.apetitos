@@ -34,9 +34,8 @@ const avatar = multer({ storage: avatar_user });
 
 // Validaciones para el Login ------------------------------------ //
 const validations = [
-    body('email')
-        .notEmpty().withMessage('Ingrese un correo.')
-        .isEmail().withMessage('Debe ser un correo válido.'),
+    body('user')
+        .notEmpty().withMessage('Ingrese un nombre de usuario.').bail(),
     body('password')
         .notEmpty().withMessage('Ingrese una contraseña.')
 ];

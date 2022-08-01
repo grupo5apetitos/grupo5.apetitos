@@ -21,7 +21,7 @@ router.get('/registro', guestMiddleware, userController.registro);
 router.post('/registro', upload.single('image'), validationRegister, userController.form_registro);
 
 router.get('/perfil', userController.perfil);
-router.put('/perfil/editar', userController.editar_perfil);
+router.put('/perfil', userController.editar_perfil);
 
 router.get('/logout', userController.logout);
 

@@ -59,12 +59,10 @@ const controller = {
     },
     editar_perfil: (req, res) => {
         let id = req.params.id;
-        let resultado = products.filter((user) => {
-            return user.id == id;
-        });
-        resultado = resultado[0];
-        res.render("user/editar", { panel, resultado });
-    },//
+        let usuarioEncontrado = User.findByField('id', id);
+        
+        console.log(usuarioEncontrado);
+    },
     registro: function (req, res) {
         res.render("users/register", { registro });
     },
