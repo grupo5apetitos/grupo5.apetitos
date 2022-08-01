@@ -25,10 +25,16 @@ const administrador = {
         res.render('admin/login', { login });
     },
     login: (req, res) => {
-        const errors = validationResult(req);
-        // return res.send(errors);
-        if (errors.length > 0) {
-            
+        const errores = validationResult(req);
+        
+        if (errores.errors.length > 0) {
+            res.render('admin/login', {
+                errors: errores.mapped(),
+                login: login,
+                oldData: req.body
+            });
+        } else {
+            res.redirect('/administrador/lista');
         }
     },
     session: (req, res) => {
@@ -54,10 +60,15 @@ const administrador = {
         res.render('admin/lista', { panel, products });
     },
     editar: (req, res) => {
-        let id = req.params.id;
-        let resultado = products.filter((producto) => { return (producto.id == id) });
-        resultado = resultado[0];
-        res.render('admin/editar', { panel, resultado });
+        console.log(req.params.id);
+        if (req.params.id) {
+            let id = req.params.id;
+            let resultado = products.filter((producto) => { return (producto.id == id) });
+            resultado = resultado[0];
+            res.render('admin/editar', { panel, resultado });
+        } else {
+            res.redirect('administrador/lista');
+        }
     },
     actualizar: (req, res) => {
         let id = req.params.id;

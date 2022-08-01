@@ -65,6 +65,13 @@ h1, h2, h3 {
     font-size: 1.2rem;
 }
 
+.text-error {
+    margin: 0.35rem 0;
+    font-size: 1rem;
+    color: #e70000;
+    font-size: 0.8rem;
+}
+
 /** Estilos de botones principales, secundarios y de advertencia . */
 .btn {
     width: 150px;
