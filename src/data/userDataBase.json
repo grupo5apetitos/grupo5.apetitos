@@ -28,6 +28,16 @@
   "password": "$2a$10$tfZiFAeLpObQAeuap9tvUOhZDqm576PylakolEQJIlao4HVIhlkIe",
   "password_conf": "intel",
   "image": "users-1659225203971.png"
+ },
+ {
+  "id": 4,
+  "name": "David",
+  "lastname": "Gomez",
+  "email": "david@gmail.com",
+  "email_conf": "naruto@gmail.com",
+  "password": "$2a$10$m.c8VHD8ZJJ4EXr0xDFyZ.aGKPvSu6YbGLVV0M1Fz655GVZYZrbgi",
+  "password_conf": "1234",
+  "image": "users-1659244841635.jpg"
  }
 
 ]

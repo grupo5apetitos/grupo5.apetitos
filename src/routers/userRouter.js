@@ -23,8 +23,6 @@ router.post('/registro', upload.single('image'), validationRegister, userControl
 router.get('/perfil', userController.perfil);
 router.put('/perfil/editar', userController.editar_perfil);
 
-router.get('/registro', userController.registro);
-// router.post('/registro', upload.single('image'), middleware.register_user, userController.form_registro);
 router.get('/logout', userController.logout);
 
 //Exportando el router --------------------------//
