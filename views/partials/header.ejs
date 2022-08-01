@@ -13,7 +13,13 @@
         </form>
         <div class="sesion">
             <ul>
-                <li><a href="/usuarios/login"> <i class="fa-solid fa-user"></i></a></li>
+                <li>
+                    <% if (!locals.isLogged) { %>
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    <% } else { %>
+                        <a href="/usuarios/perfil"><img src="../../images/users/<%= locals.userLogged.image %>" class="perfil-header" alt="perfil"></a>
+                    <% } %>
+                </li>
                 <li><a href="/productos/carroProductos"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="/ayuda"><i class="fa-solid fa-circle-info"></i></a></li>
             </ul>

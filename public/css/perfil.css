@@ -35,6 +35,7 @@
 .perfil .group-input img {
     width: 200px;
     margin: 0.6rem auto;
+    border-radius: 100%;
 }
 
 .perfil .group-input .btn {

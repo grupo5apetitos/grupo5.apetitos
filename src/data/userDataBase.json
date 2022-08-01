@@ -18,6 +18,16 @@
   "password": "$2a$10$swhvo6Ax5HNtT8hlNmnu5.uoSygd5iEbIJofgMrcUKWhpKY/0vdCK",
   "password_conf": "12345",
   "image": "users-1659060817004.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Josué Fernando",
+  "lastname": "Martínez Higuera",
+  "email": "josephee.xp@gmail.com",
+  "email_conf": "josephee.xp@gmail.com",
+  "password": "$2a$10$tfZiFAeLpObQAeuap9tvUOhZDqm576PylakolEQJIlao4HVIhlkIe",
+  "password_conf": "intel",
+  "image": "users-1659225203971.png"
  }
 
 ]
