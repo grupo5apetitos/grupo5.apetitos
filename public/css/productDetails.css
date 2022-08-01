@@ -4,147 +4,85 @@
     box-sizing: border-box;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-    font-size: 16px;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.inicio {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-}
-
-.inicio p {
-    margin-left: 5px;
-}
-
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-section article {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 10px;
-    text-align: center;
-    border: 1px solid #FF5733;
-    width: 100%;
-    height: 320px;
-    padding: 10px;
+.container-img img{
+    margin-top: 15px;
     width: 100%;
 }
 
-.imagen {
-    display: flex;
-    justify-content: center;
-    height: 60%;
-    width: 60%;
-    margin: auto;
-}
-
-.imagen img {
-    width: 100%;
-}
-
-.textoYprecio {
-    height: 20%;
-    color: #FF5733;
-}
-
-.comprarVerMas {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 10%;
-    padding: 5px;
-}
-
-.titulo {
-    height: 50%;
-    padding: 2px;
-}
-
-.precio {
-    height: 50%;
-    padding: 2px;
-    font-weight: 900;
-}
-
-#ver {
-    text-decoration: none;
-}
-
-.pie-pagina {
-    background-color: #CEA780;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-.container {
+.detalle-productos h3{
     border: 1px solid red;
 }
-.container-hijo {
-    border: 1px solid rgb(37, 102, 223);
-    width: 100%;
-    margin-bottom: 15px;
-}
-.container-hijo img {
-    margin-top: 2em;
-    width: 100%;
-    object-fit: cover;
-}
-.container-description {
+
+.descripcion-productos {
+    border: 1px solid rgb(134, 134, 134);
     padding: 15px;
-    border: 1px solid rgb(37, 102, 223);
     font-family: 'Ruda', sans-serif;
+    margin:20px;
+    border-radius: 10px;
+    background-color: rgb(255, 249, 241);
+    
 }
-.container-description-dos {
-    font-family: 'Ruda', sans-serif;
+.descripcion-productos div img {
+    width: 25%;
+    
+}
 
-}
-.price{
-    margin:5px
-}
-.container-price {
-    margin: 15px;
+.container-datos ul{
     display: flex;
+    justify-content: space-around;
+}
+.seccion-relacionados h2 {
+    text-align: center;
+}
+.seccion-relacionados div {
+    display: inline-block;
+    list-style-type:none;
+    padding: 10px;
 }
 
-
-
-
-
+/*------------------- Media Query´s -------------------- */
 
 @media (min-width: 539px) {
-    section article {
-        width: 40%;
+    .container-img {
+        margin-top: 15px;
+        width: 100%;
     }
+    .container-img img{
+        margin-top: 15px;
+        margin-right: 50px;
+    }
+    .contenido {
+        display: block;
+    }
+    
+    .seccion-relacionados div {
+        display: inline-block;
+        padding: 15px;
+        list-style-type:none;
+    }
+    
 }
-
 @media (min-width: 769px) {
-    section article {
-        width: 20%;
+    .container-img {
+        margin-top: 15px;
+        width: 80%;
+    }
+    .container-img img{
+        margin-top: 15px;
+        width: 80%;
+        padding: 15px;
     }
 
-    .imagen {
-        width: 90%;
+    .contenido {
+        display: flex;
     }
+
+    .seccion-relacionados div {
+        display: flex;
+        justify-content: center;
+        list-style-type:none;
+        justify-content: space-around;
+    }
+
+
 }
