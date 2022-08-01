@@ -87,4 +87,28 @@
 
 # Retrospectiva Sprint 4 
 
-1. 
+1. Comenzar Hacer. 
+
+-  El nuevo sprint.
+- Comunicarnos ideas y opiniones sobre el sprint.
+- Dividirnos tareas.
+- Daily y Weekly.
+
+2. Hacer mas.
+
+- Daily o Weekly.
+- Mas seguimiento de como va cada integrante del grupo y atender dudas en grupo para estar al tanto de todo.
+- Mas revisiones para ver como va quedando el sprint antes de la  fecha de entrega.
+
+3. Hacer menos.
+
+- No vemos nada que debamos hacer menos.
+
+5. Dejar de Hacer.
+
+- No vemos nada que dejar de hacer.
+
+
+
++++++ en este sprint implementamos reetro.app aca les dejamos el link +++++
+https://www.reetro.app/ 
