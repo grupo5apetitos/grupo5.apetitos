@@ -10,14 +10,14 @@ const productRouter = require('./routers/productsRouter');
 const userRouter = require('./routers/userRouter');
 
 const path = require('path');
-const methodOverride = require('method-override');  // Metodo para hacer uso de PUT and DELETE
+const methodOverride = require('method-override');  // Método para hacer uso de PUT & DELETE
 const cookieParser = require('cookie-parser');
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(methodOverride('_method')); // Método para uso de PUT & DELETE
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method')); //Metodo para uso de PUT
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(cookieParser());
 app.use(userLoggedMiddleware);

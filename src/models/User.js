@@ -54,6 +54,10 @@ const User = {
         let finalUsers = allUsers.filter(user => user.id !== id);
         fs.writeFileSync(this.filename, JSON.stringify(finalUsers, null, ' '));
         return true;
+    },
+
+    update: function(id) {
+        
     }
 }
 

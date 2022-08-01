@@ -8,6 +8,7 @@ const validationRegister = require('../middleware/validationRegisterMiddleware')
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 const upload = require('../middleware/multerUserMiddleware');
+const uploadPerfil = require('../middleware/userPerfilMiddleware');
 
 //Requiriendo el controlador userController--------------------------------//
 const userController = require('../controllers/userController');
@@ -21,7 +22,7 @@ router.get('/registro', guestMiddleware, userController.registro);
 router.post('/registro', upload.single('image'), validationRegister, userController.form_registro);
 
 router.get('/perfil', userController.perfil);
-router.put('/perfil/:id', userController.editar_perfil);
+router.put('/perfil/:id', uploadPerfil.single('image'), userController.editar_perfil);
 
 router.get('/logout', userController.logout);
 
