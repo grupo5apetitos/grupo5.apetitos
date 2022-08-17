@@ -35,8 +35,3 @@
 > + Nos ayudamos entre todos para entendre las dudas que teniamos  y para sulucionar los errores que surguieron el camino.
 > + Trabajamos en equipo para realizar el sprint. 
 > + Compartimos ideas para lograr dar con la solucion mas optima y poder implementarlo como equipo en el proyecto, así como estar comunicado todo el tiempo.
-
-
-
-
-

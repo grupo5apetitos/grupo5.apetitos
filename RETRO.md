@@ -108,7 +108,22 @@
 
 - No vemos nada que dejar de hacer.
 
+# Retrospectiva Sprint 5
 
+1. Comenzar Hacer.
+    - Realizar el análisis del nuevo sprint.
+    - Repartir los puntos del sprint deacuerdo al conocimiento que tiene cada uno de nosotros.
+    - Planear los días de reuniones para revisar avances o solucionar problemas.
+2. Hacer Más.
+    - Mejorar los tiempos de cada quien.
+    - Realizar investigaciones más allá del contenido de la clase.
+3. Continuar Haciendo.
+    - Comunicarnos, dar ideas y opiniones.
+    - Daily y Weekly.
+4. Hacer Menos.
+    - No hay nada que podamos hacer menos.
+5. Dejar de Hacer.
+    - No hay nada que podamos dejar de hacer.
 
 +++++ en este sprint implementamos reetro.app aca les dejamos el link +++++
-https://www.reetro.app/ 
+https://www.reetro.app/
