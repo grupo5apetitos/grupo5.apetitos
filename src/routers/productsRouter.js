@@ -12,5 +12,9 @@ router.get('/detalleProductos', productsController.productDetails);
 router.get('/carroProductos', productsController.productCart);
 router.get('/listaProductos', productsController.productList);
 
+// CRUD ------------------------------------------------------------// 
+
+router.post('/add', productsController.create);
+
 // Exportando router --------------------------------------------- //
 module.exports = router;

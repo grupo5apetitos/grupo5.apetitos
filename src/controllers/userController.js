@@ -110,8 +110,53 @@ const controller = {
         res.clearCookie('emailUsuario');
         req.session.destroy();
         res.redirect('/');
-    }
-};
+    },
+
+    // CRUD CON SEQUELIZE PARA MANEJO DEL ORM
+
+    create:function(req,res) {
+            User.create({
+                    
+                name: res.body.name,
+                last_name: req.body.last_name,
+                user_name: req.body.user_name,
+                email: req.body.email,
+                password: req.body.password,
+                avatar: req.body.avatar,
+                id_profile: req.body.id_profile 
+            })
+
+            res.redirect('/', { });
+    },
+
+    edit: function(req,res){
+            User.findByPk(req.params.id)   // Opcion de usar findByAll()
+                .then((locals)=> {
+                    res.redirect('/perfil');
+                })        
+    },
+    update: function(req, res){
+
+    },
+
+    delete:function(req,res) {
+        User.destroy(
+        
+        {
+            where: {
+                id: req.params.id
+            }
+
+        })
+
+            res.redirect('');
+     },
+
+    
+
+
+}
+
 
 //Exportando el modulo del controlador --------------------------//
 module.exports = controller;

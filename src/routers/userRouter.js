@@ -27,5 +27,13 @@ router.put('/perfil/:id', uploadPerfil.single('image'), validationPerfil, userCo
 
 router.get('/logout', userController.logout);
 
+//CRUD con sequelize -------------------------------//
+
+router.post('/add', userController.create);
+router.get('/edit/:id', userController.edit);
+router.post('/edit/:id' , userController.update)
+router.delete('/delete/:id', userController.delete);
+
+
 //Exportando el router --------------------------//
 module.exports = router;
