@@ -29,12 +29,10 @@ router.get('/logout', userController.logout);
 
 //CRUD con sequelize -------------------------------//
 
-/*
 router.post('/add', userController.create);
 router.get('/edit/:id', userController.edit);
 router.put('/edit/:id' , userController.update)
 router.delete('/delete/:id', userController.delete);
-*/
 
 
 //Exportando el router --------------------------//
