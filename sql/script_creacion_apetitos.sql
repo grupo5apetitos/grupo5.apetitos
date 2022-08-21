@@ -50,8 +50,8 @@ ALTER TABLE meals ADD PRIMARY KEY (id_meals);
 ALTER TABLE category ADD PRIMARY KEY (id_category);
 ALTER TABLE shopping_cart ADD PRIMARY KEY (id_cart);
 
-ALTER TABLE users ADD CONSTRAINT FK_users_profile FOREIGN KEY (id_profile) REFERENCES users_profile(id_profile);
-ALTER TABLE meals ADD CONSTRAINT FK_meals_category FOREIGN KEY (id_category) REFERENCES category(id_category);
-ALTER TABLE shopping_cart ADD CONSTRAINT FK_cart_users FOREIGN KEY (id_users) REFERENCES users(id_users);
-ALTER TABLE cart_meals ADD CONSTRAINT FK_cart_meals FOREIGN KEY (id_cart) REFERENCES shopping_cart(id_cart);
-ALTER TABLE cart_meals ADD CONSTRAINT FK_shopping_cart_meals FOREIGN KEY (id_meals) REFERENCES meals(id_meals);
+ALTER TABLE users ADD CONSTRAINT FK_users_profile FOREIGN KEY (id_profile) REFERENCES users_profile(id_profile) ON DELETE CASCADE;
+ALTER TABLE meals ADD CONSTRAINT FK_meals_category FOREIGN KEY (id_category) REFERENCES category(id_category) ON DELETE CASCADE;
+ALTER TABLE shopping_cart ADD CONSTRAINT FK_cart_users FOREIGN KEY (id_users) REFERENCES users(id_users) ON DELETE CASCADE;
+ALTER TABLE cart_meals ADD CONSTRAINT FK_cart_meals FOREIGN KEY (id_cart) REFERENCES shopping_cart(id_cart) ON DELETE CASCADE;
+ALTER TABLE cart_meals ADD CONSTRAINT FK_shopping_cart_meals FOREIGN KEY (id_meals) REFERENCES meals(id_meals) ON DELETE CASCADE;
