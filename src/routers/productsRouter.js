@@ -15,7 +15,7 @@ router.get('/listaProductos', productsController.productList);
 // CRUD ------------------------------------------------------------//
 router.post('/crearProducto', productsController.productCreate);
 router.put('/editarProducto/:id', productsController.productEdit);
-router.delete('/deleteProduct/:id', productsController.productDelete);
+router.delete('/eliminarProducto/:id', productsController.productDelete);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;
