@@ -1,37 +1,39 @@
 module.exports = (sequelize, dataTypes) => {
     const alias = 'Meals';
-    const cols = { 
+    const cols = 
+    {
         id_meals: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
-        name:{
-            type:dataTypes.STRING(80), 
+        name: {
+            type: dataTypes.STRING(80),
             allowNull: false
         },
-        description:{
-            type:dataTypes.STRING(400),
+        description: {
+            type: dataTypes.STRING(500),
             allowNull: false
         },
-        price:{
-            type:dataTypes.INTEGER,
+        price: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        image:{
-            type:dataTypes.STRING(100),
+        image: {
+            type: dataTypes.STRING(100),
             allowNull: false
+        },
+        id_category: {
+            type: dataTypes.TINYINT
         }
     };
-        let config = {
-            timestamps: true,
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
-            deletedAt: false
-        }
+    const config = {
+        timestamps: false,
+        deletedAt: false
+    }
 
-    const Shopping_Car = sequelize.define(alias, cols, config);
-    return Shopping_Car;
+    const Meals = sequelize.define(alias, cols, config);
 
+    return Meals;
 }

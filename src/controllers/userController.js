@@ -6,7 +6,7 @@ const userFilePath = path.join(__dirname, "../data/userDataBase.json");
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 
-const User = require('../models/User');
+const Users = require("../database/models/Users");
 
 let login = {
     titulo: "Inicio de Sesión - Apetitos Delivery",
@@ -44,7 +44,7 @@ const controller = {
                     }
                     res.redirect("/usuarios/perfil");
                 } else {
-                    res.render("users/login", { errors: { email: { msg: "credenciales invalidas" } }, login});
+                    res.render("users/login", { errors: { email: { msg: "credenciales invalidas" } }, login });
                 }
             }
         } else {
@@ -68,7 +68,7 @@ const controller = {
             let form = req.body;
             form.image = req.file.filename;
             form.password = bcryptjs.hashSync(form.password, 10);
-            
+
             let usuarioEncontrado = User.findByPk(id);
             if (usuarioEncontrado) {
                 User.update(id, form);
@@ -91,7 +91,7 @@ const controller = {
         if (errores.isEmpty()) {
             let usuarioRegistrado = User.findByField('email', req.body.email);
             if (usuarioRegistrado) {
-                res.render("users/register", { errors: { email: { msg: "El usuario ya se encuentra registrado" } }, login});
+                res.render("users/register", { errors: { email: { msg: "El usuario ya se encuentra registrado" } }, login });
             } else {
                 let usuarioCreado = {
                     ...req.body,
@@ -114,47 +114,40 @@ const controller = {
 
     // CRUD CON SEQUELIZE PARA MANEJO DEL ORM
 
-    create:function(req,res) {
-            User.create({
-                    
-                name: res.body.name,
-                last_name: req.body.last_name,
-                user_name: req.body.user_name,
-                email: req.body.email,
-                password: req.body.password,
-                avatar: req.body.avatar,
-                id_profile: req.body.id_profile 
+    create: function (req, res) {
+        User.create({
+            name: res.body.name,
+            last_name: req.body.last_name,
+            user_name: req.body.user_name,
+            email: req.body.email,
+            password: req.body.password,
+            avatar: req.body.avatar,
+            id_profile: req.body.id_profile
+        });
+
+        res.redirect('/', {});
+    },
+
+    edit: function (req, res) {
+        User.findByPk(req.params.id)   // Opcion de usar findByAll()
+            .then((locals) => {
+                res.redirect('/perfil');
+            })
+    },
+    update: function (req, res) {
+
+    },
+
+    delete: function (req, res) {
+        User.destroy(
+            {
+                where: {
+                    id: req.params.id
+                }
             })
 
-            res.redirect('/', { });
+        res.redirect('');
     },
-
-    edit: function(req,res){
-            User.findByPk(req.params.id)   // Opcion de usar findByAll()
-                .then((locals)=> {
-                    res.redirect('/perfil');
-                })        
-    },
-    update: function(req, res){
-
-    },
-
-    delete:function(req,res) {
-        User.destroy(
-        
-        {
-            where: {
-                id: req.params.id
-            }
-
-        })
-
-            res.redirect('');
-     },
-
-    
-
-
 }
 
 

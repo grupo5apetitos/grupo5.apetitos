@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { findByPk } = require("../models/User");
-const User = require("../models/User");
-const Products = require('../models/User');
+
+const Users = require("../database/models/Users");
+const Meals = require('../database/models/Meals');
 
 // Obteniendo el arreglo de productos desde el JSON ------------------------ //
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
@@ -46,23 +46,24 @@ const productos = {
     },
 
     // CRUD -----------------------------------------------------------------// 
-    create: function(req, res) {
-            User.create({
-                name: req.body.name,
-                descripcion: req.body.descripcion,
-                price: req.body.price,
-                image: req.body.image,
-                // Duda si pongo el id_category
-            })
-            res.redirect('/productList');
+    productCreate: function(req, res) {
+        User.create({
+            name: req.body.name,
+            descripcion: req.body.descripcion,
+            price: req.body.price,
+            image: req.body.image,
+            id_category: req.body.id_category
+        });
 
+        res.redirect('productList');
     }, 
 
-    edit:function(req, res){
-        Products.update(findByPk)
-            .then(()=>{
-                
-            })
+    productEdit: function(req, res) {
+        
+    },
+
+    productDelete: function(req, res) {
+
     }
 };
 

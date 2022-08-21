@@ -12,9 +12,10 @@ router.get('/detalleProductos', productsController.productDetails);
 router.get('/carroProductos', productsController.productCart);
 router.get('/listaProductos', productsController.productList);
 
-// CRUD ------------------------------------------------------------// 
-
-router.post('/add', productsController.create);
+// CRUD ------------------------------------------------------------//
+router.post('/crearProducto', productsController.productCreate);
+router.put('/editarProducto/:id', productsController.productEdit);
+router.delete('/deleteProduct/:id', productsController.productDelete);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;

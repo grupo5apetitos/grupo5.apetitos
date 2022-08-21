@@ -4,8 +4,7 @@ module.exports = {
     "password": null,
     "database": "apetitos_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "port":"3307"   // Pon el puerto  que tenes configurado
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

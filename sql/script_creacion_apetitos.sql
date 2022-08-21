@@ -23,7 +23,7 @@ CREATE TABLE meals (
 	id_meals INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(80) NOT NULL,
     description VARCHAR(500) NOT NULL,
-    price INT NOT NULL,
+    price DOUBLE NOT NULL,
     image VARCHAR(100) NOT NULL,
     id_category TINYINT
 );
