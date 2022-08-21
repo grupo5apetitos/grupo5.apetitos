@@ -3,7 +3,7 @@ CREATE DATABASE apetitos_db;
 USE apetitos_db;
 
 CREATE TABLE users (
-	id_users INT NOT NULL AUTO_INCREMENT,
+	id_users INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL,
     email VARCHAR(70) NOT NULL,
     name VARCHAR(50) NOT NULL,
@@ -14,13 +14,13 @@ CREATE TABLE users (
 );
 
 CREATE TABLE users_profile (
-	id_profile TINYINT AUTO_INCREMENT NOT NULL,
+	id_profile TINYINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     abrev CHAR(5)
 );
 
 CREATE TABLE meals (
-	id_meals INT NOT NULL AUTO_INCREMENT,
+	id_meals INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(80) NOT NULL,
     description VARCHAR(500) NOT NULL,
     price INT NOT NULL,
@@ -29,26 +29,20 @@ CREATE TABLE meals (
 );
 
 CREATE TABLE category (
-	id_category TINYINT NOT NULL AUTO_INCREMENT,
+	id_category TINYINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50)
 );
 
 CREATE TABLE shopping_cart (
-	id_cart INT NOT NULL AUTO_INCREMENT,
+	id_cart INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_users INT NOT NULL
 );
 
 CREATE TABLE cart_meals (
-	id INT NOT NULL AUTO_INCREMENT,
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cart INT NOT NULL,
     id_meals INT NOT NULL
 );
-
-ALTER TABLE users ADD PRIMARY KEY (id_users);
-ALTER TABLE users_profile ADD PRIMARY KEY (id_profile);
-ALTER TABLE meals ADD PRIMARY KEY (id_meals);
-ALTER TABLE category ADD PRIMARY KEY (id_category);
-ALTER TABLE shopping_cart ADD PRIMARY KEY (id_cart);
 
 ALTER TABLE users ADD CONSTRAINT FK_users_profile FOREIGN KEY (id_profile) REFERENCES users_profile(id_profile) ON DELETE CASCADE;
 ALTER TABLE meals ADD CONSTRAINT FK_meals_category FOREIGN KEY (id_category) REFERENCES category(id_category) ON DELETE CASCADE;
