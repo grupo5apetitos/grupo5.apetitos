@@ -6,7 +6,11 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
-        }  
+        },
+        id_users: {
+            type: dataTypes.INTEGER,
+            allowNull: false
+        } 
     };
 
     let config = {

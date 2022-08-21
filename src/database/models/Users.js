@@ -30,6 +30,11 @@ module.exports = (sequelize, dataTypes) => {
             avatar:{
                 type:dataTypes.STRING(100),
                 allowNull:false
+            },
+            id_profile:{
+                type:dataTypes.TINYINT,
+                allowNull: false
+
             }   
         };
             let config = {
