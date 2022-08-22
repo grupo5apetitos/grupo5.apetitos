@@ -16,23 +16,17 @@ module.exports = (sequelize, dataTypes) => {
         },
         
     };
-    
         const config = {
-            
             timestamps: false,
             deletedAt: false
     }
-
-        const Meals = sequelize.define(alias, cols, config);
-
-        Category.associate = function(models) {
-                Meals.hasMany(model.Meals, {
+    const category = sequelize.define(alias, cols, config);
+    
+    Category.associate = function(models) {
+                Category.hasMany(models.Meals, {
                     as: 'categorys',
                     foreigKey: 'id_category'
-                })
+            })
         }
-
-
-
-    return Meals;
+    return category;
 }

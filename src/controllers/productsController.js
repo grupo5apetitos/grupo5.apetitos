@@ -9,6 +9,7 @@ const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 // Titulos y CSS ----------------------------------------------------------- //
+
 let index = {
     titulo: "Inicio - Apetitos Delivery",
     css: "inicio",
@@ -46,26 +47,37 @@ const productos = {
     },
     productCreate: function(req, res) {
         Meals.create({
+                name: req.body.name,
+                descripcion: req.body.descripcion,
+                price: req.body.price,
+                image: req.body.image,
+                id_category: req.body.id_category
+        });
+        res.redirect('productList');
+    }, 
+
+    productEdit: function(req, res) {
+        Meals.update({
             name: req.body.name,
             descripcion: req.body.descripcion,
             price: req.body.price,
             image: req.body.image,
             id_category: req.body.id_category
-        });
-
-        res.redirect('productList');
-    }, 
-/*
-    productEdit: function(req, res) {
-        Meals.update(req.params.id)
-            name: '',
-            descripcion: '',
-            price: '',
-
-    },*/
+         },{
+            where:{
+                id:req.params.id
+            }
+         })
+            .then(function(){
+                res.redirect('/productList');
+            })
+    },
 
     productDelete: function(req, res) {
-
+        Meals.findByPk(req.params.id)
+            .then(function(products){
+                res.render('/productList', { products })
+            })
     }
 };
 
