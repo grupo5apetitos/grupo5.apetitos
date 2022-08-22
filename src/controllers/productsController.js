@@ -44,10 +44,8 @@ const productos = {
     productList: (req, res) => {
         res.render("products/productList", { productList, products });
     },
-
-    // CRUD -----------------------------------------------------------------// 
     productCreate: function(req, res) {
-        User.create({
+        Meals.create({
             name: req.body.name,
             descripcion: req.body.descripcion,
             price: req.body.price,
@@ -57,10 +55,14 @@ const productos = {
 
         res.redirect('productList');
     }, 
-
+/*
     productEdit: function(req, res) {
-        
-    },
+        Meals.update(req.params.id)
+            name: '',
+            descripcion: '',
+            price: '',
+
+    },*/
 
     productDelete: function(req, res) {
 
