@@ -1,34 +1,20 @@
 const { BelongsTo } = require("sequelize/types");
 
 module.exports = (sequelize, dataTypes) => {
-    const alias = 'Meals';
+    const alias = 'Category';
     const cols = 
     {
-        id_meals: {
+        id_category: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(80),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
-        description: {
-            type: dataTypes.STRING(500),
-            allowNull: false
-        },
-        price: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        image: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-        },
-        id_category: {
-            type: dataTypes.TINYINT
-        }
+        
     };
     
         const config = {
@@ -39,9 +25,9 @@ module.exports = (sequelize, dataTypes) => {
 
         const Meals = sequelize.define(alias, cols, config);
 
-        Meals.associate = function(models) {
-                Meals.belongsTo(model.Category, {
-                    as: 'category',
+        Category.associate = function(models) {
+                Meals.hasMany(model.Meals, {
+                    as: 'categorys',
                     foreigKey: 'id_category'
                 })
         }
