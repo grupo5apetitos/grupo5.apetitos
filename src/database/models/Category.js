@@ -13,16 +13,14 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     const config = {
+        tableName: 'category',
         timestamps: false,
         deletedAt: false,
-    }
+
+    };
+    
     const Category = sequelize.define(alias, cols, config);
-/*
-    Category.associate = function(models) {
-        Category.belongsTo(models.Meals, {
-            as: "meals",  // A la tabla que estamos asociando
-            foreigKey: "id_category",
-        });
-    }*/
+
+
     return Category;
 };

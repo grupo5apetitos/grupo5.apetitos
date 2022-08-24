@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Shopping_Car";
+    const alias = "ShoppingCart";
     const cols = {
         id_cart: {
             type: dataTypes.INTEGER,
@@ -21,7 +21,8 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false,
     };
 
-    const Shopping_Car = sequelize.define(alias, cols, config);
+    const ShoppingCart = sequelize.define(alias, cols, config);
+    
     Meals.associate = function (models) {
         Meals.belongsTo(models.Meals, {
             as: 'meals',
@@ -32,5 +33,6 @@ module.exports = (sequelize, dataTypes) => {
             onDelete: 'CASCADE',
         })
     }
-    return Shopping_Car;
+
+    return ShoppingCart;
 };
