@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const db = require('../database/models');
 const Users = require("../database/models/Users");
-const Meals = require('../database/models/Meals');
+const Meals = db.Meals;
 
 // Obteniendo el arreglo de productos desde el JSON ------------------------ //
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");

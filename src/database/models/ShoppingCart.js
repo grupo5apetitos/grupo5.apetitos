@@ -23,8 +23,8 @@ module.exports = (sequelize, dataTypes) => {
 
     const ShoppingCart = sequelize.define(alias, cols, config);
     
-    Meals.associate = function (models) {
-        Meals.belongsTo(models.Meals, {
+    ShoppingCart.associate = function (models) {
+        ShoppingCart.belongsTo(models.Meals, {
             as: 'meals',
             through: 'cart_meals',
             foreigKey: 'id_meals',  // Se toman las PK Y FK  los de la tabla extra
