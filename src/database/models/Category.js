@@ -15,14 +15,14 @@ module.exports = (sequelize, dataTypes) => {
     const config = {
         timestamps: false,
         deletedAt: false,
-    };
-    const category = sequelize.define(alias, cols, config);
-
-    Category.associate = function (models) {
-        Category.hasMany(models.Meals, {
+    }
+    const Category = sequelize.define(alias, cols, config);
+/*
+    Category.associate = function(models) {
+        Category.belongsTo(models.Meals, {
             as: "meals",  // A la tabla que estamos asociando
             foreigKey: "id_category",
         });
-    }
-    return category;
+    }*/
+    return Category;
 };

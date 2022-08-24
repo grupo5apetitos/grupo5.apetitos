@@ -36,23 +36,21 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Meals = sequelize.define(alias, cols, config);
-    // Definiendo asociacion de Meals con Category-----------------------------------// 
+    // Definiendo asociacion de Meals con Category-----------------------------------//
+
     Meals.associate = function (models) {
         Meals.belongsTo(models.Category, {
             as: 'category',
             foreigKey: 'id_category'
-        })
-    }
-
-    Meals.associate = function (models) {
-        Meals.belongsTo(models.ShoppingCart, {
+        });
+        Meals.belongsToMany(models.Shopping_Cart, {
             as: 'shopping_cart',
             through: 'cart_meals',
             foreigKey: 'id_meals',  // Se toman los de la tabla extra
             otherKey: 'id_cart',
             timestamps: false,
             onDelete: 'CASCADE',
-        })
+        });
     }
     return Meals;
 }

@@ -10,8 +10,9 @@ const productsController = require('../controllers/productsController');
 // Rutas para los productos -------------------------------------- //
 router.get('/detalleProductos', productsController.productDetails);
 router.get('/carroProductos', productsController.productCart);
-router.get('/listaProductos', productsController.productList);
+//router.get('/listaProductos', productsController.productList);
 
+router.get('/listaProductos', productsController.productListCrud);
 // CRUD ------------------------------------------------------------//
 router.post('/crearProducto', productsController.productCreate);
 router.put('/editarProducto/:id', productsController.productEdit);
