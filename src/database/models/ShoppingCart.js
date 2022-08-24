@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Shopping_Car";
+    const alias = "ShoppingCart";
     const cols = {
         id_cart: {
             type: dataTypes.INTEGER,
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false,
     };
 
-    const Shopping_Car = sequelize.define(alias, cols, config);
+    const ShoppingCart = sequelize.define(alias, cols, config);
 
-    return Shopping_Car;
+    return ShoppingCart;
 };
