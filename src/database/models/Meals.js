@@ -1,8 +1,7 @@
-const { BelongsTo } = require("sequelize/types");
 
 module.exports = (sequelize, dataTypes) => {
     const alias = 'Meals';
-    const cols = 
+    const cols =
     {
         id_meals: {
             type: dataTypes.INTEGER,
@@ -30,19 +29,19 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TINYINT
         }
     };
-        const config = {
-            tableName: 'meals',
-            timestamps: false,
-            deletedAt: false
+    const config = {
+        tableName: 'meals',
+        timestamps: false,
+        deletedAt: false
     }
 
-        const Meals = sequelize.define(alias, cols, config);
-// Definiendo asociacion de Meals con Category-----------------------------------// 
-        Meals.associate = function(models) {
-                Meals.belongsTo(models.Category, {
-                    as: 'category',
-                    foreigKey: 'id_category'
-            })
-        }
+    const Meals = sequelize.define(alias, cols, config);
+    // Definiendo asociacion de Meals con Category-----------------------------------// 
+    Meals.associate = function (models) {
+        Meals.belongsTo(models.Category, {
+            as: 'category',
+            foreigKey: 'id_category'
+        })
+    }
     return Meals;
 }
