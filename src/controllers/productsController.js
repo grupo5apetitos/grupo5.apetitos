@@ -46,15 +46,22 @@ const productos = {
     productList: (req, res) => {
         // res.render("products/productList", { productList, products });
     },
+    productListCrud: (req, res) => {
+        //res.render("products/productList", { productList, products });
+        Meals.findAll()
+            .then(function (meals) {
+                res.render("products/productList",  { productList, products: meals });
+        });
+    },
     productCreate: function(req, res) {
-        Meals.create({
+       db.Meals.create({
                 name: req.body.name,
                 descripcion: req.body.descripcion,
                 price: req.body.price,
                 image: req.body.image,
                 id_category: req.body.id_category
         });
-        res.redirect('productList');
+            res.redirect('/');
     }, 
 
     productEdit: function(req, res) {

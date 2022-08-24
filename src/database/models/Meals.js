@@ -36,14 +36,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Meals = sequelize.define(alias, cols, config);
 
-    // Definiendo asociacion de Meals con Category-----------------------------------//
-    Meals.associate = function(models) {
+    // Definiendo asociacion de Meals con Category-----------------------------------// 
+    Meals.associate = function (models) {
         Meals.belongsTo(models.Category, {
             as: 'category',
             foreignKey: 'id_category',
             onDelete: 'CASCADE'
         });
     }
-
     return Meals;
 }

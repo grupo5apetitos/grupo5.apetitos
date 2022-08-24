@@ -5,9 +5,9 @@
   "lastname": "battista",
   "email": "shirly.battista.sb@gmail.com",
   "email_conf": "shirly.battista.sb@gmail.com",
-  "password": "$2a$10$U40nf1C1viJn78Jmn2OMjeQYW4KJo/v1je104judAFFJn5gwmRdiq",
-  "password_conf": "12345",
-  "image": "users-1659060549410.jpg"
+  "password": "$2a$10$Bx76FLN4nQYUba8nTfd2euGpYJ4EX0ivUpwC0Lwj/FdxzduiU3g5S",
+  "password_conf": "$2a$10$Bx76FLN4nQYUba8nTfd2euGpYJ4EX0ivUpwC0Lwj/FdxzduiU3g5S",
+  "image": "users-1661306752447.jpg"
  },
  {
   "id": 2,
@@ -49,5 +49,4 @@
   "password_conf": "12345",
   "image": "users-1659331500508.jpg"
  }
-
 ]
