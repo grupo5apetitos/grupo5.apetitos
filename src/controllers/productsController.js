@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const Users = require("../database/models/Users");
-const Meals = require('../database/models/Meals');
+const db = require('../database/models');
+
+const Meals = db.Meals;
 
 // Obteniendo el arreglo de productos desde el JSON ------------------------ //
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
@@ -43,7 +44,7 @@ const productos = {
     },
     // Mostrar la lista de productos de la base de datos ----------- //
     productList: (req, res) => {
-        res.render("products/productList", { productList, products });
+        // res.render("products/productList", { productList, products });
     },
     productCreate: function(req, res) {
         Meals.create({
@@ -63,11 +64,11 @@ const productos = {
             price: req.body.price,
             image: req.body.image,
             id_category: req.body.id_category
-         },{
+        },{
             where:{
                 id:req.params.id
             }
-         })
+        })
             .then(function(){
                 res.redirect('/productList');
             })
@@ -78,6 +79,16 @@ const productos = {
             .then(function(products){
                 res.render('/productList', { products })
             })
+    },
+
+    // ----------------------------------------------------------- //
+    productListCRUD: (req, res) => {
+        Meals.findAll({
+            include: [{ association: 'category'}]
+        }).then((meals) => {
+            console.log('/ ----------------------- /');
+            res.render("products/productList", { productList, products: meals });
+        });
     }
 };
 
