@@ -63,11 +63,11 @@ const productos = {
             price: req.body.price,
             image: req.body.image,
             id_category: req.body.id_category
-         },{
+        },{
             where:{
                 id:req.params.id
             }
-         })
+        })
             .then(function(){
                 res.redirect('/productList');
             })
