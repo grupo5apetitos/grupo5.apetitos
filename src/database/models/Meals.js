@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         price: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.DOUBLE,
             allowNull: false
         },
         image: {
@@ -36,12 +36,23 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Meals = sequelize.define(alias, cols, config);
+
+
     // Definiendo asociacion de Meals con Category-----------------------------------// 
     Meals.associate = function (models) {
         Meals.belongsTo(models.Category, {
             as: 'category',
-            foreigKey: 'id_category'
-        })
+            foreigKey: 'id_category',
+            onDelete: 'CASCADE'
+        });
+        Meals.belongsTo(models.ShoppingCart, {
+            as: 'shopping_cart',
+            through: 'cart_meals',
+            foreigKey: 'id_meals',  // Se toman los de la tabla extra
+            otherKey: 'id_cart',
+            timestamps: false,
+            onDelete: 'CASCADE',
+        });
     }
     return Meals;
 }
