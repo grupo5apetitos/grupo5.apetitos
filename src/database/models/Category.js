@@ -20,9 +20,9 @@ module.exports = (sequelize, dataTypes) => {
 
     Category.associate = function (models) {
         Category.hasMany(models.Meals, {
-            as: "categorys",
+            as: "meals",  // A la tabla que estamos asociando
             foreigKey: "id_category",
         });
-    };
+    }
     return category;
 };
