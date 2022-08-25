@@ -7,6 +7,7 @@ const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 const { validationResult } = require("express-validator");
 
 const Users = require("../database/models/Users");
+const User = require("../models/User");
 
 let login = {
     titulo: "Inicio de Sesión - Apetitos Delivery",
@@ -148,6 +149,62 @@ const controller = {
 
         res.redirect('');
     },
+
+    userCreate: function(req, res){
+        User.create(req.body)
+        .then(function(){
+            res.json({
+                process: 'sucessful',
+            })
+        })
+        .catch(function(error){
+            res.send(error);
+        })
+    },
+
+    userEdit: function(req,res){
+        User.findByPk(req.params.id)
+        .then(function(user){
+            res.json({
+                data: user,
+            })
+        })
+        .catch(function(error){
+            res.send(error);
+        })
+    }, 
+    userUpdate: function(req, res){
+        User.update(req.body,{
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(){
+            res.json({
+                process: 'succesful',
+            })
+        })
+        .catch(function (error){
+            res.send(error);
+        })
+    },
+
+    userDelete: function(req, res){
+        User.delete({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function (){
+            res.json({
+                process: 'successful',
+            })
+        })
+        .catch(function (error){
+            res.send(error);
+        })
+    }
+
 }
 
 

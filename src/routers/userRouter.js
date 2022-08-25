@@ -30,9 +30,13 @@ router.get('/logout', userController.logout);
 //CRUD con sequelize -------------------------------//
 
 router.post('/add', userController.create);
+router.post('/add', userController.userCreate);
 router.get('/edit/:id', userController.edit);
-router.put('/edit/:id' , userController.update)
+router.get('/edit/:id', userController.userEdit);
+router.put('/edit/:id', userController.update);
+router.put('/edit/:id', userController.userUpdate);
 router.delete('/delete/:id', userController.delete);
+router.delete('/delete/:id', userController.userDelete);
 
 
 //Exportando el router --------------------------//

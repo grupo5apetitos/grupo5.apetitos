@@ -8,8 +8,7 @@ const path = require('path');
 const mainController = require('../controllers/mainController');
 
 // Acá definimos las rutas --------------------------------------- //
-// router.get('/', mainController.index );
-router.get('/', mainController.index);
+router.get('/', mainController.index );
 router.get('/ayuda', mainController.help);
 
 // Ruta de Obtener datos del usuario ----------------------------- //

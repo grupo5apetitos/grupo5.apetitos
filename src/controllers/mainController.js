@@ -36,10 +36,9 @@ const mainController = {
     },
     // Rutas para trabajar con el CRUD --------------------------- //
     home: (req, res) => {
-        Meals.findAll({
-            include: [{ association: 'category' }]
-        }).then(function(meals) {
+        Meals.findAll().then((meals) => {
             console.log(meals);
+            res.render('index', { index, meals });
         });
     }
 };
