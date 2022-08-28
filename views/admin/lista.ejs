@@ -31,10 +31,10 @@
                                 <td><img src="/images/platillos/<%= platillo.image %>" alt="platillo1"></td>
                                 <td><span><%= platillo.name %></span></td>
                                 <td><span><%= platillo.description %></span></td>
-                                <td><span><%= platillo.category %></span></td>
+                                <td><span><%= platillo.category.name %></span></td>
                                 <td><span>$<%= platillo.price %></span></td>
                                 <td>
-                                    <a href="/administrador/editar/<%= platillo.id %>" class="btn">
+                                    <a href="/administrador/editar/<%= platillo.id_meals %>" class="btn">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
                                 </td>

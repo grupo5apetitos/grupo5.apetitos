@@ -21,6 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
+// ERROR 404 em caso la url sea incorrecta --------------------------------//
+
 
 // Utilizando el Template Engine EJS ----------------------------- //
 app.set('view engine', 'ejs');
