@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Llamado para el funcionamiento de Sequelize ------------------- //
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require('sequelize');
