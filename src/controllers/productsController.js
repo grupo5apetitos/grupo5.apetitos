@@ -2,11 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const db = require('../database/models');
-<<<<<<< HEAD
-const Users = require("../database/models/Users");
-=======
 
->>>>>>> dd88dc310e70de1d61f3136dbbb8ed02b796332d
 const Meals = db.Meals;
 
 // Obteniendo el arreglo de productos desde el JSON ------------------------ //

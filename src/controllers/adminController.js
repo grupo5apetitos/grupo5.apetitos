@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
+const Meals = db.Meals;
 
 // Obtener los datos de la carpeta data -------------------------- //
 const filePathUser = path.join(__dirname, '../data/adminDataBase.json');
@@ -48,19 +50,34 @@ const administrador = {
         res.render('admin/agregar', { panel });
     },
     crear: (req, res) => {
-        let producto = req.body;
+     /*   let producto = req.body;
         producto.id = products.length + 1;
         producto.image = req.file.filename;
         products.push(producto);
 
         fs.writeFileSync(filePathProduct, JSON.stringify(products, null, 4));
-        res.render('admin/lista', { panel, products });
+        res.render('admin/lista', { panel, products }); */
+        db.Meals.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.file.filename,
+            id_category:req.body.category
+
+        })
+            res.redirect('lista');
     },
     lista: (req, res) => {
-        res.render('admin/lista', { panel, products });
+       //res.render('admin/lista', { panel, products });
+       Meals.findAll({
+        include: [{ association: 'category'}]
+    }).then((meals) => {
+            //console.log( meals );
+             res.render("admin/lista", { panel, products: meals });
+        });
     },
     editar: (req, res) => {
-        console.log(req.params.id);
+       /* console.log(req.params.id);
         if (req.params.id) {
             let id = req.params.id;
             let resultado = products.filter((producto) => { return (producto.id == id) });
@@ -68,16 +85,40 @@ const administrador = {
             res.render('admin/editar', { panel, resultado });
         } else {
             res.redirect('administrador/lista');
-        }
+        }*/
+        Meals.findByPk(req.params.id)
+        .then(function(meal){
+            const object = {
+                vista: panel,
+                platillo: meal
+            }
+            res.render('admin/editar', object);
+        });
+        
     },
     actualizar: (req, res) => {
-        let id = req.params.id;
+       /* let id = req.params.id;
         let form = req.body;
         let resultado = products.filter((producto) => { return (producto.id == id) });
         console.log(id);
         console.log('-------------------');
         console.log(form);
-        res.send('Entramos a actualizar');
+        res.send('Entramos a actualizar'); */
+
+        Meals.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.file.filename,
+            id_category: req.body.category
+        },{
+            where:{
+                id:req.params.id
+            }
+        })
+            .then(function(){
+                res.redirect('lista');
+            })
     },
     eliminar: (req, res) => {
         res.send('Entramos a eliminar');
