@@ -54,7 +54,7 @@ const productos = {
         });
     },
     productCreate: function(req, res) {
-       db.Meals.create({
+        db.Meals.create({
                 name: req.body.name,
                 descripcion: req.body.descripcion,
                 price: req.body.price,
