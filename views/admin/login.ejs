@@ -9,9 +9,10 @@
             </div>
             <div class="group-box">
                 <label for="user">Correo:</label>
-                <input id="email"
-                    type="text" 
-                    name="user" id="user" class="text-box" 
+                <input type="email" 
+                    name="user" 
+                    id="user" 
+                    class="text-box" 
                     value="<%= (locals.oldData && oldData.user) ? oldData.user : null %>">
                 <% if (locals.errors && errors.user) { %>
                 <div class="text-error">
@@ -21,7 +22,10 @@
             </div>
             <div class="group-box">
                 <label for="password">Contraseña:</label>
-                <input type="password" name="password" id="password" class="text-box">
+                <input type="password" 
+                    name="password" 
+                    id="password" 
+                    class="text-box">
                 <% if (locals.errors && errors.password) { %>
                 <div class="text-error">
                     <span><%= errors.password.msg %></span>
@@ -33,5 +37,6 @@
             </div>
         </form>
     </div>
+    <script src="../../js/login.js"></script>
 </body>
 </html>

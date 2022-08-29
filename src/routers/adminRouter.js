@@ -52,7 +52,7 @@ router.post('/agregar', upload.single('imagen'), adminController.crear);
 router.get('/lista', adminController.lista);
 
 // Validar sesión del usuario ---------------- //
-router.post('/lista', adminController.session);
+// router.post('/lista', adminController.session);
 
 // Editar un producto ------------------------ //
 router.get('/editar/:id', adminController.editar);

@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Category";
+    const alias = "UserProfile";
     const cols = {
-        id_category: {
+        id_profile: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
@@ -10,15 +10,19 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING(45),
             allowNull: false,
+        },
+        abrev: {
+            type: dataTypes.STRING(5)
         }
     };
+
     const config = {
-        tableName: 'category',
+        tableName: 'users_profile',
         timestamps: false,
         deletedAt: false
     };
     
-    const Category = sequelize.define(alias, cols, config);
+    const UserProfile = sequelize.define(alias, cols, config);
 
-    return Category;
+    return UserProfile;
 };

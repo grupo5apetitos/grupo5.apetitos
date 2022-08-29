@@ -17,7 +17,7 @@
                     <% if (!locals.isLogged) { %>
                         <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
                     <% } else { %>
-                        <a href="/usuarios/perfil"><img src="../../images/users/<%= locals.userLogged.image %>" class="perfil-header" alt="perfil"></a>
+                        <a href="/usuarios/perfil"><img src="../../images/<%= locals.userLogged.image %>" class="perfil-header" alt="perfil"></a>
                     <% } %>
                 </li>
                 <li><a href="/productos/carroProductos"><i class="fa-solid fa-cart-shopping"></i></a></li>

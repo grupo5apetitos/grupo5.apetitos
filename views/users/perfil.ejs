@@ -7,11 +7,11 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la página -->
     <section class="perfil">
-        <form action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id)  ? locals.userLogged.id : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id_users)  ? locals.userLogged.id_users : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h4>Perfil de <%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %> </h4>
             <div class="form-module">
                 <div class="group-input">
-                    <img src="../../images/users/<%= (locals.userLogged && locals.userLogged.image)  ? locals.userLogged.image : null %> " alt="imagen de perfil">
+                    <img src="../../images/<%= (locals.userLogged && locals.userLogged.image)  ? locals.userLogged.image : null %> " alt="imagen de perfil">
                 </div>
                 <div class="group-input">
                     <label for="name">Nombre:</label>
@@ -26,7 +26,7 @@
                 <div class="group-input">
                     <label for="lastname">Apellidos:</label>
                     <input type="text" name="lastname" id="lastname" class="text-box" 
-                    value="<%= (locals.userLogged && locals.userLogged.lastname)  ? locals.userLogged.lastname : null %>">
+                    value="<%= (locals.userLogged && locals.userLogged.last_name)  ? locals.userLogged.last_name : null %>">
                     <% if (locals.errors && errors.lastname) { %>
                     <div class="text-error">
                         <span><%= errors.lastname.msg %></span>

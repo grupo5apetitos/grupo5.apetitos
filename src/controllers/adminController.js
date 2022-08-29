@@ -1,7 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const md5 = require('md5');
+/** Express Validator -------------------------------------------- */
 const { validationResult } = require('express-validator');
+/** Sequelize (Modelos, DB) -------------------------------------- */
 const db = require('../database/models');
+
+const Users = db.Users;
 const Meals = db.Meals;
 
 // Obtener los datos de la carpeta data -------------------------- //
@@ -36,7 +41,43 @@ const administrador = {
                 oldData: req.body
             });
         } else {
-            res.redirect('/administrador/lista');
+            let user = req.body.user;
+            let pass = md5(req.body.password);
+            let error = {
+                user: {
+                    msg: "Usuario no válido."
+                }, password: {
+                    msg: "Contraseña no válida."
+                }
+            }
+
+            Users.findAll({
+                include: [{ association: 'users_profile' }],
+                where: {
+                    email: user
+                },
+                raw: true,
+                nest: true
+            }).then((result) => {
+                let data = result[0];
+                if (data.email !== user) {
+                    res.render('admin/login', {
+                        errors: error,
+                        login: login
+                    });
+                } else {
+                    if (data.password !== pass) {
+                        res.render('admin/login', {
+                            errors: error,
+                            login: login
+                        });
+                    } else {
+                        res.redirect('/administrador/lista');
+                    }
+                }
+            }).catch((err) => {
+                console.error(err);
+            });
         }
     },
     session: (req, res) => {
@@ -50,20 +91,21 @@ const administrador = {
         res.render('admin/agregar', { panel });
     },
     crear: (req, res) => {
-        /*   let producto = req.body;
-           producto.id = products.length + 1;
-           producto.image = req.file.filename;
-           products.push(producto);
-   
-           fs.writeFileSync(filePathProduct, JSON.stringify(products, null, 4));
-           res.render('admin/lista', { panel, products }); */
+        /* 
+        let producto = req.body;
+        producto.id = products.length + 1;
+        producto.image = req.file.filename;
+        products.push(producto);
+
+        fs.writeFileSync(filePathProduct, JSON.stringify(products, null, 4));
+        res.render('admin/lista', { panel, products });
+        */
         db.Meals.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             image: req.file.filename,
             id_category: req.body.category
-
         })
         res.redirect('lista');
     },
@@ -113,7 +155,7 @@ const administrador = {
             id_category: req.body.category
         }, {
             where: {
-                id: req.params.id
+                id_users: req.params.id
             }
         })
             .then(function () {

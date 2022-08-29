@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, dataTypes) => {
     const alias = 'Meals';
     const cols =
@@ -36,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const Meals = sequelize.define(alias, cols, config);
 
-    // Definiendo asociacion de Meals con Category-----------------------------------// 
+    // Definiendo asociacion de Meals con Category --------------- // 
     Meals.associate = function (models) {
         Meals.belongsTo(models.Category, {
             as: 'category',

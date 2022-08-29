@@ -23,19 +23,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
-// ERROR 404 em caso la url sea incorrecta --------------------------------//
-
 
 // Utilizando el Template Engine EJS ----------------------------- //
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
-
 
 // Vista a la rutas ---------------------------------------------- //
 app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
 app.use('/usuarios', userRouter);
+
+// ERROR 404 en caso la url sea incorrecta ----------------------- //
 app.use('/page-not-found', notFoundRouter);
 
 // Servidor a escuchar ------------------------------------------- //
