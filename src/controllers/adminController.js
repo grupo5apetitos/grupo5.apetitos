@@ -121,7 +121,13 @@ const administrador = {
             })
     },
     eliminar: (req, res) => {
-        res.send('Entramos a eliminar');
+      //  res.send('Entramos a eliminar');
+        Meals.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
+        res.redirect('lista');
     }
 };
 
