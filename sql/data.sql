@@ -6,7 +6,7 @@ INSERT INTO users_profile(`name`, `abrev`) VALUES ('USUARIO', 'USERS');
 INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('josue', 'josephee.xp@gmail.com', 'Josué Fernando', 'Martínez Higuera', md5('12345'), 'josue.png', 1);
 INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('shirly', 'shirly@gmail.com', 'Shirly', 'Batista', md5('12345'), 'shirly.png', 1);
 INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('david', 'david@gmail.com', 'David', 'Gómez', md5('12345'), 'david.png', 1);
-INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('admin', 'admin@admin.com', 'admin', 'principal', md5('admin'), 'david.png', 1);
+INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('admin', 'admin@admin.com', 'admin', 'principal', md5('admin'), 'admin.png', 1);
 
 INSERT INTO category (`name`) VALUES ('Lo más visto');
 INSERT INTO category (`name`) VALUES ('Lo menos visto');

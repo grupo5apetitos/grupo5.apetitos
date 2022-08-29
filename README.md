@@ -60,8 +60,18 @@ Gracias a ellas pudimos tener una idea mas clara de lo que queriamos hacer y que
 # Tablero de trabajo
 - [Trello](https://trello.com/b/vi4YnYe2/proyecto-apetitos-delivery "Trello")
 
+# Para ver el diagrama Entidad - Relación ir a la carpeta SQL
+- apetitos.pdf
+
+# CRUD
+- userRoute     -> userController
+- adminRoute    -> adminController
+- productsRoute -> productController
+
 # Para acceder al Administrador del sitio
 - http://localhost:3000/administrador
+- user: admin
+- pass: admin
 
 # Autores
 - **Shirly Battista:** Amante de la gastronomia de 29 años , mi objetivo es ayudar a las personas a comer bien todos los dias sin esfuerzo y hacer lo posible para que se vuelvan a sentir como nos sentíamos de niños, cuando comer era tan solo disfrutar.
