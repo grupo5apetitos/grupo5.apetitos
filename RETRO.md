@@ -146,3 +146,6 @@ https://www.reetro.app/
     - No hay nada que podamos hacer menos.
 5. Dejar de hacer.
     - No hay nada que podamos dejar de hacer.
+
++++++ en este sprint implementamos reetro.app aca les dejamos el link +++++
+https://www.reetro.app/board/62ccbec7e8f8dcb41bb5319a/630d452f256d0c163ceb3ff4
