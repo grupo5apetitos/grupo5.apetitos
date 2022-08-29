@@ -81,6 +81,19 @@ h1, h2, h3 {
     border: 1px solid #cecece;
     background-color: #fafafa;
     font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn-edit {
+    color: #fafafa;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-delete {
+    color: #fafafa;
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /* Encabezado del administrador ........................ */
@@ -222,25 +235,6 @@ main {
 .panel .table .btn {
     width: 40px;
     padding: 0.4rem;
-}
-
-.panel .btn {
-    background-color: #198754;
-    border-color: #198754;
-    cursor: pointer;
-    color: #fafafa;
-}
-
-.panel .btn:active {
-    color: #fff;
-    background-color: #146c43;
-    border-color: #13653f;
-}
-
-.panel .btn:hover {
-    color: #fff;
-    background-color: #157347;
-    border-color: #146c43;
 }
 
 /* Pie de página del administrador ..................... */

@@ -44,22 +44,22 @@ const validations = [
 router.get('/', adminController.admin);
 router.post('/', validations, adminController.login);
 
-// agregar un producto ----------------------- //
+// Agregar un producto ----------------------- //
 router.get('/agregar', adminController.mostrar);
 router.post('/agregar', upload.single('imagen'), adminController.crear);
 
-// mostrar productos ------------------------- //
+// Mostrar productos ------------------------- //
 router.get('/lista', adminController.lista);
 
-// validar sesión del usuario ---------------- //
+// Validar sesión del usuario ---------------- //
 router.post('/lista', adminController.session);
 
-// editar un producto ------------------------ //
+// Editar un producto ------------------------ //
 router.get('/editar/:id', adminController.editar);
 router.put('/lista/:id', upload.single('image'), adminController.actualizar);
 
-// eliminar un producto ---------------------- //
-router.delete('/lista/:id', adminController.eliminar);
+// Eliminar un producto ---------------------- //
+router.delete('/eliminar/:id', adminController.eliminar);
 
 // Exportando router --------------------------------------------- //
 module.exports = router;

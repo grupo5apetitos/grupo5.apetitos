@@ -35,14 +35,16 @@
                                 <td><span><%= platillo.category.name %></span></td>
                                 <td><span>$<%= platillo.price %></span></td>
                                 <td>
-                                    <a href="/administrador/editar/<%= platillo.id_meals %>" class="btn">
+                                    <a href="/administrador/editar/<%= platillo.id_meals %>" class="btn btn-edit">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a  href="" class='boton-delete'>
-                                        <i class="fa-solid fa-circle-trash"></i>
-                                    </a>
+                                    <form action="/administrador/eliminar/<%= platillo.id_meals %>?_method=DELETE" method="post">
+                                        <button type="submit" class="btn btn-delete">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                             <% } %>
