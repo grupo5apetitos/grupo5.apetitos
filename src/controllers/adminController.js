@@ -170,7 +170,7 @@ const administrador = {
                 id_meals: req.params.id
             }
         });
-        res.redirect('../lsita');
+        res.redirect('../lista');
     }
 };
 
