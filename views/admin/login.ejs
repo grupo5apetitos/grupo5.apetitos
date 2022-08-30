@@ -12,8 +12,11 @@
                 <input type="email" 
                     name="user" 
                     id="user" 
-                    class="text-box" 
+                    class="text-box"
                     value="<%= (locals.oldData && oldData.user) ? oldData.user : null %>">
+                <div class="text-error">
+                    <span role="inputEmail"></span>
+                </div>
                 <% if (locals.errors && errors.user) { %>
                 <div class="text-error">
                     <span><%= errors.user.msg %></span>
@@ -26,6 +29,9 @@
                     name="password" 
                     id="password" 
                     class="text-box">
+                <div class="text-error">
+                    <span role="inputPassword"></span>
+                </div>
                 <% if (locals.errors && errors.password) { %>
                 <div class="text-error">
                     <span><%= errors.password.msg %></span>
@@ -33,7 +39,7 @@
                 <% } %>
             </div>
             <div class="group-box">
-                <button type="submit" class="btn-primary">Iniciar Sesión</button>
+                <button type="submit" role="btnSubmit" class="btn-primary">Iniciar Sesión</button>
             </div>
         </form>
     </div>

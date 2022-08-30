@@ -8,13 +8,11 @@ const mainRouter = require('./routers/mainRouter');
 const adminRouter = require('./routers/adminRouter');
 const productRouter = require('./routers/productsRouter');
 const userRouter = require('./routers/userRouter');
-const notFoundRouter = require('./routers/notFoundRouter');
 
 const path = require('path');
 const methodOverride = require('method-override');  // Método para hacer uso de PUT & DELETE
 const cookieParser = require('cookie-parser');
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
-const mainController = require('./controllers/mainController');
 
 // Configuración ------------------------------------------------- //
 app.use(express.static(path.join(__dirname, '../public')));
@@ -33,9 +31,6 @@ app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
 app.use('/usuarios', userRouter);
-
-// ERROR 404 en caso la url sea incorrecta ----------------------- //
-app.use('/page-not-found', notFoundRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {
