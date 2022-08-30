@@ -10,6 +10,7 @@ const mainController = require('../controllers/mainController');
 // Acá definimos las rutas --------------------------------------- //
 router.get('/', mainController.index );
 router.get('/ayuda', mainController.help);
+router.get('/page-not-found', mainController.error404);
 
 // Ruta de Obtener datos del usuario ----------------------------- //
 //router.get('/', mainController.getUser);

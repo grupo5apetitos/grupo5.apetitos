@@ -35,6 +35,9 @@ const mainController = {
     getUser: function(req, res) {
         // Código para obtener por sesión el usuario
     },
+    error404: function(req, res) {
+        res.render('error-404/not-found', { index });
+    },
     // Rutas para trabajar con el CRUD --------------------------- //
     home: (req, res) => {
         Meals.findAll().then((meals) => {
