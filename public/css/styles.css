@@ -141,12 +141,6 @@ td .boton-delete{
     font-size: 0.8rem;
 }
 
-.is-invalid {
-    color: #842029;
-    border: 5px solid #842029;
-    background-color: red;
-  }
-
 /** Estilos para grupos de textos y botones .................................................... */
 .group-box {
     display: flex;
