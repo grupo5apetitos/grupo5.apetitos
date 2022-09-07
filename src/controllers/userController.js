@@ -1,7 +1,7 @@
 /** Variables para la utilización de funciones dentro del Controlador ...... */
 const fs = require("fs");
 const path = require("path");
-const md5 = require('md5');
+//const md5 = require('md5');
 const bcryptjs = require('bcryptjs');
 
 /** Variables para obtener de datos desde un archivo JSON -------- */

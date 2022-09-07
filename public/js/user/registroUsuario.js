@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
         let inputs = document.querySelectorAll('input');
 
         inputs.forEach((input) => {
-            if (input.id === "name") {
+            if (input.id === "email") {
                 if (input.value.length >= 2) {
                     input.classList.remove('is-invalid');
                     input.classList.add('is-valid');
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
                 }
             }
 
-            if (input.id === "email") {
+            if (input.id === "password") {
                 if (input.value.length === 0) {
                     input.classList.add('is-invalid');
                 } else {
@@ -27,8 +27,8 @@ window.addEventListener('load', () => {
             }
         });
     });
-
+/*
     email.addEventListener('blur', () => {
         // fetch('url', {config}).then((res) => {});
-    });
+    });*/
 });

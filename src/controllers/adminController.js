@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const md5 = require('md5');
+//const md5 = require('md5');
 /** Express Validator -------------------------------------------- */
 const { validationResult } = require('express-validator');
 /** Sequelize (Modelos, DB) -------------------------------------- */
