@@ -8,10 +8,12 @@ INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avata
 INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('david', 'david@gmail.com', 'David', 'Gómez', md5('12345'), 'david.png', 1);
 INSERT INTO users (`user_name`, `email`, `name`, `last_name`, `password`, `avatar`, `id_profile`) VALUES ('admin', 'admin@admin.com', 'admin', 'principal', md5('admin'), 'admin.png', 1);
 
-INSERT INTO category (`name`) VALUES ('Lo más visto');
-INSERT INTO category (`name`) VALUES ('Lo menos visto');
+INSERT INTO category (`name`) VALUES ('Lo más elegido');
+INSERT INTO category (`name`) VALUES ('Lo menos elegido');
 INSERT INTO category (`name`) VALUES ('Lo más comprado');
 INSERT INTO category (`name`) VALUES ('Lo menos comprado');
+INSERT INTO category (`name`) VALUES ('Lo más visto');
+INSERT INTO category (`name`) VALUES ('Lo menos visto');
 
 INSERT INTO meals(`name`, `description`, `price`, `image`, `id_category`) VALUES ('Camarones', 'Camarones pelados, pasados por jugo de limón, harina, huevo y pan molido y, posteriormente, fritos. Acompañados por una salsa de mesa tradicional y con arroz o ensalada de verduras.', 850.00, 'camarones.png', 1);
 INSERT INTO meals(`name`, `description`, `price`, `image`, `id_category`) VALUES('Pata y Muslo', 'Pata y Muslo Deshuesada de Pollo a la Pomarola con Puré de Calabazas.', 850,'pata_muslo.jpg',1);
