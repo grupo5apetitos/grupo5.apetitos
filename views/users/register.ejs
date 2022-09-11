@@ -23,12 +23,14 @@
             </div>
             <div>
                 <input class="controls" type="text" name="email" id="email" placeholder="Correo">
+                <span role="valida-correo"></span>
                 <% if (locals.errors && errors.email) { %>
                     <p style="color: red;"><%= errors.email.msg %> </p>
                 <% } %>
             </div>
             <div>
                 <input class="controls" type="email" name="email_conf" id="email_conf" placeholder=" Confirmar Correo">
+                <span role="valida-correo2"></span>
                 <% if (locals.errors && errors.email_conf) { %>
                     <p style="color: red;"><%= errors.email_conf.msg %> </p>
                 <% } %>
@@ -41,6 +43,7 @@
             </div>
             <div>
                 <input class="controls" type="password" name="password_conf" id="password_conf" placeholder="Confirmar Contraseña">
+                <span role="valida-password2"></span>
                 <% if (locals.errors && errors.password_conf) { %>
                     <p style="color: red;"><%= errors.password_conf.msg %> </p>
                 <% } %>

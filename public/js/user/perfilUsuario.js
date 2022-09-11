@@ -1,58 +1,48 @@
 window.addEventListener('load', function(){
+    const btn = document.querySelector('input[type="submit"]');
+    const inputs = document.querySelectorAll('input');
+    let errors = new Object(); // -> = {}
 
-    // Extrayendo los id con queryselector -----------------------------------------//
-    let form = document.querySelector('form');
-   // let btn = document.querySelectorAll('form input')
-    let input = document.querySelector()
+    function validarEmail(valor) {
+        let patron = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        return patron.test(valor);
+    }
 
-    let errors = [];
+    inputs.forEach(function(input) {
+        input.addEventListener('blur', function(event) {
+            // this = event.target
+            // Se válida que el campo no este vacío.
+            if (event.target.value.length === 0) {
+                event.target.classList.add('is-invalid');
+                errors[event.target.name] = "Rellena el campo vacío.";
+                event.target.placeholder = errors[event.target.name];
+            } else {
+                event.target.classList.remove('is-invalid');
+                event.target.classList.add('is-valid');
+                delete errors[event.target.name];
+            }
 
-    form.addEventListener('click', function(){
-        let btn = document.querySelectorAll('form input');
-    })
+            // Se válida los tipos de input.
+            switch(event.target.type) {
+                case "email":
+                    if (validarEmail(event.target.value)) {
+                        event.target.classList.remove('is-invalid');
+                        event.target.classList.add('is-valid');
+                        delete errors[event.target.name];
+                    } else {
+                        event.target.classList.add('is-invalid');
+                        errors[event.target.name] = "Ingresa un correo válido.";
+                        event.target.placeholder = errors[event.target.name];
+                    }
+                    break;
+                case "file":
 
-    email.addEventListener('blur', function(){
-        if (validarEmail(this.value)) {
-            if(errors[0].length > 0){ 
-                errors[0] = '';
-                this.classList.add('is-valid');
-                this.classList.remove('is-invalid');
-                emailErrors.innerText = '';
+                    break;
             }
-        } else {
-            if(errors[0].length == 0){ 
-                errors[0] = 'Correo incorrecto';
-                this.classList.remove('is-valid');
-                this.classList.add('is-invalid');
-                emailErrors.innerText = errors[0];
-            }
-        
-        }
-    })
-passwd.addEventListener('blur', function(){
-        if (passwd.value >= 3) {
-            if(errors[1].length > 0){ 
-                errors[1] = '';  
-                this.classList.add('is-valid');
-                this.classList.remove('is-invalid');
-                passwdErrors.innerText = '';   // Reseteo a un string vacio para que no salga el mensaje
-            }
-        } else {
-            if(errors[1].length == 0){ 
-                errors[1] = 'Password incorrecto';
-                this.classList.remove('is-valid');
-                this.classList.add('is-invalid');
-                passwdErrors.innerText = errors[1];
-            }
-        
-        }
+        });
+    });
+
+    
 })
 
-
-
-
-
-
-
-
-})
+//Como validar el input file 
