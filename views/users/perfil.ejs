@@ -7,7 +7,7 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la página -->
     <section class="perfil">
-        <form action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id_users)  ? locals.userLogged.id_users : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form accept="audio/*,video/*,image/*" action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id_users)  ? locals.userLogged.id_users : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h4>Perfil de <%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %> </h4>
             <div class="form-module">
                 <div class="group-input">

@@ -36,7 +36,7 @@ window.addEventListener('load', function(){
                     }
                     break;
                 case "file":
-
+                    
                     break;
             }
         });
