@@ -4,7 +4,7 @@ module.exports = {
         "password": null,
         "database": "apetitos_db",
         "host": "localhost",
-        "dialect": "mysql"
+        "dialect": "mysql",
     },
     "test": {
         "username": "root",

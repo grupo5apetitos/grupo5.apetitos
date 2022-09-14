@@ -33,13 +33,17 @@ window.addEventListener("load", () => {
             form.submit();
         }
     });
+    */
 
     btn.onclick = function(e) {
         e.preventDefault();
-        console.log('Estamos en el onSubmit');
-        form.submit();
+        
+        fetch('/api/products/')
+        .then(respuesta => respuesta.json())
+        .catch(error => console.error(error))
+        .then(respuesta => console.log(respuesta));
+        // form.submit();
     }
-    */
 
     email.addEventListener("blur", function () {
         if (validarEmail(this.value)) {

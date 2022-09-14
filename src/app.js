@@ -9,6 +9,9 @@ const adminRouter = require('./routers/adminRouter');
 const productRouter = require('./routers/productsRouter');
 const userRouter = require('./routers/userRouter');
 
+// Rutas de API's ----------------------------------------------- //
+const productAPIRouter = require('./routers/api/productsRouter');
+
 const path = require('path');
 const methodOverride = require('method-override');  // Método para hacer uso de PUT & DELETE
 const cookieParser = require('cookie-parser');
@@ -31,6 +34,9 @@ app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/administrador', adminRouter);
 app.use('/usuarios', userRouter);
+
+// Rutas para las API's --------------------------------------------//
+app.use('/api/products', productAPIRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3000, () => {
