@@ -38,7 +38,8 @@ window.addEventListener('load', () => {
                     }
                     break;
                 case "file":
-
+                    // lo que se hizo en perfil aplicarlo aqui en registro
+                    // Empezar api de user basado en la de productos.
                     break;
             }
         });
