@@ -1,7 +1,81 @@
 window.addEventListener('load', () => {
-    let form  = document.querySelector('form');
-    let email = document.querySelector('#email');
-    let btn = document.querySelector('input[type="submit"]');
+    const form  = document.querySelector('form');
+    const email = document.querySelector('#email');
+    const btn = document.querySelector('input[type="submit"]');
+    const inputs = document.querySelectorAll('input');
+    let errors = new Object(); // -> = {}
+
+    function validarEmail(valor) {
+        let patron = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        return patron.test(valor);
+    }
+
+    inputs.forEach(function(input) {
+        input.addEventListener('blur', function(event) {
+            // this = event.target
+            // Se válida que el campo no este vacío.
+            if (event.target.value.length === 0) {
+                event.target.classList.add('is-invalid');
+                errors[event.target.name] = "Rellena el campo vacío.";
+                event.target.placeholder = errors[event.target.name];
+            } else {
+                event.target.classList.remove('is-invalid');
+                event.target.classList.add('is-valid');
+                delete errors[event.target.name];
+            }
+
+            // Se válida los tipos de input.
+            switch(event.target.type) {
+                case "email":
+                    if (validarEmail(event.target.value)) {
+                        event.target.classList.remove('is-invalid');
+                        event.target.classList.add('is-valid');
+                        delete errors[event.target.name];
+                    } else {
+                        event.target.classList.add('is-invalid');
+                        errors[event.target.name] = "Ingresa un correo válido.";
+                        event.target.placeholder = errors[event.target.name];
+                    }
+                    break;
+                case "file":
+
+                    break;
+            }
+        });
+    });
+
+    document.querySelector('#email_conf').addEventListener('blur', function() {
+        const email01 = document.querySelector('#email');
+        const email02 = document.querySelector('#email_conf');
+        const validaCorreo = document.querySelector('[role="valida-correo2"]');
+
+        if (email02.value === email01.value) {
+            email02.classList.add('is-valid');
+            email02.classList.remove('is-invalid');
+            delete errors[email02.name];
+            validaCorreo.value = "";
+        } else {
+            email02.classList.add('is-invalid');
+            errors[email02.name] = "Los correos no son identicas.";
+            validaCorreo.value = errors[email02.name];
+        }
+    });
+
+    document.querySelector('#password_conf').addEventListener('blur', function(){
+        const paswd01 = document.querySelector('#password');
+        const paswd02 = document.querySelector('#password_conf');  
+        const validaPassword = document.querySelector('[role="valida-password2"]');
+        
+        if(paswd02.value == paswd01.value) {
+            paswd02.classList.add('is-valid');
+            paswd01.classList.remove('is-invalid');
+            delete errors[paswd02.name];
+        }else{
+            paswd02.classList.add('is-invalid');
+            errors[paswd02.name] = 'Las contraseñas son identicas';
+            validaPassword.value = errors[paswd02.name];
+        }
+    })
 
     btn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -27,8 +101,10 @@ window.addEventListener('load', () => {
             }
         });
     });
-/*
+    /*
     email.addEventListener('blur', () => {
         // fetch('url', {config}).then((res) => {});
     });*/
 });
+
+//Mejorar codigo

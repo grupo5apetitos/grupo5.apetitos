@@ -7,7 +7,7 @@
     <%- include('../partials/header.ejs') %>
     <!-- Cuerpo de la página -->
     <section class="perfil">
-        <form action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id_users)  ? locals.userLogged.id_users : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form accept="audio/*,video/*,image/*" action="/usuarios/perfil/<%= (locals.userLogged && locals.userLogged.id_users)  ? locals.userLogged.id_users : null %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h4>Perfil de <%= (locals.userLogged && locals.userLogged.name)  ? locals.userLogged.name : null %> </h4>
             <div class="form-module">
                 <div class="group-input">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="group-input">
                     <label for="email">Correo:</label>
-                    <input type="text" name="email" id="email" class="text-box" 
+                    <input type="email" name="email" id="email" class="text-box" 
                     value="<%= (locals.userLogged && locals.userLogged.email)  ? locals.userLogged.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                     <div class="text-error">
@@ -72,5 +72,6 @@
     </section>
     <!-- Parte del footer  -->
     <%- include('../partials/footer.ejs') %>
+    <script src="../../js/user/perfilUsuario.js"></script>
 </body>
 </html>
