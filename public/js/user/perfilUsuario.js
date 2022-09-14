@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
         let fileName = this.files[0].name;
         let fileSize = this.files[0].size;
 
-        if (fileSize > 3000000) // Equivale a 3MB
+        if (fileSize > 1000000) // Equivale a 3MB
         {
             alert('El archivo no debe superar los 3MB');
             this.value = '';
@@ -45,17 +45,6 @@ window.addEventListener('load', function(){
         input.addEventListener('blur', function(event) {
             // this = event.target
             // Se válida que el campo no este vacío.
-            if (event.target.value.length === 0) {
-                event.target.classList.add('is-invalid');
-                errors[event.target.name] = "Rellena el campo vacío.";
-                event.target.placeholder = errors[event.target.name];
-            } else {
-                event.target.classList.remove('is-invalid');
-                event.target.classList.add('is-valid');
-                delete errors[event.target.name];
-            }
-
-            // Se válida los tipos de input.
             switch(event.target.type) {
                 case "email":
                     if (validarEmail(event.target.value)) {
@@ -66,6 +55,17 @@ window.addEventListener('load', function(){
                         event.target.classList.add('is-invalid');
                         errors[event.target.name] = "Ingresa un correo válido.";
                         event.target.placeholder = errors[event.target.name];
+                    }
+                    break;
+                case "text":
+                    if (event.target.value.length === 0) {
+                        event.target.classList.add('is-invalid');
+                        errors[event.target.name] = "Rellena el campo vacío.";
+                        event.target.placeholder = errors[event.target.name];
+                    } else {
+                        event.target.classList.remove('is-invalid');
+                        event.target.classList.add('is-valid');
+                        delete errors[event.target.name];
                     }
                     break;
             }
