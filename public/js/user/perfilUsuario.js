@@ -31,7 +31,7 @@ window.addEventListener('load', function(){
                 case 'png':
                 case 'pdf': break;
                 default:
-                    alert('Elarchivo no tiene la extensin adecuada´.');
+                    alert('Elarchivo no tiene la extensin adecuada.');
                     this.value = '';
                     this.files[0].name = '';
                     this.classList.add('is-invalid');
@@ -43,18 +43,40 @@ window.addEventListener('load', function(){
 
     inputs.forEach(function(input) {
         input.addEventListener('blur', function(event) {
-            // this = event.target
-            // Se válida que el campo no este vacío.
-            switch(event.target.type) {
+            // this = this
+            // Se válida los tipos de input.
+            switch(this.type) {
                 case "email":
-                    if (validarEmail(event.target.value)) {
-                        event.target.classList.remove('is-invalid');
-                        event.target.classList.add('is-valid');
-                        delete errors[event.target.name];
+                    if (validarEmail(this.value)) {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                        delete errors[this.name];
                     } else {
-                        event.target.classList.add('is-invalid');
-                        errors[event.target.name] = "Ingresa un correo válido.";
-                        event.target.placeholder = errors[event.target.name];
+                        this.classList.add('is-invalid');
+                        errors[this.name] = "Ingresa un correo válido.";
+                        this.placeholder = errors[this.name];
+                    }
+                    break;
+                case "text":
+                    if (this.value.length === 0) {
+                        this.classList.add('is-invalid');
+                        errors[this.name] = "Rellena el campo vacío.";
+                        this.placeholder = errors[this.name];
+                    } else {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                        delete errors[this.name];
+                    }
+                    break;
+                case "password":
+                    if (this.value.length === 0) {
+                        this.classList.add('is-invalid');
+                        errors[this.name] = "Rellena el campo vacío.";
+                        this.placeholder = errors[this.name];
+                    } else {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                        delete errors[this.name];
                     }
                     break;
                 case "text":
