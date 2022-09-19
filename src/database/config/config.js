@@ -5,6 +5,7 @@ module.exports = {
         "database": "apetitos_db",
         "host": "localhost",
         "dialect": "mysql",
+        "port":"3307"
     },
     "test": {
         "username": "root",

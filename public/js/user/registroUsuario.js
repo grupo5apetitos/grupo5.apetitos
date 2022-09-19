@@ -3,12 +3,45 @@ window.addEventListener('load', () => {
     const email = document.querySelector('#email');
     const btn = document.querySelector('input[type="submit"]');
     const inputs = document.querySelectorAll('input');
+    const file = document.querySelector('#image');
     let errors = new Object(); // -> = {}
 
     function validarEmail(valor) {
         let patron = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         return patron.test(valor);
     }
+
+    file.addEventListener('change', function() {
+        let fileName = this.files[0].name;
+        let fileSize = this.files[0].size;
+
+        if (fileSize > 3000000) // Equivale a 3MB
+        {
+            alert('El archivo no debe superar los 3MB');
+            this.value = '';
+            this.files[0].name = '';
+            this.classList.add('is-invalid');
+            errors[this.name] = "Archivo fuera de rango.";
+            this.placeholder = errors[this.name];
+        } else {
+            let ext = fileName.split('.').pop();
+            ext = ext.toLowerCase();
+
+            switch(ext) {
+                case 'jpg':
+                case 'jpeg':
+                case 'png':
+                case 'pdf': break;
+                default:
+                    alert('Elarchivo no tiene la extensin adecuada.');
+                    this.value = '';
+                    this.files[0].name = '';
+                    this.classList.add('is-invalid');
+                    errors[this.name] = "Extensión erronéa.";
+                    this.placeholder = errors[this.name];
+            }
+        }
+    });
 
     inputs.forEach(function(input) {
         input.addEventListener('blur', function(event) {
@@ -37,9 +70,9 @@ window.addEventListener('load', () => {
                         event.target.placeholder = errors[event.target.name];
                     }
                     break;
-                case "file":
-
-                    break;
+                    // lo que se hizo en perfil aplicarlo aqui en registro
+                    // Empezar api de user basado en la de productos.
+                    
             }
         });
     });

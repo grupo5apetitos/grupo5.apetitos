@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
         let fileName = this.files[0].name;
         let fileSize = this.files[0].size;
 
-        if (fileSize > 3000000) // Equivale a 3MB
+        if (fileSize > 1000000) // Equivale a 3MB
         {
             alert('El archivo no debe superar los 3MB');
             this.value = '';
@@ -77,6 +77,17 @@ window.addEventListener('load', function(){
                         this.classList.remove('is-invalid');
                         this.classList.add('is-valid');
                         delete errors[this.name];
+                    }
+                    break;
+                case "text":
+                    if (event.target.value.length === 0) {
+                        event.target.classList.add('is-invalid');
+                        errors[event.target.name] = "Rellena el campo vacío.";
+                        event.target.placeholder = errors[event.target.name];
+                    } else {
+                        event.target.classList.remove('is-invalid');
+                        event.target.classList.add('is-valid');
+                        delete errors[event.target.name];
                     }
                     break;
             }
