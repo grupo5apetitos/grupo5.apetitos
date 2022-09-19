@@ -41,7 +41,15 @@ window.addEventListener("load", () => {
         fetch('/api/products/')
         .then(respuesta => respuesta.json())
         .catch(error => console.error(error))
-        .then(respuesta => console.log(respuesta));
+        .then(respuesta => {
+            console.log(respuesta.data);
+            let valor = respuesta.data;
+
+            valor.forEach(element => {
+                console.log(`Nombre: ${element.name}, Descripción: ${element.description}`);
+                // console.log('Nombre: ' + element.name + ', Descripción: ' + element.description);
+            });
+        });
         // form.submit();
     }
 
