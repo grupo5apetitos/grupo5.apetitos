@@ -149,3 +149,23 @@ https://www.reetro.app/
 
 +++++ en este sprint implementamos reetro.app aca les dejamos el link +++++
 https://www.reetro.app/board/62ccbec7e8f8dcb41bb5319a/630d452f256d0c163ceb3ff4
+
+# Retrospectiva Sprint 7
+
+1. Comenzar Hacer.
+    - Realizar el análisis del nuevo sprint (validaciones en FrontEnd y BackEnd).
+    - Repartir los puntos del sprint de acuerdo al conocimiento que tiene cada uno de nosotros.
+    - Planear los días de reuniones para revisar avances o solucionar problemas.
+    - Apoyar a los miembros del equipo en cualquier dificultad.
+    - Repasar detalles de las clases, para mejorar el proyecto.
+2. Hacer más.
+    - Mejorar los tiempos de trabajo, de cada integrante.
+    - Realizar investigaciones más allá del contenido de la clase.
+3. Continuar haciendo.
+    - Comunicación, dar ideas y opiniones.
+    - Apoyarnos mutuamente.
+    - Daily y Weekly.
+4. Hacer menos.
+    - No hay nada que podamos hacer menos.
+5. Dejar de hacer.
+    - No hay nada que podamos dejar de hacer.

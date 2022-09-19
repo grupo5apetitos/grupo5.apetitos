@@ -134,10 +134,4 @@ window.addEventListener('load', () => {
             }
         });
     });
-    /*
-    email.addEventListener('blur', () => {
-        // fetch('url', {config}).then((res) => {});
-    });*/
 });
-
-//Mejorar codigo
