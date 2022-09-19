@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
         return patron.test(valor);
     }
     // Evento del boton de submit para envio del login ------------------------------------//
-    /*
+    
     btn.addEventListener('click', function(event){
         event.preventDefault();
 
@@ -30,14 +30,15 @@ window.addEventListener("load", () => {
         }
 
         if (errors[0] == '' && errors[1] == '') {
+           
             form.submit();
         }
     });
-    */
+    
 
-    btn.onclick = function(e) {
+   /* btn.onclick = function(e) {
         e.preventDefault();
-        
+        console.log('desde el script');
         fetch('/api/products/')
         .then(respuesta => respuesta.json())
         .catch(error => console.error(error))
@@ -46,12 +47,12 @@ window.addEventListener("load", () => {
             let valor = respuesta.data;
 
             valor.forEach(element => {
-                console.log(`Nombre: ${element.name}, Descripción: ${element.description}`);
+                //console.log(`Nombre: ${element.name}, Descripción: ${element.description}`);
                 // console.log('Nombre: ' + element.name + ', Descripción: ' + element.description);
             });
         });
-        // form.submit();
-    }
+        form.submit();
+    }*/
 
     email.addEventListener("blur", function () {
         if (validarEmail(this.value)) {
