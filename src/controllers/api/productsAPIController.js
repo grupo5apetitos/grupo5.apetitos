@@ -14,7 +14,14 @@ const productsAPIController = {
                     total: products.length,
                     url: 'api/products'
                 },
-                data: products
+                data: {
+                    count: products.length,
+                    countByCategory: {
+
+                    },
+                    products: products,
+                    detail: 'api/products'
+                }
             }
             res.json(respuesta);
         });
