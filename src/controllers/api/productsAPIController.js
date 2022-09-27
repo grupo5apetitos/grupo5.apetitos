@@ -11,7 +11,7 @@ const productsAPIController = {
             let respuesta = {
                 count: products.length,
                 countByCategory: {
-
+                    
                 },
                 products: products,
                 detail: 'api/products'
