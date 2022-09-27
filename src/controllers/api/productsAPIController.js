@@ -9,12 +9,12 @@ const productsAPIController = {
         Products.findAll()
         .then(products => {
             let respuesta = {
-                meta: {
-                    status: 200,
-                    total: products.length,
-                    url: 'api/products'
+                count: products.length,
+                countByCategory: {
+
                 },
-                data: products
+                products: products,
+                detail: 'api/products'
             }
             res.json(respuesta);
         });
