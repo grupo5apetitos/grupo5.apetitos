@@ -9,6 +9,7 @@ function SiderBar() {
     return(
         <React.Fragment>
             {/*<!-- SiderBar -->*/}
+            <h1> SiderBar</h1>
             <ul className="">
                 <li>
                     <Link className="" to="/">
