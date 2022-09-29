@@ -43,6 +43,6 @@ app.use('/api/users', userAPIRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3002, () => {
-    console.log("Servidor Activo en el puerto 3000...");
+    console.log("Servidor Activo en el puerto 3002...");
 });
 
