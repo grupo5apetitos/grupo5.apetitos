@@ -6,7 +6,7 @@ function Content() {
     return(
         <React.Fragment>
             <Header />
-            <div className="contenido">
+            <div className="content">
                 
             </div>
             <Footer />

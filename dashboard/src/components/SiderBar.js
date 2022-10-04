@@ -5,33 +5,42 @@ import Content from './Content';
 import Products from "./Products";
 import Users from "./Users";
 
+import logo from "../assets/images/apetitos_delivery.png";
+
 function SiderBar() {
     return(
         <React.Fragment>
             {/*<!-- SiderBar -->*/}
-            <h1> SiderBar</h1>
-            <ul className="">
-                <li>
-                    <Link className="" to="/">
-                        <span>Contenido</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className="" to="/products">
-                        <span>Productos</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className="" to="/users">
-                        <span>Usuarios</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className="" to="/category">
-                        <span>Categorias</span>
-                    </Link>
-                </li>
-            </ul>
+            <div className="siderbar">
+                <div className="logo">
+                    <img className="logo" src={logo} />
+                </div>
+                <hr/>
+                <nav>
+                    <ul className="">
+                        <li>
+                            <Link className="" to="/">
+                                <span>Contenido</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="" to="/products">
+                                <span>Productos</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="" to="/users">
+                                <span>Usuarios</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="" to="/category">
+                                <span>Categorias</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             {/*<!-- SiderBar End -->*/}
             {/*<!-- Contenido -->*/}
             <Routes>

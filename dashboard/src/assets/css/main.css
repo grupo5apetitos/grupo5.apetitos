@@ -21,10 +21,16 @@
 .sidebar {
     background-color: #CEA780;
     color: #ff6955;
-    display: none;
+}
+
+.siderbar .logo {
+    width: 100px;
 }
 
 /** Contenido ---------------------------------------------------- */
+.content {
+    background-color: #F0EAD6;
+}
 
 /** Footer ------------------------------------------------------- */
 .footer {
