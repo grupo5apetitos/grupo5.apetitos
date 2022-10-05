@@ -16,6 +16,7 @@
     border: 1px solid #ffffff;
     color: #ffffff;
     padding: 0.65rem 0.35rem;
+    cursor: pointer;
 }
 
 .is-invalid {

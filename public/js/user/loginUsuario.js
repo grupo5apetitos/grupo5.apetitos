@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     // Extrayendo los id con queryselector -----------------------------------------//
     let form = document.querySelector("form");
     let email = document.querySelector("#email");
-    let btn = document.querySelector('input[type="submit"]');
+    let btn = document.querySelector('button[type="submit"]');
     let passwd = document.querySelector("#password");
     let emailErrors = document.querySelector("#emailErrors");
     let passwdErrors = document.querySelector("#passwdErrors");
@@ -18,9 +18,8 @@ window.addEventListener("load", () => {
     }
 
     // Evento del boton de submit para envio del login ------------------------------------//
-    btn.addEventListener('click', function(event){
+    form.addEventListener('submit', function(event) {
         event.preventDefault();
-
         if (errors[0] !== '') {
             alert('Revisa el campo de correo.');
         }
@@ -30,29 +29,9 @@ window.addEventListener("load", () => {
         }
 
         if (errors[0] == '' && errors[1] == '') {
-           
             form.submit();
         }
     });
-    
-
-   /* btn.onclick = function(e) {
-        e.preventDefault();
-        console.log('desde el script');
-        fetch('/api/products/')
-        .then(respuesta => respuesta.json())
-        .catch(error => console.error(error))
-        .then(respuesta => {
-            console.log(respuesta.data);
-            let valor = respuesta.data;
-
-            valor.forEach(element => {
-                //console.log(`Nombre: ${element.name}, Descripción: ${element.description}`);
-                // console.log('Nombre: ' + element.name + ', Descripción: ' + element.description);
-            });
-        });
-        form.submit();
-    }*/
 
     email.addEventListener("blur", function () {
         if (validarEmail(this.value)) {

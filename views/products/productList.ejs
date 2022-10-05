@@ -2,45 +2,32 @@
 <html>
 <!-- Parte del head -->
 <%- include('../partials/head.ejs', { data: productList }) %>
-<body>
-    <!-- Encabezado de la Página -->
-    <%- include('../partials/header.ejs') %>
-    <!-- Cuerpo de la Página-->
-    <main>
-        <section class="menu">
-            <div class="inicio">
-                <p>Inicio</p>
-                <p>></p>
-                <p>Nuestros platos</p>
-            </div>
 
-
-            <div><select name="select">
-                    <option value="value1">ensaladas</option>
-                    <option value="value2" selected>pastas</option>
-                    <option value="value3">postres</option>
-                </select></div>
-        </section>
-
-        <section class="productos">
-            <% for (producto of products) { %>
-            <article>
-                <div class="imagen"><img src="/images/platillos/<%= producto.image %>" alt="FotoComidas"></div>
-
-                <div class="textoYprecio">
-                    <p class="titulo"><%= producto.name %></p>
-                    <p class="precio">$<%= producto.price %></p>
-                </div>
-
-                <div class="comprarVerMas"><button>Comprar</button>
-                    <div><a id="ver" href="">Ver +</a></div>
-                </div>
-            </article>
-            <% } %>
-        </section>
-    </main>
-    <!-- Parte del footer  -->
-    <%- include('../partials/footer.ejs') %>
-</body>
+    <body>
+        <!-- Encabezado de la Página -->
+        <%- include('../partials/header.ejs') %>
+            <!-- Cuerpo de la Página-->
+            <main>
+                <section class="productos">
+                    <% for (producto of products) { %>
+                        <article>
+                            <div class="imagen">
+                                <img src="/images/platillos/<%= producto.image %>" alt="FotoComidas">
+                            </div>
+                            <div class="textoYprecio">
+                                <p class="titulo"><%= producto.name %></p>
+                                <p class="precio">$<%= producto.price %>.00</p>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn">Comprar</button>
+                                <a class="btn" href="/productos/detalleProducto/<%= producto.id_meals %>">Ver +</a>
+                            </div>
+                        </article>
+                    <% } %>
+                </section>
+            </main>
+            <!-- Parte del footer  -->
+            <%- include('../partials/footer.ejs') %>
+    </body>
 
 </html>

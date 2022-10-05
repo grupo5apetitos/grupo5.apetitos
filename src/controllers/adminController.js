@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-//const md5 = require('md5');
+const md5 = require('md5');
 /** Express Validator -------------------------------------------- */
 const { validationResult } = require('express-validator');
 /** Sequelize (Modelos, DB) -------------------------------------- */
@@ -139,13 +139,16 @@ const administrador = {
 
     },
     actualizar: (req, res) => {
-        /* let id = req.params.id;
+        /*
+         let id = req.params.id;
          let form = req.body;
          let resultado = products.filter((producto) => { return (producto.id == id) });
          console.log(id);
          console.log('-------------------');
          console.log(form);
-         res.send('Entramos a actualizar'); */
+         res.send('Entramos a actualizar');
+        */
+        console.log(req.file);
 
         Meals.update({
             name: req.body.name,

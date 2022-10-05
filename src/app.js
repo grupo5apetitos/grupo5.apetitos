@@ -11,6 +11,7 @@ const userRouter = require('./routers/userRouter');
 
 // Rutas de API's ------------------------------------------------ //
 const productAPIRouter = require('./routers/api/productsRouter');
+const categoryAPIRouter = require('./routers/api/categoryRouter');
 const userAPIRouter = require('./routers/api/usersRouter');
 
 // --------------------------------------------------------------- //
@@ -40,6 +41,7 @@ app.use('/usuarios', userRouter);
 // Rutas para las API's --------------------------------------------//
 app.use('/api/products', productAPIRouter);
 app.use('/api/users', userAPIRouter);
+app.use('/api/category', categoryAPIRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3002, () => {

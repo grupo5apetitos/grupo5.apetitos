@@ -35,8 +35,11 @@ const productos = {
         res.send("esta es la pagina de index de productos");
     },
 
-    productDetails: (req, res) => {
-        res.render("products/productDetails", { productDetails });
+    productDetail: (req, res) => {
+        db.Meals.findByPk(req.params.id)
+        .then(function(producto) {
+            res.render("products/productDetails", { producto, productDetails });
+        });
     },
 
     productCart: (req, res) => {
@@ -61,7 +64,7 @@ const productos = {
                 image: req.body.image,
                 id_category: req.body.id_category
         });
-            res.redirect('/');
+        res.redirect('/');
     }, 
 
     productEdit: function(req, res) {
@@ -76,16 +79,16 @@ const productos = {
                 id:req.params.id
             }
         })
-            .then(function(){
-                res.redirect('/productList');
-            })
+        .then(function() {
+            res.redirect('/productList');
+        })
     },
 
     productDelete: function(req, res) {
         Meals.findByPk(req.params.id)
-            .then(function(products){
-                res.render('/productList', { products })
-            })
+        .then(function(products){
+            res.render('/productList', { products })
+        })
     },
 
     // ----------------------------------------------------------- //
@@ -93,7 +96,6 @@ const productos = {
         Meals.findAll({
             include: [{ association: 'category'}]
         }).then((meals) => {
-            console.log('/ ----------------------- /');
             res.render("products/productList", { productList, products: meals });
         });
     }

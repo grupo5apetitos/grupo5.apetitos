@@ -8,6 +8,7 @@ const { Op } = require('sequelize');
 
 // Llamado de los modelos ---------------------------------------- //
 const Meals = db.Meals;
+const Category = db.Category;
 
 // Convierte los datos del JSON en objetos para trabajarlos ------ //
 const userFilePath = path.join(__dirname, '../data/userDataBase.json');
@@ -27,7 +28,23 @@ let ayuda = {
 // Controlador --------------------------------------------------- //
 const mainController = {
     index: function (req, res) {
-        res.render('index', { index });
+        Meals.findAll({
+            // include: [{ association: 'category'}],
+            where: {
+                '$category.name$': {
+                    [Op.eq]: 'Comidas Completas'
+                }
+            },
+            include: [{
+                model: Category,
+                as: 'category'
+            }],
+            limit: 4
+        }).then((meals) => {
+            // console.log(meals);
+            res.render("index", { index, products: meals });
+        });
+        // res.render('index', { index });
     },
     help: function(req, res) {
         res.render('help', { ayuda } );

@@ -55,6 +55,10 @@ h2.titulo span {
     padding: 0.45rem 0.35rem;
 }
 
+.mas-elegido article p.descripcion {
+    font-size: 12px;
+}
+
 .mas-elegido article p.precio {
     color: #FF6955;
     font-size: 20px;
@@ -83,7 +87,7 @@ h2.titulo span {
 }
 
 .newsletter .secundario {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /** Media Queries .............................................................................. */

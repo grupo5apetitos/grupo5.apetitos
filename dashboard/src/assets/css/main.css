@@ -15,6 +15,26 @@
 .header {
     background-color: #CEA780;
     color: #F0EAD6;
+    padding: 0.5rem 0;
+}
+
+.user {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.user i {
+    font-size: 1rem;
+    color: #333333;
+    margin-right: 1rem;
+    margin-top: 4px;
+}
+
+.user .label-admin {
+    font-weight: bold;
+    font-size: 1rem;
+    padding-right: 1rem;
 }
 
 /** Menú lateral (SiderBar) -------------------------------------- */
@@ -24,12 +44,31 @@
 }
 
 .siderbar .logo {
-    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.siderbar .logo img {
+    width: 130px;
+}
+
+.menu li a:hover,
+.menu .is-active {
+    background-color: #ff6955;
+    color: #F0EAD6;
 }
 
 /** Contenido ---------------------------------------------------- */
+.cell {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
 .content {
+    padding-top: 1rem;
     background-color: #F0EAD6;
+    height: 87vh;
 }
 
 /** Footer ------------------------------------------------------- */
@@ -43,37 +82,9 @@
     padding-bottom: 1rem;
 }
 
-/** Filas -------------------------------------------------------- */
-.row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-/** Columnas ----------------------------------------------------- */
-[class*=column-] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.column-1 {
-    width: 100%;
-}
-
-.column-2 {
-    width: 50%;
-}
-
-.column-3 {
-    width: 33.33%;
-}
-
 /**
     Media Query -------------------------------------------------- //
 */
 @media (min-width: 768px) {
-    .siderbar {
-        width: 14rem;
-    }
+    
 }

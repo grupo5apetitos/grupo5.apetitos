@@ -9,7 +9,7 @@ const path = require('path');
 const productsController = require('../controllers/productsController');
 
 // Rutas para los productos -------------------------------------- //
-router.get('/detalleProductos', productsController.productDetails);
+router.get('/detalleProducto/:id', productsController.productDetail);
 router.get('/carroProductos', productsController.productCart);
 // router.get('/listaProductos', productsController.productList);
 

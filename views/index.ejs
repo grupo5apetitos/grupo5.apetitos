@@ -28,22 +28,25 @@
                 <p>Disfruta de una comida como si fuera de casa.</p>
             </article>
         </div>
-        <h2 class="titulo"><span>LO MÁS ELEGIDO</span></h2>
+        <h2 class="titulo"><span>COMIDAS COMPLETAS</span></h2>
         <div class="mas-elegido">
+            <% for (producto of products) { %>
             <article>
-                <img src="/images/platillos/camarones.png" alt="plato-1">
+                <img src="/images/platillos/<%= producto.image %>" alt="plato-1">
                 <div class="contenido-plato">
-                    <h5>Camarones</h5>
-                    <p>Camarones pelados, pasados por jugo de limón, harina, huevo y pan molido y, posteriormente, fritos.</p>
-                    <p class="precio">$ 850.00</p>
+                    <h5><%= producto.name %></h5>
+                    <p class="descripcion"><%= producto.description %></p>
+                    <p class="precio">$ <%= producto.price %>.00</p>
                 </div>
             </article>
+            <% } %>
+        <!--
             <article>
                 <img src="/images/platillos/empanizado.png" alt="plato-1">
                 <div class="contenido-plato">
                     <h5>Tempura de Verduras</h5>
                     <p>Tempura de verduras ligera y crujiente. Un plato realmente exquisito. </p>
-                    <p class="precio">$ 1.200</p>
+                    <p class="precio">$ 1,200.00</p>
                 </div>
             </article>
             <article>
@@ -62,6 +65,7 @@
                     <p class="precio">$ 850.00</p>
                 </div>
             </article>
+        -->
         </div>
         <div class="conoce-nuestro-menu">
             &nbsp;

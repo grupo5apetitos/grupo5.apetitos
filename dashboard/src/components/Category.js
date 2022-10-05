@@ -1,46 +1,65 @@
-import React from "react";
-import { Link, Routes, Route} from 'react-router-dom';
-import Content from './Content';
-import Products from "./Products";
-
+import React, { useEffect } from "react";
+import { useState } from 'react';
 
 function Category() {
+
+    /*
+    const [listadoDeCategorias, setListadoDeCategorias] = useState([
+        "Desayuno Ligero",
+        "Desayuno Completo",
+        "Comida Ligera",
+        "Comida Completa",
+        "Postres",
+        "Aperitivos"
+    ]);
+    */
+
+    const [category, setCategory] = useState([]);
+
+    const apiCategory = async () => {
+        try{
+            const uri = `http://localhost:3002/api/category`;
+            const req = await fetch(uri);
+            const res = await req.json();
+
+            if (res.success) {
+                setCategory(res.data);
+            } else {
+                setCategory([]);
+            }
+        } catch(err) {
+            console.error(err);
+        }
+    }
+
+    useEffect(() => {
+        apiCategory();
+    }, []);
+
     return(
         <React.Fragment>
-            <h1> Categorias </h1>
-            {/*<!-- SiderBar -->*/}
-            <ul className="">
-                <li>
-                    <Link  className=""  to={'/visitado'}>
-                        <span> Visitado </span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className=""  to={'/masVisto'}>
-                        <span> Lo mas visto </span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className=""  to={'/masComprado'}>
-                        <span> Mas comprado </span>
-                    </Link>
-                </li>
-                <li>
-                    <Link className=""  to={'/masPuntuado'}>
-                        <span> Mas puntuado </span>
-                    </Link>
-                </li>
-            </ul>
-            {/*<!-- Categorias End -->*/}
-            {/*<!-- Contenido -->*/}
-                <Routes>
-                    <Route exact path="/" element={<Content />} />
-                    <Route  path="/visitado" element={<Products />} />
-                    <Route  path="/masVisto" element={<Products />} />
-                    <Route  path="/masComprado" element={<Products />} />
-                    <Route  path="/masPuntuado" element={<Products />} />
-                </Routes>
-            {/*<!-- Contenido End -->*/}
+            <div className="grid-container fluid content">
+                <h3>Categorias</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200">#</th>
+                            <th>Nombre de la categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            category.map((categoria, i) => {
+                                // return <li key={i}><Link to={"/" + producto}>{producto}</Link></li>
+                                return  <tr key={i}>
+                                            <td>{i + 1}</td>
+                                            <td>{categoria.name}</td>
+                                        </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         </React.Fragment>
     );
 }

@@ -1,3 +1,5 @@
+import { query } from "express";
+
 window.addEventListener('load', function () {
     const element_email = document.querySelector('#user');
     const element_password = document.querySelector('#password');
@@ -47,7 +49,7 @@ window.addEventListener('load', function () {
         });
 
         if (errors.length == 0) {
-            
+            document.querySelector('form').submit();
         } else {
             errors.forEach((err) => {
                 document.querySelector(`input[type=${err.typ}]`).classList.add('is-invalid');
