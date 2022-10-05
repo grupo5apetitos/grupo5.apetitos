@@ -9,11 +9,12 @@ const productsAPIController = {
         Products.findAll()
         .then(products => {
             let respuesta = {
+                success: true,
                 count: products.length,
                 countByCategory: {
                     
                 },
-                products: products,
+                data: products,
                 detail: 'api/products'
             }
             res.json(respuesta);

@@ -2,18 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from 'react';
 
 function Category() {
-
-    /*
-    const [listadoDeCategorias, setListadoDeCategorias] = useState([
-        "Desayuno Ligero",
-        "Desayuno Completo",
-        "Comida Ligera",
-        "Comida Completa",
-        "Postres",
-        "Aperitivos"
-    ]);
-    */
-
     const [category, setCategory] = useState([]);
 
     const apiCategory = async () => {

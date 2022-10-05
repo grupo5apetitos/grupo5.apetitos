@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from 'react';
 
 function Users() {
-    const [listadoDeUsuarios, setListadoDeUsuarios] = useState([
-        "Desayuno Ligero",
-        "Desayuno Completo",
-        "Comida Ligera",
-        "Comida Completa",
-        "Postres",
-        "Aperitivos"
-    ]);
+    const [users, setUsers] = useState([]);
+
+    const apiUsers = async () => {
+        try {
+            const uri = `http://localhost:3002/api/users`;
+            const req = await fetch(uri);
+            const res = await req.json();
+
+            if (res.meta.status == 200) {
+                setUsers(res.data);
+            } else {
+                setUsers([]);
+            }
+        } catch(err) {
+            console.error(err);
+        }
+    }
+
+    useEffect(() => {
+        apiUsers();
+    }, []);
 
     return(
         <React.Fragment>
@@ -19,18 +32,22 @@ function Users() {
                     <thead>
                         <tr>
                             <th width="200">#</th>
-                            <th>Nombre de la categoría</th>
-                            <th>Tipo de usuario</th>
+                            <th>Nombre del Usuario</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Avatar</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            listadoDeUsuarios.map((usuario, i) => {
-                                // return <li key={i}><Link to={"/" + producto}>{producto}</Link></li>
+                            users.map((usuario, i) => {
+                                let image = `http://localhost:3002/images/avatars/${usuario.avatar}`;
                                 return  <tr key={i}>
                                             <td>{i + 1}</td>
-                                            <td>{usuario}</td>
-                                            <td>Tipo</td>
+                                            <td>{usuario.user_name}</td>
+                                            <td>{usuario.name}</td>
+                                            <td>{usuario.email}</td>
+                                            <td width={100}><img src={image} alt="usuarios"/></td>
                                         </tr>
                             })
                         }

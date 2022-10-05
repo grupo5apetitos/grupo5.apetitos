@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+const cors = require('cors');
 
 // Requiriendo a las rutas --------------------------------------- //
 const mainRouter = require('./routers/mainRouter');
@@ -13,6 +14,7 @@ const userRouter = require('./routers/userRouter');
 const productAPIRouter = require('./routers/api/productsRouter');
 const categoryAPIRouter = require('./routers/api/categoryRouter');
 const userAPIRouter = require('./routers/api/usersRouter');
+const mainAPIRouter = require('./routers/api/mainRouter');
 
 // --------------------------------------------------------------- //
 const path = require('path');
@@ -27,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
+app.use(cors());
 
 // Utilizando el Template Engine EJS ----------------------------- //
 app.set('view engine', 'ejs');
@@ -42,6 +45,7 @@ app.use('/usuarios', userRouter);
 app.use('/api/products', productAPIRouter);
 app.use('/api/users', userAPIRouter);
 app.use('/api/category', categoryAPIRouter);
+app.use('/api/dashboard', mainAPIRouter);
 
 // Servidor a escuchar ------------------------------------------- //
 app.listen(3002, () => {

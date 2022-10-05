@@ -71,6 +71,12 @@
     height: 87vh;
 }
 
+/** Tablas ------------------------------------------------------- */
+table#productos {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 /** Footer ------------------------------------------------------- */
 .footer {
     background-color: #CEA780;
